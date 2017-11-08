@@ -21,7 +21,7 @@ Public Class ClassSalesOrder
         ModKoneksi.BukaKoneksi()
         Command.Connection = ModKoneksi.Koneksi
         Command.CommandType = CommandType.Text
-        Command.CommandText = "select a.CL,a.ItemCode,b.Description1,b.UOM,a.Qty,a.UnitPrice,a.DiscountType,a.Discount,a.Total,a.Remarks,a.SalesOrderId from tbSalesOrderDetils a inner join tbMasterItemMD b on a.ItemCode = b.ItemCode where a.SalesOrderId='" & SOId & "'"
+        Command.CommandText = "Exec SelectDetilSObyDocNumber '" & SOId & "'"
         oDataAdapter.SelectCommand = Command
         oDataAdapter.Fill(oDataTabel)
         ModKoneksi.TutupKoneksi()
@@ -63,7 +63,7 @@ Public Class ClassSalesOrder
             KodeMaster = Command.Parameters("@DocNumber").Value
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec addDetilSalesOrder '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
+                Command.CommandText = "exec addDetilSalesOrder '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
                                        & "'" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "'"
                 Command.ExecuteNonQuery()
             Next
@@ -110,7 +110,7 @@ Public Class ClassSalesOrder
             Command.ExecuteNonQuery()
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec addDetilSalesOrder '" & Guid.NewGuid.ToString & "','" & SOid & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
+                Command.CommandText = "exec addDetilSalesOrder '" & Guid.NewGuid.ToString & "','" & SOid & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
                                        & "'" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "'"
                 Command.ExecuteNonQuery()
             Next

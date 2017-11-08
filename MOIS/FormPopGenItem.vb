@@ -12,31 +12,32 @@ Public Class FormPopGenItem
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         If X = "1" Then
-            FormAddPR.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text + " " + txtUom.Text
+            FormAddPR.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text
             FormAddPR.GridView1.GetFocusedDataRow.Item("MaxQty") = 999
-            ' FormAddPR.GridView1.GetFocusedDataRow.Item("UOM") =txtUom.Text
+            FormAddPR.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
         ElseIf X = "2" Then
-            FormAddPO.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text + " " + txtUom.Text
+            FormAddPO.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text
             FormAddPO.GridView1.GetFocusedDataRow.Item("MaxQty") = 999
-            'FormAddPO.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
+            FormAddPO.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
         ElseIf X = "3" Then
-            FormAddSalesQuotation.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text + " " + txtUom.Text
+            FormAddSalesQuotation.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text
             FormAddSalesQuotation.GridView1.GetFocusedDataRow.Item("QtyEnquiry") = 999
-            'FormAddSalesQuotation.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
+            FormAddSalesQuotation.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
         ElseIf X = "4" Then
-            FormAddSalesOrder.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text + " " + txtUom.Text
+            FormAddSalesOrder.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text
             ' 'FormAddSalesOrder.GridView1.GetFocusedDataRow.Item("MaxQty") = 999
-            'FormAddSalesOrder.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
+            FormAddSalesOrder.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
         ElseIf X = "5" Then
-            FormAddDelivery.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text + " " + txtUom.Text
-            FormAddDelivery.GridView1.GetFocusedDataRow.Item("MaxQty") = 999
-            'FormAddDelivery.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
+            FormAddDelivery.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text
+            'FormAddDelivery.GridView1.GetFocusedDataRow.Item("MaxQty") = 999
+            FormAddDelivery.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
         ElseIf X = "6" Then
-            FormEnquiry.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text + " " + txtUom.Text
+            FormEnquiry.GridView1.GetFocusedDataRow.Item("Item Description") = txtDesc.Text
             'FormEnquiry.GridView1.GetFocusedDataRow.Item("MaxQty") = 999
-            'FormEnquiry.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
+            FormEnquiry.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
         ElseIf X = "7"
-            FormAdjustmentStock.GridView1.GetFocusedDataRow.Item("Description") = txtDesc.Text + " " + txtUom.Text
+            FormAdjustmentStock.GridView1.GetFocusedDataRow.Item("Description") = txtDesc.Text
+            FormAdjustmentStock.GridView1.GetFocusedDataRow.Item("UOM") = txtUom.Text
         End If
         clean()
         Close()

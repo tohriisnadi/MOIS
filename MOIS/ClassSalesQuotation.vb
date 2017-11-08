@@ -75,7 +75,7 @@ Public Class ClassSalesQuotation
             KodeMaster = Command.Parameters("@DocNumber").Value
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec addDetilSalesQuotation '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
+                Command.CommandText = "exec addDetilSalesQuotation '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
                                        & "'" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "'"
                 Command.ExecuteNonQuery()
             Next
@@ -122,7 +122,7 @@ Public Class ClassSalesQuotation
             Command.ExecuteNonQuery()
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec addDetilSalesQuotation '" & Guid.NewGuid.ToString & "','" & salesQuotationid & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
+                Command.CommandText = "exec addDetilSalesQuotation '" & Guid.NewGuid.ToString & "','" & salesQuotationid & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
                                        & "'" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "'"
                 Command.ExecuteNonQuery()
             Next

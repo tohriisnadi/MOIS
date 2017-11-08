@@ -87,7 +87,7 @@ Public Class ClassEnquiry
             KodeMaster = Command.Parameters("@DocumentNumber").Value
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec AddEnquiryDetil '" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'"
+                Command.CommandText = "exec AddEnquiryDetil '" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'"
                 Command.ExecuteNonQuery()
             Next
 
@@ -122,7 +122,7 @@ Public Class ClassEnquiry
             Command.ExecuteNonQuery()
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec AddEnquiryDetil '" & DocNumber & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'"
+                Command.CommandText = "exec AddEnquiryDetil '" & DocNumber & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'"
                 Command.ExecuteNonQuery()
             Next
 

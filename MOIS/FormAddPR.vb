@@ -124,8 +124,9 @@ Public Class FormAddPR
         Odata.Clear()
         Odata = dataPR.selectPRDetilByDocumentNumber(DocNumberPR)
         For i As Integer = 0 To Odata.Rows.Count - 1
-            addNewRow(Odata.Rows(i).Item(1).ToString, Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5),
-                             Odata.Rows(i).Item(6), Odata.Rows(i).Item(7), Odata.Rows(i).Item(8), Odata.Rows(i).Item(9), Odata.Rows(i).Item(10), Odata.Rows(i).Item(11).ToString, Odata.Rows(i).Item(5))
+            addNewRow(Odata.Rows(i).Item(1).ToString, Odata.Rows(i).Item(2).ToString, Odata.Rows(i).Item(3).ToString, Odata.Rows(i).Item(4).ToString, Odata.Rows(i).Item(5).ToString,
+                             Odata.Rows(i).Item(6).ToString, Odata.Rows(i).Item(7).ToString, Odata.Rows(i).Item(8).ToString, Odata.Rows(i).Item(9).ToString, Odata.Rows(i).Item(10).ToString,
+                             Odata.Rows(i).Item(11).ToString, Odata.Rows(i).Item(5).ToString)
         Next
     End Sub
 

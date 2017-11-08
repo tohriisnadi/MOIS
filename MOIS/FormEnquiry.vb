@@ -97,7 +97,7 @@ Public Class FormEnquiry
         Odata.Clear()
         Odata = dataEnquiry.SelectEnquiryDetilByID(idEnquiry)
         For i As Integer = 0 To Odata.Rows.Count - 1
-            addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5), Odata.Rows(i).Item(6))
+            addNewRow(Odata.Rows(i).Item(1).ToString, Odata.Rows(i).Item(2).ToString, Odata.Rows(i).Item(3).ToString, Odata.Rows(i).Item(4).ToString, Odata.Rows(i).Item(5).ToString, Odata.Rows(i).Item(6).ToString)
         Next
     End Sub
 
@@ -209,6 +209,9 @@ Public Class FormEnquiry
         laporan.lbENNo.Text = idEnquiry
         laporan.lbDate.Text = txtDate.Text
         laporan.lbValidUntil.Text = txtMaxResponDate.Text
+        laporan.lbRef.Text = txtRef.Text
+        laporan.lbSourceofCall.Text = cbSourceOfCall.Text
+        laporan.lbSourceofCall2.Text = txtSourceOFCallDesc.Text
 
         laporan.txtNo.DataBindings.Add("Text", Nothing, "NO")
         laporan.txtQty.DataBindings.Add("Text", Nothing, "Qty")

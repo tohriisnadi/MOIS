@@ -33,7 +33,7 @@ Public Class ClassGR
         ModKoneksi.BukaKoneksi()
         Command.Connection = ModKoneksi.Koneksi
         Command.CommandType = CommandType.Text
-        Command.CommandText = "select a.CL,a.ItemCode,b.Description1,b.uom,a.Qty,a.WHS,a.Allocation,A.Remarks from tbGRDetils a join tbMasterItemMD b on a.ItemCode = b.ItemCode where a.DocumentNumebr='" & id & "'"
+        Command.CommandText = "Exec SelectDetilGRbyId '" & id & "'"
         oDataAdapter.SelectCommand = Command
         oDataAdapter.Fill(oDataTabel)
         ModKoneksi.TutupKoneksi()

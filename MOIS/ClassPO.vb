@@ -97,7 +97,7 @@ Public Class ClassPO
             KodeMaster = Command.Parameters("@DocumentNumber").Value
             FormAddPO.DocumentNumber = KodeMaster
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec addDetilPO '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(5) & "'," _
+                Command.CommandText = "exec addDetilPO '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "'," _
                                         & "'" & data.Rows(i).Item(6) & "','" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "','" & prnumber & "'"
                 Command.ExecuteNonQuery()
             Next
@@ -142,7 +142,7 @@ Public Class ClassPO
             Command.ExecuteNonQuery()
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec addDetilPO '" & Guid.NewGuid.ToString & "','" & DocumentNumber & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(5) & "'," _
+                Command.CommandText = "exec addDetilPO '" & Guid.NewGuid.ToString & "','" & DocumentNumber & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "'," _
                                         & "'" & data.Rows(i).Item(6) & "','" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "','" & prnumber & "'"
                 Command.ExecuteNonQuery()
             Next

@@ -429,7 +429,7 @@ Partial Public Class ReportEnqiry
         Me.lbRef.SizeF = New System.Drawing.SizeF(280.7766!, 19.87502!)
         Me.lbRef.StylePriority.UseFont = False
         Me.lbRef.StylePriority.UseTextAlignment = False
-        Me.lbRef.Text = "Reference"
+        Me.lbRef.Text = " "
         Me.lbRef.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'lbSourceofCall2

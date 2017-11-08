@@ -579,3 +579,4 @@ D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportSalesQuotation.resources
 D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportVendorInvoice.resources
 D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.WaitForm1.resources
 D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListItem.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.vbprojResolveAssemblyReference.cache

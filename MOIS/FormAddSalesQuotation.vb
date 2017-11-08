@@ -106,7 +106,8 @@ Public Class FormAddSalesQuotation
         odata.Clear()
         odata = dataSQ.SelectDetilbyIdMaster(SQid)
         For i = 0 To odata.Rows.Count - 1
-            addNewRow(odata.Rows(i).Item(1), odata.Rows(i).Item(2), odata.Rows(i).Item(3), odata.Rows(i).Item(4), odata.Rows(i).Item(5), odata.Rows(i).Item(6), odata.Rows(i).Item(7), odata.Rows(i).Item(8), odata.Rows(i).Item(9), odata.Rows(i).Item(10), odata.Rows(i).Item(11), odata.Rows(i).Item(5))
+            addNewRow(odata.Rows(i).Item(1).ToString, odata.Rows(i).Item(2).ToString, odata.Rows(i).Item(3).ToString, odata.Rows(i).Item(4).ToString, odata.Rows(i).Item(5).ToString, odata.Rows(i).Item(6).ToString,
+                      odata.Rows(i).Item(7).ToString, odata.Rows(i).Item(8).ToString, odata.Rows(i).Item(9).ToString, odata.Rows(i).Item(10).ToString, odata.Rows(i).Item(11).ToString, odata.Rows(i).Item(5).ToString)
         Next
     End Sub
 

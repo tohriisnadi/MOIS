@@ -218,8 +218,8 @@ Public Class FormAddPO
         Odata.Clear()
         Odata = DataPO.selectPODetilByDocNumber(DocumentNumber)
         For i As Integer = 0 To Odata.Rows.Count - 1
-            addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5),
-                      Odata.Rows(i).Item(6), Odata.Rows(i).Item(7), Odata.Rows(i).Item(8), Odata.Rows(i).Item(9), Odata.Rows(i).Item(10), Odata.Rows(i).Item(11))
+            addNewRow(Odata.Rows(i).Item(1).ToString, Odata.Rows(i).Item(2).ToString, Odata.Rows(i).Item(3).ToString, Odata.Rows(i).Item(4).ToString, Odata.Rows(i).Item(5).ToString,
+                      Odata.Rows(i).Item(6).ToString, Odata.Rows(i).Item(7).ToString, Odata.Rows(i).Item(8).ToString, Odata.Rows(i).Item(9).ToString, Odata.Rows(i).Item(10).ToString, Odata.Rows(i).Item(11).ToString)
         Next
     End Sub
 
@@ -252,7 +252,7 @@ Public Class FormAddPO
                              txtRef.Text, txtTotal.Text, txtDiscount.Text, txtPPN.Text, txtNetPrice.Text, oDataTabelUnbound, PRNumber)
                 clean()
             ElseIf X = "2"
-                DataPO.EditPO(DocumentNumber, Format(CDate(txtDate.Text), "yyyy/MM/dd"), vendorcode(cbVendor.SelectedIndex), PPNStatus, txtCurrency.Text.ToUpper, txtCurRate.Text, txtDiscountHead.Text, txtStatus.Text, txtNote.Text,
+                DataPO.EditPO(DocumentNumber, Format(CDate(txtDate.EditValue), "yyyy/MM/dd"), vendorcode(cbVendor.SelectedIndex), PPNStatus, txtCurrency.Text.ToUpper, txtCurRate.Text, txtDiscountHead.Text, txtStatus.Text, txtNote.Text,
                               txtRef.Text, txtTotal.Text, txtDiscount.Text, txtPPN.Text, txtNetPrice.Text, oDataTabelUnbound, PRNumber)
                 clean()
                 Close()

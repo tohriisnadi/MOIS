@@ -102,7 +102,8 @@ Public Class FormAddSalesOrder
         odata.Clear()
         odata = dataSO.SelectDetilbyIdMaster(SOid)
         For i = 0 To odata.Rows.Count - 1
-            addNewRow(odata.Rows(i).Item(0), odata.Rows(i).Item(1), odata.Rows(i).Item(2), odata.Rows(i).Item(3), odata.Rows(i).Item(4), odata.Rows(i).Item(5), odata.Rows(i).Item(6), odata.Rows(i).Item(7), odata.Rows(i).Item(8), odata.Rows(i).Item(9), odata.Rows(i).Item(10))
+            addNewRow(odata.Rows(i).Item(0).ToString, odata.Rows(i).Item(1).ToString, odata.Rows(i).Item(2).ToString, odata.Rows(i).Item(3).ToString, odata.Rows(i).Item(4).ToString, odata.Rows(i).Item(5).ToString, odata.Rows(i).Item(6).ToString,
+                      odata.Rows(i).Item(7).ToString, odata.Rows(i).Item(8).ToString, odata.Rows(i).Item(9).ToString, odata.Rows(i).Item(10).ToString)
         Next
     End Sub
 
@@ -378,6 +379,10 @@ Public Class FormAddSalesOrder
         laporan.txtFPPN.Text = Format(CLng(txtTotalPPN.Text), "###,###,##0.00")
         laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
         laporan.txtCurF1.Text = txtCurrency.Text
+        laporan.txtCurF2.Text = txtCurrency.Text
+        laporan.txtCurF3.Text = txtCurrency.Text
+        laporan.txtCurF4.Text = txtCurrency.Text
+        laporan.txtCurF5.Text = txtCurrency.Text
 
         laporan.FlbBankName.Text = dataRekening("BankName")
         laporan.FlbBankAddress.Text = dataRekening("BankAddress")

@@ -51,7 +51,7 @@
             FormAddSalesOrder.KodeCustomer = GridView1.GetFocusedDataRow.Item(1)
             FormAddSalesOrder.LoadCustomer()
             FormAddSalesOrder.txtContactPerson.Text = GridView1.GetFocusedDataRow.Item(2)
-            FormAddSalesOrder.txtRef.Text = GridView1.GetFocusedDataRow.Item(3)
+            FormAddSalesOrder.txtRef.Text = GridView1.GetFocusedDataRow.Item(0)
             FormAddSalesOrder.txtCurrency.Text = GridView1.GetFocusedDataRow.Item(4)
             FormAddSalesOrder.txtRate.Text = GridView1.GetFocusedDataRow.Item(5)
             FormAddSalesOrder.txtDiscount.Text = GridView1.GetFocusedDataRow.Item(9)
