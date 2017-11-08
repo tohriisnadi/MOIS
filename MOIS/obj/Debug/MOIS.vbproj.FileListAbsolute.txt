@@ -1,0 +1,581 @@
+C:\Users\Tohri\AppData\Local\Temporary Projects\MOIS\bin\Debug\MOIS.exe.config
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\MOIS.exe.config
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\MOIS.exe
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\MOIS.pdb
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\MOIS.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Data.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraBars.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraEditors.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Printing.v15.1.Core.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Data.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraBars.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraEditors.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Printing.v15.1.Core.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Sparkline.v15.1.Core.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.Utils.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.Utils.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.Utils.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.Utils.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.XtraBars.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.XtraBars.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraBars.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraBars.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.vbprojResolveAssemblyReference.cache
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormMain.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.Resources.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.vbproj.GenerateResource.Cache
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.exe.licenses
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.exe
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.pdb
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormLogin.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormRule.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraGrid.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraLayout.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraPrinting.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.RichEdit.v15.1.Core.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraTreeList.v15.1.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Office.v15.1.Core.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraGrid.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraLayout.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraPrinting.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.RichEdit.v15.1.Core.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.XtraTreeList.v15.1.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\DevExpress.Office.v15.1.Core.xml
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\de\DevExpress.Office.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\es\DevExpress.Office.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ja\DevExpress.Office.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\bin\Debug\ru\DevExpress.Office.v15.1.Core.resources.dll
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormDataOperator.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormAddWarehouse.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormDataWarehouse.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormAddItemGroup.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormAddUom.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormItemMD.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormDataUom.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormAddCompanySetup.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormEnquiry.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormPriceList.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormVendorMasterData.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormDataItemGroup.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormDataCompanySetup.resources
+D:\Bismillah DokterData\App\MOIS\MOIS\obj\Debug\MOIS.FormDataItemMD.resources
+D:\Tohri\MOIS\MOIS\bin\Debug\MOIS.exe.config
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.exe
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.xml
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.pdb
+D:\Tohri\MOIS\MOIS\bin\Debug\MOIS.exe
+D:\Tohri\MOIS\MOIS\bin\Debug\MOIS.pdb
+D:\Tohri\MOIS\MOIS\bin\Debug\MOIS.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Data.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Printing.v15.1.Core.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraBars.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraEditors.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraGrid.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraLayout.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraPrinting.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.RichEdit.v15.1.Core.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraTreeList.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Office.v15.1.Core.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Data.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Printing.v15.1.Core.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraBars.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraEditors.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraGrid.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraLayout.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraPrinting.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Sparkline.v15.1.Core.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.RichEdit.v15.1.Core.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraTreeList.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Office.v15.1.Core.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.Utils.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.Utils.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.Utils.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.Utils.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraBars.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraBars.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraBars.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraBars.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraLayout.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.Office.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.Office.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.Office.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.Office.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddCompanySetup.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddItemGroup.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddUom.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddWarehouse.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataCompanySetup.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataItemGroup.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataItemMD.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataUom.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataWarehouse.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormEnquiry.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormItemMD.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormLogin.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormMain.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormPriceList.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormRule.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.Resources.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.vbproj.GenerateResource.Cache
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.exe.licenses
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataMasterVendor.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddMasterVendor.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataEnquiry.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddPR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataPR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddPO.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataPriceList.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataPO.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddRole.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormManageOperator.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddOperator.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddGR.resources
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Charts.v15.1.Core.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.PivotGrid.v15.1.Core.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.UI.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraGauges.v15.1.Core.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.Extensions.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraRichEdit.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.Extensions.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraPivotGrid.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraNavBar.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.CodeParser.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.UI.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.Wizard.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Xpo.v15.1.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.PivotGrid.v15.1.Core.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.UI.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraGauges.v15.1.Core.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.Extensions.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraRichEdit.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraPivotGrid.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraNavBar.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.UI.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.Wizard.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.Xpo.v15.1.xml
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.Utils.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.Utils.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.Utils.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.Utils.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraCharts.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraCharts.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraCharts.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraCharts.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraReports.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraReports.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraReports.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraReports.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.DataAccess.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.DataAccess.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.DataAccess.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.DataAccess.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\de\DevExpress.Xpo.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\es\DevExpress.Xpo.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ja\DevExpress.Xpo.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\bin\Debug\ru\DevExpress.Xpo.v15.1.resources.dll
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportPO.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataGR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportPR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddCustomer.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataCustomer.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportGR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddSalesQuotation.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataSalesQuotation.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddSalesOrder.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataSalesOrder.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataDelivery.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddDelivery.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataSalesBilling.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddSalesBilling.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataVendorInvoice.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddVendorInvoice.resources
+D:\Tohri\MOIS\MOIS\bin\Debug\DevExpress.BonusSkins.v15.1.dll
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataPayment.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAddPayment.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportDO.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportSalesInvoice.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormChangePassowrd.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListPriceList.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportPayment.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListPOBlumGR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDashboard.resources
+D:\MOIS\MOIS\MOIS\bin\Debug\MOIS.exe.config
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.exe
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.xml
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.pdb
+D:\MOIS\MOIS\MOIS\bin\Debug\MOIS.exe
+D:\MOIS\MOIS\MOIS\bin\Debug\MOIS.pdb
+D:\MOIS\MOIS\MOIS\bin\Debug\MOIS.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.BonusSkins.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Charts.v15.1.Core.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Data.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Office.v15.1.Core.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.PivotGrid.v15.1.Core.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Printing.v15.1.Core.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.RichEdit.v15.1.Core.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.UI.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraBars.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraEditors.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraGauges.v15.1.Core.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraGrid.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraLayout.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraNavBar.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraPrinting.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.Extensions.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraTreeList.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraRichEdit.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.Extensions.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraPivotGrid.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.CodeParser.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.UI.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.Wizard.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Xpo.v15.1.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Data.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Office.v15.1.Core.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.PivotGrid.v15.1.Core.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Printing.v15.1.Core.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.RichEdit.v15.1.Core.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Sparkline.v15.1.Core.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Utils.v15.1.UI.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraBars.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraEditors.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraGauges.v15.1.Core.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraGrid.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraLayout.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraNavBar.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraPrinting.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraReports.v15.1.Extensions.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraTreeList.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraRichEdit.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraPivotGrid.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.DataAccess.v15.1.UI.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.XtraCharts.v15.1.Wizard.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\DevExpress.Xpo.v15.1.xml
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.Office.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.Office.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.Office.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.Office.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.PivotGrid.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.Printing.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.Printing.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.Printing.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.Printing.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.RichEdit.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.Utils.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.Utils.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.Utils.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.Utils.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.Utils.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.Utils.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.Utils.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.Utils.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraBars.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraBars.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraBars.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraBars.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraCharts.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraCharts.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraCharts.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraCharts.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraEditors.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraGauges.v15.1.Core.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraLayout.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraLayout.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraLayout.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraLayout.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraNavBar.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraPrinting.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraReports.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraReports.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraReports.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraReports.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraReports.v15.1.Extensions.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraTreeList.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraRichEdit.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.DataAccess.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.DataAccess.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.DataAccess.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.DataAccess.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraPivotGrid.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.DataAccess.v15.1.UI.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\de\DevExpress.Xpo.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\es\DevExpress.Xpo.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ja\DevExpress.Xpo.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\bin\Debug\ru\DevExpress.Xpo.v15.1.resources.dll
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddCompanySetup.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddCustomer.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddDelivery.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddGR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddItemGroup.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddMasterVendor.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddOperator.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddPayment.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddPO.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddPR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddRole.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddSalesBilling.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddSalesOrder.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddSalesQuotation.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddUom.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddVendorInvoice.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAddWarehouse.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormChangePassowrd.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDashboard.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataCompanySetup.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataCustomer.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataDelivery.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataEnquiry.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataGR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataItemGroup.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataItemMD.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataMasterVendor.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataPayment.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataPO.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataPR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataPriceList.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataSalesBilling.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataSalesOrder.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataSalesQuotation.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataUom.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataVendorInvoice.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDataWarehouse.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormEnquiry.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormItemMD.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListPOBlumGR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListPriceList.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormLogin.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormMain.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormManageOperator.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormPopGenItem.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormPriceList.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormRule.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.Resources.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportDO.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportGR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportPayment.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportPO.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportPR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportSalesInvoice.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportSalesOrder.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.WaitForm1.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.vbproj.GenerateResource.Cache
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.exe.licenses
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListEnquiry.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListPR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListGR.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListSQ.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListSO.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormListOD.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormRekening.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormChoseRekening.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportSalesQuotation.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportEnqiry.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.ReportVendorInvoice.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormAdjustmentStock.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.vbprojResolveAssemblyReference.cache
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormDaftarStock.resources
+D:\MOIS\MOIS\MOIS\obj\Debug\MOIS.FormKartuStock.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormAdjustmentStock.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormChoseRekening.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDaftarStock.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormKartuStock.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListEnquiry.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListGR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListOD.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListPR.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListSO.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListSQ.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormPopGenItem.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormRekening.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportEnqiry.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportSalesOrder.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportSalesQuotation.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.ReportVendorInvoice.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.WaitForm1.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormListItem.resources
