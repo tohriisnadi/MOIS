@@ -75,7 +75,7 @@ Public Class ClassEnquiry
         Command.CommandText = "{call AddEnquiry (?,?,?,?,?,?,?,?)}"
         Try
             Command.Parameters.Add("@SourceOfCall", OdbcType.VarChar, 50, ParameterDirection.Input).Value = SourceOfCall
-            Command.Parameters.Add("@SourceOfCallDesc", OdbcType.VarChar, 50, ParameterDirection.Input).Value = SourceOfCallDesc
+            Command.Parameters.Add("@SourceOfCallValue", OdbcType.VarChar, 50, ParameterDirection.Input).Value = SourceOfCallDesc
             Command.Parameters.Add("@Reference", OdbcType.VarChar, 50, ParameterDirection.Input).Value = Reference
             Command.Parameters.Add("@MaxResponDate", OdbcType.VarChar, 50, ParameterDirection.Input).Value = MaxRespon
             Command.Parameters.Add("@Note", OdbcType.VarChar, 250, ParameterDirection.Input).Value = Note
@@ -91,12 +91,13 @@ Public Class ClassEnquiry
                 Command.ExecuteNonQuery()
             Next
 
-            'Command.Parameters.Clear()
+            Command.Parameters.Clear()
             dbTrans.Commit()
             MsgBox("Data hase been save", MsgBoxStyle.Information, "Information")
         Catch ex As Exception
             dbTrans.Rollback()
-            MsgBox("Pesan Error : " + vbCrLf + ex.Message + vbCrLf + "Data gagal disimpan ! ", MsgBoxStyle.Critical, "Error")
+            'MsgBox("Pesan Error : " + vbCrLf + ex.Message + vbCrLf + "Data gagal disimpan ! ", MsgBoxStyle.Critical, "Error")
+            MsgBox("Data gagal disimpan" + vbCrLf + "Periksa inputan anda", vbInformation, "Information")
         End Try
         ModKoneksi.TutupKoneksi()
         Return KodeMaster
@@ -131,7 +132,8 @@ Public Class ClassEnquiry
             MsgBox("Data hase been save", MsgBoxStyle.Information, "Information")
         Catch ex As Exception
             dbTrans.Rollback()
-            MsgBox("Pesan Error : " + vbCrLf + ex.Message + vbCrLf + "Data gagal disimpan ! ", MsgBoxStyle.Critical, "Error")
+            'MsgBox("Pesan Error : " + vbCrLf + ex.Message + vbCrLf + "Data gagal disimpan ! ", MsgBoxStyle.Critical, "Error")
+            MsgBox("Data gagal disimpan" + vbCrLf + "Periksa inputan anda, Terdapat Format data yang keliru", vbInformation, "Information")
         End Try
         ModKoneksi.TutupKoneksi()
     End Sub
@@ -148,7 +150,8 @@ Public Class ClassEnquiry
             MsgBox("Data deleted", MsgBoxStyle.Information, "Information")
         Catch ex As Exception
             dbTrans.Rollback()
-            MsgBox("Error deleting data " + vbCrLf + "Error message: " + vbCrLf + ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox("Tidak dapat di proses" + vbCrLf + "Periksa inputan anda", vbInformation, "Information")
+            'MsgBox("Error deleting data " + vbCrLf + "Error message: " + vbCrLf + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
         ModKoneksi.TutupKoneksi()
     End Sub

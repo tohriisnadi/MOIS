@@ -37,7 +37,7 @@
                 GridView1.Columns(i).OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains
                 GridView1.Columns(i).BestFit()
             Next
-            GridView1.Columns(0).Visible = False
+            'GridView1.Columns(0).Visible = False
         Catch ex As Exception
             ' MsgBox(ex.Message)
         End Try
@@ -81,6 +81,7 @@
                 FormEnquiry.btnEdit.Visible = False
                 FormEnquiry.btnPrint.Enabled = False
                 FormEnquiry.enable()
+                FormEnquiry.txtDocNumber.Text = "Otomatis"
                 FormEnquiry.ShowDialog()
             Else
                 MsgBox("No Authorize", MsgBoxStyle.Critical, "Akses Failed")
@@ -91,11 +92,11 @@
                 FormEnquiry.idEnquiry = GridView1.GetFocusedDataRow.Item(0).ToString
                 FormEnquiry.LoadDetil()
                 FormEnquiry.txtDocNumber.Text = GridView1.GetFocusedDataRow.Item(0).ToString
-                FormEnquiry.txtDate.EditValue = CDate(GridView1.GetFocusedDataRow.Item(1)).ToString
+                FormEnquiry.txtDate.EditValue = (GridView1.GetFocusedDataRow.Item(1)).ToString
                 FormEnquiry.cbSourceOfCall.Text = GridView1.GetFocusedDataRow.Item(2).ToString
                 FormEnquiry.txtSourceOFCallDesc.Text = GridView1.GetFocusedDataRow.Item(3).ToString
                 FormEnquiry.txtRef.Text = GridView1.GetFocusedDataRow.Item(4).ToString
-                FormEnquiry.txtMaxResponDate.EditValue = CDate(GridView1.GetFocusedDataRow.Item(5)).ToString
+                FormEnquiry.txtMaxResponDate.EditValue = (GridView1.GetFocusedDataRow.Item(5)).ToString
                 FormEnquiry.txtNote.Text = GridView1.GetFocusedDataRow.Item(6).ToString
                 FormEnquiry.btnEdit.Visible = True
                 FormEnquiry.btnEdit.Enabled = True

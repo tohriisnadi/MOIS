@@ -86,10 +86,10 @@ Public Class FormAddPR
             oDataTabelUnbound.Columns.Add(New DataColumn("Item Description", GetType(String))) '3
             oDataTabelUnbound.Columns.Add(New DataColumn("UOM", GetType(String))) '4
             oDataTabelUnbound.Columns.Add(New DataColumn("Qty", GetType(Integer))) '5
-            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Price", GetType(Integer))) '6
+            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Price", GetType(Long))) '6
             oDataTabelUnbound.Columns.Add(New DataColumn("Discount Type", GetType(String))) '7
             oDataTabelUnbound.Columns.Add(New DataColumn("Req. Discount", GetType(Integer))) '8
-            oDataTabelUnbound.Columns.Add(New DataColumn("Total", GetType(Integer))) '9
+            oDataTabelUnbound.Columns.Add(New DataColumn("Total", GetType(Long))) '9
             oDataTabelUnbound.Columns.Add(New DataColumn("IEO", GetType(String))) '10
             oDataTabelUnbound.Columns.Add(New DataColumn("Remarks", GetType(String))) '11
             oDataTabelUnbound.Columns.Add(New DataColumn("MaxQty", GetType(Integer))) '12
@@ -136,7 +136,6 @@ Public Class FormAddPR
         RepositoryItemComboBox2.Items.Add("I")
         RepositoryItemComboBox2.Items.Add("E")
         RepositoryItemComboBox2.Items.Add("O")
-
     End Sub
     Private Sub FormAddPR_Load(sender As Object, e As EventArgs) Handles Me.Load
 
@@ -148,6 +147,9 @@ Public Class FormAddPR
         btnConvert.Enabled = True
         formatangka()
 
+        RepositoryItemComboBox2.TextEditStyle = TextEditStyles.DisableTextEditor
+        RepoCbDisType.TextEditStyle = TextEditStyles.DisableTextEditor
+        RepositoryItemSearchLookUpEdit1.TextEditStyle = TextEditStyles.DisableTextEditor
     End Sub
 
     Private Sub GridControl1_Load(sender As Object, e As EventArgs) Handles GridControl1.Load
@@ -159,12 +161,15 @@ Public Class FormAddPR
         GridView1.Columns("Item Code").ColumnEdit = RepositoryItemSearchLookUpEdit1
         GridView1.Columns("Discount Type").ColumnEdit = RepoCbDisType
     End Sub
-
+    Dim TotalPPN As Long = 0
+    Dim PPNEx As Long = 0
     Sub hitung()
         Dim TotalPrice As Long = 0
         Dim discount As Long = 0
         Dim NetPrice As Long = 0
-        Dim dis, price, qty As Long
+        Dim ppn As Long = 0
+        Dim dis As Double
+        Dim price, qty As Long
         Try
             For i As Integer = 0 To oDataTabelUnbound.Rows.Count - 1
                 'dis = oDataTabelUnbound.Rows(i).Item("Req. Discount")
@@ -173,11 +178,21 @@ Public Class FormAddPR
                 TotalPrice = TotalPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Qty")) * CLng(oDataTabelUnbound.Rows(i).Item("Req. Price")))
                 discount = discount + (((dis / 100) * price) * qty)
                 'NetPrice = TotalPrice - discount
+                If oDataTabelUnbound.Rows(i).Item("IEO").ToString = "I" Then
+                    ppn = ppn + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * 0.11)
+                ElseIf oDataTabelUnbound.Rows(i).Item("IEO").ToString = "E" Then
+                    ppn = ppn + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * 0.1)
+                    PPNEx = PPNEx + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * 0.1)
+                Else
+                    ppn = ppn + 0
+                End If
+
                 NetPrice = NetPrice + CLng(oDataTabelUnbound.Rows(i).Item("Total"))
             Next
+            TotalPPN = ppn
             txtTotal.Text = TotalPrice.ToString
             txtDiscount.Text = TotalPrice - NetPrice
-            txtNetPrice.Text = NetPrice.ToString
+            txtNetPrice.Text = (NetPrice).ToString
         Catch ex As Exception
             txtTotal.Text = "0"
             txtDiscount.Text = "0"
@@ -187,12 +202,15 @@ Public Class FormAddPR
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        hitung()
+
         If txtCurrency.Text = "" Then
             MsgBox("Currency cannot empty", MsgBoxStyle.Information, "Please fill all field")
             txtCurrency.Focus()
-            'ElseIf txtRate.Text = "" Then
-            '    MsgBox("rate cannot empty", MsgBoxStyle.Information, "Please fill all field")
-            '    txtRate.Focus()
+        ElseIf txtRate.Text = "" Or IsNumeric(txtRate.Text) = False Then
+            MsgBox("Rate format is false", MsgBoxStyle.Information, "Please fill all field")
+            txtRate.Focus()
+
         Else
             If X = "1" Then
                 dataPR.AddPR(Format(CDate(txtDate.Text), "yyyy/MM/dd"), txtReqName.Text, txtReqDept.Text, Format(txtReqDate.EditValue, "yyyy/MM/dd"), Format(txtValidUntil.EditValue, "yyyy/MM/dd"), txtCurrency.Text, txtRate.Text, txtStatus.Text,
@@ -270,6 +288,23 @@ Public Class FormAddPR
 
     End Sub
 
+    Sub hitungDiscountItem()
+        Dim price As Long
+        Dim qty As Integer
+        Dim disc As Long
+        For i = 0 To oDataTabelUnbound.Rows.Count - 1
+            price = oDataTabelUnbound.Rows(i).Item("Req. Price")
+            qty = oDataTabelUnbound.Rows(i).Item("Qty")
+            disc = oDataTabelUnbound.Rows(i).Item("Req. Discount")
+            oDataTabelUnbound.Rows(i).Item("Total") = 0
+            If oDataTabelUnbound.Rows(i).Item("Discount Type") = "Percent" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (price * qty) - (CDbl(disc / 100) * (price * qty))
+            ElseIf oDataTabelUnbound.Rows(i).Item("Discount Type") = "Value" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (qty * (price - disc))
+            End If
+        Next
+    End Sub
+
     Private Sub GridView1_ValidatingEditor(sender As Object, e As BaseContainerValidateEditorEventArgs) Handles GridView1.ValidatingEditor
         Dim View As GridView = sender
         If View.FocusedColumn.FieldName = "Item Code" Then
@@ -288,6 +323,7 @@ Public Class FormAddPR
             View.GetFocusedDataRow.Item("Discount Type") = "Percent"
             View.GetFocusedDataRow.Item("MaxQty") = 999
             View.GetFocusedDataRow.Item("Total") = 0
+            View.GetFocusedDataRow.Item("IEO") = "I"
             View.GetFocusedDataRow.Item("NO") = GridView1.RowCount
         ElseIf View.FocusedColumn.FieldName = "Qty" Then
             Dim mqty As Long = Convert.ToInt64(View.GetFocusedDataRow.Item("MaxQty"))
@@ -336,6 +372,9 @@ Public Class FormAddPR
     End Sub
 
     Private Sub GridView1_RowUpdated(sender As Object, e As RowObjectEventArgs) Handles GridView1.RowUpdated
+
+        hitungDiscountItem()
+
         hitung()
     End Sub
 
@@ -349,6 +388,8 @@ Public Class FormAddPR
         If oDataSet.Tables.Count <> 0 Then
             oDataSet.Tables.Remove("Table1")
         End If
+
+        hitung()
 
         oDataSet.Tables.Add(odata.Copy)
 
@@ -372,12 +413,14 @@ Public Class FormAddPR
         laporan.txtJumlah.DataBindings.Add("Text", Nothing, "Total", "{0:#,#.00}")
         laporan.txtCur1.Text = txtCurrency.Text
         laporan.txtCur2.Text = txtCurrency.Text
-
+        laporan.txtCur5.Text = txtCurrency.Text
 
 
         laporan.txtSubTotalF.Text = txtTotal.Text
         laporan.txtDiscountF.Text = txtDiscount.Text
-        laporan.txtGrandTotalF.Text = txtNetPrice.Text
+        laporan.txtPPN.Text = Format(CLng(TotalPPN), "###,###,##0.00")
+        laporan.txtNetPrice.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
+        laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text) + CLng(PPNEx), "###,###,##0.00")
 
         laporan.txtNoteF.Text = txtNote.Text
 
@@ -400,5 +443,9 @@ Public Class FormAddPR
         Else
             MsgBox("No Authorize", MsgBoxStyle.Critical, "Akses Failed")
         End If
+    End Sub
+
+    Private Sub RepositoryItemComboBox2_EditValueChanged(sender As Object, e As EventArgs) Handles RepositoryItemComboBox2.EditValueChanged
+        hitung()
     End Sub
 End Class

@@ -19,6 +19,8 @@
     Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
         If txtUsername.Text <> "" And e.KeyCode = Keys.Enter Then
             txtPassword.Focus()
+        ElseIf e.KeyCode = Keys.F1 Then
+            MsgBox("Aplication Version 0.1.2.1" + vbCrLf + "update 11-01-2018", MsgBoxStyle.Information, "Version Info")
         End If
     End Sub
 

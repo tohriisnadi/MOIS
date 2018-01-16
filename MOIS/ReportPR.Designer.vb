@@ -94,6 +94,10 @@ Partial Public Class ReportPR
         Me.XrTableCell9 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtCurF2 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtDiscountF = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableRow6 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.txtCur4 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.txtPPN = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableRow8 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell22 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtCurF3 = New DevExpress.XtraReports.UI.XRTableCell()
@@ -102,6 +106,10 @@ Partial Public Class ReportPR
         Me.XrTable4 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow5 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.txtTotal = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableRow7 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.txtCur5 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.txtNetPrice = New DevExpress.XtraReports.UI.XRTableCell()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -803,10 +811,10 @@ Partial Public Class ReportPR
         'XrTable3
         '
         Me.XrTable3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrTable3.LocationFloat = New DevExpress.Utils.PointFloat(533.1248!, 16.0!)
+        Me.XrTable3.LocationFloat = New DevExpress.Utils.PointFloat(533.1248!, 0!)
         Me.XrTable3.Name = "XrTable3"
-        Me.XrTable3.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow3, Me.XrTableRow4, Me.XrTableRow8})
-        Me.XrTable3.SizeF = New System.Drawing.SizeF(259.8751!, 56.8265!)
+        Me.XrTable3.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow3, Me.XrTableRow4, Me.XrTableRow7, Me.XrTableRow6, Me.XrTableRow8})
+        Me.XrTable3.SizeF = New System.Drawing.SizeF(259.8751!, 94.71083!)
         Me.XrTable3.StylePriority.UseFont = False
         Me.XrTable3.StylePriority.UseTextAlignment = False
         Me.XrTable3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
@@ -866,6 +874,34 @@ Partial Public Class ReportPR
         Me.txtDiscountF.Text = "txtDiscountF"
         Me.txtDiscountF.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         Me.txtDiscountF.Weight = 1.25669526865272R
+        '
+        'XrTableRow6
+        '
+        Me.XrTableRow6.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell10, Me.txtCur4, Me.txtPPN})
+        Me.XrTableRow6.Name = "XrTableRow6"
+        Me.XrTableRow6.Weight = 1.0R
+        '
+        'XrTableCell10
+        '
+        Me.XrTableCell10.Name = "XrTableCell10"
+        Me.XrTableCell10.Text = "PPN"
+        Me.XrTableCell10.Weight = 0.978219618238072R
+        '
+        'txtCur4
+        '
+        Me.txtCur4.Name = "txtCur4"
+        Me.txtCur4.Text = "RP."
+        Me.txtCur4.Weight = 0.281020139203395R
+        '
+        'txtPPN
+        '
+        Me.txtPPN.Name = "txtPPN"
+        Me.txtPPN.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100.0!)
+        Me.txtPPN.StylePriority.UsePadding = False
+        Me.txtPPN.StylePriority.UseTextAlignment = False
+        Me.txtPPN.Text = "txtPPN"
+        Me.txtPPN.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        Me.txtPPN.Weight = 1.25669526865272R
         '
         'XrTableRow8
         '
@@ -934,6 +970,34 @@ Partial Public Class ReportPR
         Me.txtTotal.Text = " "
         Me.txtTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         Me.txtTotal.Weight = 0.716822411080577R
+        '
+        'XrTableRow7
+        '
+        Me.XrTableRow7.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell11, Me.txtCur5, Me.txtNetPrice})
+        Me.XrTableRow7.Name = "XrTableRow7"
+        Me.XrTableRow7.Weight = 1.0R
+        '
+        'XrTableCell11
+        '
+        Me.XrTableCell11.Name = "XrTableCell11"
+        Me.XrTableCell11.Text = "Net Price"
+        Me.XrTableCell11.Weight = 0.978219618238072R
+        '
+        'txtCur5
+        '
+        Me.txtCur5.Name = "txtCur5"
+        Me.txtCur5.Text = "Rp."
+        Me.txtCur5.Weight = 0.281020139203395R
+        '
+        'txtNetPrice
+        '
+        Me.txtNetPrice.Name = "txtNetPrice"
+        Me.txtNetPrice.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100.0!)
+        Me.txtNetPrice.StylePriority.UsePadding = False
+        Me.txtNetPrice.StylePriority.UseTextAlignment = False
+        Me.txtNetPrice.Text = "txtNetPrice"
+        Me.txtNetPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        Me.txtNetPrice.Weight = 1.25669526865272R
         '
         'ReportPR
         '
@@ -1033,4 +1097,12 @@ Partial Public Class ReportPR
     Friend WithEvents XrTable4 As DevExpress.XtraReports.UI.XRTable
     Friend WithEvents XrTableRow5 As DevExpress.XtraReports.UI.XRTableRow
     Friend WithEvents txtTotal As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableRow6 As DevExpress.XtraReports.UI.XRTableRow
+    Friend WithEvents XrTableCell10 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents txtCur4 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents txtPPN As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableRow7 As DevExpress.XtraReports.UI.XRTableRow
+    Friend WithEvents XrTableCell11 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents txtCur5 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents txtNetPrice As DevExpress.XtraReports.UI.XRTableCell
 End Class

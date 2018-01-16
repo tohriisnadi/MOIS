@@ -55,6 +55,7 @@ Partial Class FormAddPO
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
         Me.PersistentRepository1 = New DevExpress.XtraEditors.Repository.PersistentRepository(Me.components)
         Me.RepocbItemCode = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
+        Me.RepocbDiscountType = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.RbI = New System.Windows.Forms.RadioButton()
         Me.RbE = New System.Windows.Forms.RadioButton()
         Me.RbO = New System.Windows.Forms.RadioButton()
@@ -67,7 +68,6 @@ Partial Class FormAddPO
         Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.btnEdit = New DevExpress.XtraEditors.SimpleButton()
         Me.cbVendor = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.RepocbDiscountType = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         CType(Me.txtNetPrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDiscount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,13 +83,13 @@ Partial Class FormAddPO
         CType(Me.txtNote.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPPN.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepocbItemCode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCurRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDiscountHead.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSearchLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cbVendor.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnPrint
@@ -274,6 +274,7 @@ Partial Class FormAddPO
         Me.txtStatus.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.txtStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtStatus.Properties.Items.AddRange(New Object() {"Open", "Complete"})
+        Me.txtStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         Me.txtStatus.Size = New System.Drawing.Size(181, 26)
         Me.txtStatus.TabIndex = 9
         '
@@ -397,6 +398,11 @@ Partial Class FormAddPO
         '
         Me.RepocbItemCode.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepocbItemCode.Name = "RepocbItemCode"
+        '
+        'RepocbDiscountType
+        '
+        Me.RepocbDiscountType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepocbDiscountType.Name = "RepocbDiscountType"
         '
         'RbI
         '
@@ -524,11 +530,6 @@ Partial Class FormAddPO
         Me.cbVendor.Size = New System.Drawing.Size(247, 26)
         Me.cbVendor.TabIndex = 122
         '
-        'RepocbDiscountType
-        '
-        Me.RepocbDiscountType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RepocbDiscountType.Name = "RepocbDiscountType"
-        '
         'FormAddPO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -589,13 +590,13 @@ Partial Class FormAddPO
         CType(Me.txtNote.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPPN.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepocbItemCode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCurRate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDiscountHead.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSearchLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cbVendor.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

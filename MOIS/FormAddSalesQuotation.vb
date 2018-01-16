@@ -160,6 +160,7 @@ Public Class FormAddSalesQuotation
         If X = "2" Then
             cbCustomer.SelectedIndex = Array.IndexOf(CustomerCode, KodeCustomer)
         End If
+        hitung()
         formatangka()
     End Sub
 
@@ -184,6 +185,9 @@ Public Class FormAddSalesQuotation
         RepocbPaymentType.Items.Clear()
         RepocbPaymentType.Items.Add("Value")
         RepocbPaymentType.Items.Add("Percent")
+
+        RepocbPaymentType.TextEditStyle = TextEditStyles.DisableTextEditor
+        RepositoryItemSearchLookUpEdit1.TextEditStyle = TextEditStyles.DisableTextEditor
     End Sub
 
     Dim dataCustomer As New ClassCustomer
@@ -211,18 +215,30 @@ Public Class FormAddSalesQuotation
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
-            If X = "1" Then
-                dataSQ.AddSalesQuotation(CustomerCode(cbCustomer.SelectedIndex), txtContactPerson.Text, txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), Format(CDate(txtValidUntil.Text), "yyyy/MM/dd"),
-                                         txtSalesPerson.Text, txtDiscountHeader.Text, txtPPNStatus.Text, txtNote.Text, txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text,
-                                         txtNetPrice.Text, txtProject.Text, oDataTabelUnbound)
-                clean()
-            ElseIf X = "2" Then
-                dataSQ.EditSalesQuotation(SQid, CustomerCode(cbCustomer.SelectedIndex), txtContactPerson.Text, txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), Format(CDate(txtValidUntil.Text), "yyyy/MM/dd"),
-                                         txtSalesPerson.Text, txtDiscountHeader.Text, txtPPNStatus.Text, txtNote.Text, txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text,
-                                         txtNetPrice.Text, txtProject.Text, oDataTabelUnbound)
-                clean()
-                Close()
+            If txtCurrency.Text = "" Then
+                MsgBox("Currency cannot empty", MsgBoxStyle.Information, "Please fill all field")
+                txtCurrency.Focus()
+            ElseIf txtRate.Text = "" Or IsNumeric(txtRate.Text) = False
+                MsgBox("Rate Format is false", MsgBoxStyle.Information, "Please fill all field")
+                txtCurrency.Focus()
+            ElseIf txtDiscountHeader.Text = "" Or IsNumeric(txtDiscountHeader.Text) = False
+                MsgBox("Discount Format is false", MsgBoxStyle.Information, "Please fill all field")
+                txtCurrency.Focus()
+            Else
+                If X = "1" Then
+                    dataSQ.AddSalesQuotation(CustomerCode(cbCustomer.SelectedIndex), txtContactPerson.Text, txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), Format(CDate(txtValidUntil.Text), "yyyy/MM/dd"),
+                                             txtSalesPerson.Text, txtDiscountHeader.Text, txtPPNStatus.Text, txtNote.Text, txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text,
+                                             txtNetPrice.Text, txtProject.Text, oDataTabelUnbound)
+                    clean()
+                ElseIf X = "2" Then
+                    dataSQ.EditSalesQuotation(SQid, CustomerCode(cbCustomer.SelectedIndex), txtContactPerson.Text, txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), Format(CDate(txtValidUntil.Text), "yyyy/MM/dd"),
+                                             txtSalesPerson.Text, txtDiscountHeader.Text, txtPPNStatus.Text, txtNote.Text, txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text,
+                                             txtNetPrice.Text, txtProject.Text, oDataTabelUnbound)
+                    clean()
+                    Close()
+                End If
             End If
+
         Catch ex As Exception
 
         End Try
@@ -232,19 +248,21 @@ Public Class FormAddSalesQuotation
     Sub hitung()
         Dim TotalPrice As Long = 0
         Dim NetPrice As Long = 0
+        Dim Discount As Long = 0
         Try
             For i As Integer = 0 To oDataTabelUnbound.Rows.Count - 1
                 NetPrice = NetPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Total")))
                 TotalPrice = TotalPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Qty") * CLng(oDataTabelUnbound.Rows(i).Item("Unit Price"))))
+                Discount = (TotalPrice - NetPrice) + (NetPrice * (CLng(txtDiscountHeader.Text) / 100))
             Next
-            txtTotal.Text = NetPrice.ToString
-            txtDiscount.Text = CLng(txtTotal.Text) * (CLng(txtDiscountHeader.Text) / 100)
+            txtTotal.Text = TotalPrice.ToString
+            txtDiscount.Text = Discount.ToString
             If txtPPNStatus.SelectedIndex = 0 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 11
-                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
+                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text) - CLng(txtTotalPPN.Text)
             ElseIf txtPPNStatus.SelectedIndex = 1 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 10
-                txtNetPrice.Text = CLng(txtTotal.Text) - (CLng(txtDiscount.Text) + CLng(txtTotalPPN.Text))
+                txtNetPrice.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text))
             ElseIf txtPPNStatus.SelectedIndex = 2 Then
                 txtTotalPPN.Text = "0"
                 txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
@@ -264,6 +282,22 @@ Public Class FormAddSalesQuotation
         formatangka()
     End Sub
 
+    Sub hitungDiscountItem()
+        Dim price As Long
+        Dim qty As Integer
+        Dim disc As Long
+        For i = 0 To oDataTabelUnbound.Rows.Count - 1
+            price = oDataTabelUnbound.Rows(i).Item("Unit Price")
+            qty = oDataTabelUnbound.Rows(i).Item("Qty")
+            disc = oDataTabelUnbound.Rows(i).Item("Discount")
+            oDataTabelUnbound.Rows(i).Item("Total") = 0
+            If oDataTabelUnbound.Rows(i).Item("Discount Type") = "Percent" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (price * qty) - (CDbl(disc / 100) * (price * qty))
+            ElseIf oDataTabelUnbound.Rows(i).Item("Discount Type") = "Value" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (qty * (price - disc))
+            End If
+        Next
+    End Sub
 
     Dim description As String = ""
     Dim Uom As String = ""
@@ -326,6 +360,7 @@ Public Class FormAddSalesQuotation
     End Sub
 
     Private Sub GridView1_RowUpdated(sender As Object, e As RowObjectEventArgs) Handles GridView1.RowUpdated
+        hitungDiscountItem()
         hitung()
     End Sub
 
@@ -386,11 +421,11 @@ Public Class FormAddSalesQuotation
         'laporan.txtCur1.Text = txtCurrency.Text
         'laporan.txtCur2.Text = txtCurrency.Text
 
-        laporan.FlbTotal.Text = txtTotal.Text
+        laporan.FlbTotal.Text = Format(CLng(txtTotal.Text), "###,###,##0.00")
         laporan.FDiscount.Text = txtDiscount.Text
-        laporan.FNetFrice.Text = txtNetPrice.Text
+        laporan.FNetFrice.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00") '- CLng(txtDiscount.Text), "###,###,##0.00")
         laporan.FlbFat.Text = txtTotalPPN.Text
-        laporan.FGrandTotal.Text = Format(CLng(txtNetPrice.Text) + CLng(txtTotalPPN.Text), "###,###,##0.00")
+        laporan.FGrandTotal.Text = Format(CLng(laporan.FNetFrice.Text) + CLng(txtTotalPPN.Text), "###,###,##0.00")
 
         'laporan.txtNoteF.Text = txtNote.Text
 
@@ -415,5 +450,9 @@ Public Class FormAddSalesQuotation
         If e.KeyCode = Keys.Enter Then
             hitung()
         End If
+    End Sub
+
+    Private Sub txtPPNStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtPPNStatus.SelectedIndexChanged
+        hitung()
     End Sub
 End Class

@@ -201,19 +201,21 @@ Public Class FormAddDelivery
     Sub hitung()
         Dim TotalPrice As Long = 0
         Dim NetPrice As Long = 0
+        Dim Discount As Long = 0
         Try
             For i As Integer = 0 To oDataTabelUnbound.Rows.Count - 1
                 NetPrice = NetPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Total")))
                 TotalPrice = TotalPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Qty") * CLng(oDataTabelUnbound.Rows(i).Item("Unit Price"))))
+                Discount = (TotalPrice - NetPrice) + (NetPrice * (CLng(txtDiscountHeader.Text) / 100))
             Next
-            txtTotal.Text = NetPrice.ToString
-            txtDiscount.Text = CLng(txtTotal.Text) * (CLng(txtDiscountHeader.Text) / 100)
+            txtTotal.Text = TotalPrice.ToString
+            txtDiscount.Text = Discount.ToString
             If txtPPNStatus.SelectedIndex = 0 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 11
                 txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
             ElseIf txtPPNStatus.SelectedIndex = 1 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 10
-                txtNetPrice.Text = CLng(txtTotal.Text) - (CLng(txtDiscount.Text) + CLng(txtTotalPPN.Text))
+                txtNetPrice.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) + CLng(txtTotalPPN.Text)
             ElseIf txtPPNStatus.SelectedIndex = 2 Then
                 txtTotalPPN.Text = "0"
                 txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
@@ -347,15 +349,18 @@ Public Class FormAddDelivery
             If cbCust.Text = "" Then
                 MsgBox("Customer cannot empty", MsgBoxStyle.Information, "Please fill all required field")
                 cbCust.Focus()
-            ElseIf txtCurrency.Text = ""
+            ElseIf txtCurrency.Text = "" Then
                 MsgBox("Currency cannot empty", MsgBoxStyle.Information, "Please fill all required field")
                 txtCurrency.Focus()
-            ElseIf txtRate.Text = ""
+            ElseIf txtRate.Text = "" Or IsNumeric(txtRate.Text) = False Then
                 MsgBox("Rate cannot empty", MsgBoxStyle.Information, "Please fill all required field")
                 txtRate.Focus()
-            ElseIf txtDeliveryDate.Text = ""
+            ElseIf txtDeliveryDate.Text = "" Then
                 MsgBox("Delivery Date cannot empty", MsgBoxStyle.Information, "Please fill all required field")
                 txtDeliveryDate.Focus()
+            ElseIf txtDiscountHeader.Text = "" Or IsNumeric(txtDiscountHeader.Text) = False Then
+                MsgBox("Discount format is false", MsgBoxStyle.Information, "Please fill all required field")
+                txtDiscountHeader.Focus()
             Else
                 If X = "1" Then
                     DataDO.AddDeliveryOrder(CustCode(cbCust.SelectedIndex), txtContactPerson.Text, txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), Format(CDate(txtDeliveryDate.Text), "yyyy/MM/dd"),

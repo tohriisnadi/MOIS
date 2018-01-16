@@ -72,6 +72,7 @@ Partial Class FormAddSalesQuotation
         Me.cbCustomer = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
         Me.txtProject = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl17 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.txtRef.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtValidUntil.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtValidUntil.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -573,11 +574,21 @@ Partial Class FormAddSalesQuotation
         Me.txtProject.Size = New System.Drawing.Size(189, 26)
         Me.txtProject.TabIndex = 103
         '
+        'LabelControl17
+        '
+        Me.LabelControl17.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl17.Location = New System.Drawing.Point(573, 94)
+        Me.LabelControl17.Name = "LabelControl17"
+        Me.LabelControl17.Size = New System.Drawing.Size(11, 17)
+        Me.LabelControl17.TabIndex = 105
+        Me.LabelControl17.Text = "%"
+        '
         'FormAddSalesQuotation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1016, 512)
+        Me.Controls.Add(Me.LabelControl17)
         Me.Controls.Add(Me.LabelControl10)
         Me.Controls.Add(Me.txtProject)
         Me.Controls.Add(Me.cbCustomer)
@@ -702,4 +713,5 @@ Partial Class FormAddSalesQuotation
     Friend WithEvents RepocbPaymentType As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
     Friend WithEvents LabelControl10 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtProject As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl17 As DevExpress.XtraEditors.LabelControl
 End Class

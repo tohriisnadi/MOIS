@@ -166,6 +166,9 @@ Public Class FormAddVendorInvoice
 
         GridView1.Columns(2).ColumnEdit = RepoItemCode
         GridView1.Columns("Discount Type").ColumnEdit = RepocbPaymentType
+
+        RepocbPaymentType.TextEditStyle = TextEditStyles.DisableTextEditor
+        RepositoryItemSearchLookUpEdit1.TextEditStyle = TextEditStyles.DisableTextEditor
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -192,19 +195,21 @@ Public Class FormAddVendorInvoice
     Sub hitung()
         Dim TotalPrice As Long = 0
         Dim NetPrice As Long = 0
+        Dim Discount As Long = 0
         Try
             For i As Integer = 0 To oDataTabelUnbound.Rows.Count - 1
                 NetPrice = NetPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Total")))
                 TotalPrice = TotalPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Qty") * CLng(oDataTabelUnbound.Rows(i).Item("Unit Price"))))
+                Discount = (TotalPrice - NetPrice) + (NetPrice * (CLng(txtDiscountHeader.Text) / 100))
             Next
-            txtTotal.Text = NetPrice.ToString
-            txtDiscount.Text = CLng(txtTotal.Text) * (CLng(txtDiscountHeader.Text) / 100)
+            txtTotal.Text = TotalPrice.ToString
+            txtDiscount.Text = Discount.ToString
             If txtPPNStatus.SelectedIndex = 0 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 11
-                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
+                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text) - CLng(txtTotalPPN.Text)
             ElseIf txtPPNStatus.SelectedIndex = 1 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 10
-                txtNetPrice.Text = CLng(txtTotal.Text) - (CLng(txtDiscount.Text) + CLng(txtTotalPPN.Text))
+                txtNetPrice.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) '+ CLng(txtTotalPPN.Text)
             ElseIf txtPPNStatus.SelectedIndex = 2 Then
                 txtTotalPPN.Text = "0"
                 txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
@@ -219,6 +224,23 @@ Public Class FormAddVendorInvoice
             txtTotalPPN.Text = "0"
         End Try
     End Sub
+    Sub hitungDiscountItem()
+        Dim price As Long
+        Dim qty As Integer
+        Dim disc As Long
+        For i = 0 To oDataTabelUnbound.Rows.Count - 1
+            price = oDataTabelUnbound.Rows(i).Item("Unit Price")
+            qty = oDataTabelUnbound.Rows(i).Item("Qty")
+            disc = oDataTabelUnbound.Rows(i).Item("Discount")
+            oDataTabelUnbound.Rows(i).Item("Total") = 0
+            If oDataTabelUnbound.Rows(i).Item("Discount Type") = "Percent" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (price * qty) - (CDbl(disc / 100) * (price * qty))
+            ElseIf oDataTabelUnbound.Rows(i).Item("Discount Type") = "Value" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (qty * (price - disc))
+            End If
+        Next
+    End Sub
+
 
     Private Sub GridView1_ValidatingEditor(sender As Object, e As BaseContainerValidateEditorEventArgs) Handles GridView1.ValidatingEditor
         Dim View As GridView = sender
@@ -259,6 +281,7 @@ Public Class FormAddVendorInvoice
     End Sub
 
     Private Sub GridView1_RowUpdated(sender As Object, e As RowObjectEventArgs) Handles GridView1.RowUpdated
+        hitungDiscountItem()
         hitung()
     End Sub
 
@@ -274,8 +297,11 @@ Public Class FormAddVendorInvoice
         If txtCurrency.Text = "" Then
             MsgBox("Currency cannot empty", MsgBoxStyle.Information, "Please fill all field")
             txtCurrency.Focus()
-        ElseIf CInt(txtRate.Text) = 0 Or txtRate.Text = "" Then
+        ElseIf IsNumeric(txtRate.Text) = False Or txtRate.Text = "" Then
             MsgBox("Currency must more 0", MsgBoxStyle.Information, "Please fill all field")
+            txtCurrency.Focus()
+        ElseIf txtDiscountHeader.Text = "" Or IsNumeric(txtDiscountHeader.Text) = False
+            MsgBox("Discount format is false", MsgBoxStyle.Information, "Please fill all field")
             txtCurrency.Focus()
         Else
             Try
@@ -349,7 +375,7 @@ Public Class FormAddVendorInvoice
         laporan.txtDiscountF.Text = Format(CLng(txtDiscount.Text), "###,###,##0.00")
         laporan.txtFTotal.Text = Format(CLng(txtTotal.Text) - CLng(txtDiscount.Text), "###,###,##0.00")
         laporan.txtFPPN.Text = Format(CLng(txtTotalPPN.Text), "###,###,##0.00")
-        laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
+        laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text) + CLng(txtTotalPPN.Text), "###,###,##0.00")
         laporan.txtCurF1.Text = txtCurrency.Text
 
         'laporan.FlbBankName.Text = dataRekening("BankName")
@@ -363,5 +389,9 @@ Public Class FormAddVendorInvoice
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         cetakLaporan(oDataTabelUnbound)
+    End Sub
+
+    Private Sub txtPPNStatus_SelectedValueChanged(sender As Object, e As EventArgs) Handles txtPPNStatus.SelectedValueChanged
+        hitung()
     End Sub
 End Class

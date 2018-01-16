@@ -444,6 +444,7 @@ Partial Class FormAddPR
         '
         Me.RepositoryItemComboBox2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemComboBox2.Name = "RepositoryItemComboBox2"
+        Me.RepositoryItemComboBox2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         '
         'RepoItemCode
         '
@@ -491,7 +492,6 @@ Partial Class FormAddPR
         Me.txtRate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.txtRate.Size = New System.Drawing.Size(100, 26)
         Me.txtRate.TabIndex = 6
-        Me.txtRate.Visible = False
         '
         'btnEdit
         '

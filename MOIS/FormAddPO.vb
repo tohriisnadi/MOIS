@@ -58,7 +58,7 @@ Public Class FormAddPO
         txtTotal.Text = Format(CLng(txtTotal.Text), "###,###,##0.00")
         txtDiscount.Text = Format(CLng(txtDiscount.Text), "###,###,##0.00")
         txtNetPrice.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
-        txtPPN.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
+        txtPPN.Text = Format(CLng(txtPPN.Text), "###,###,##0.00")
         txtTotal.Enabled = False
         txtDiscount.Enabled = False
         txtNetPrice.Enabled = False
@@ -96,13 +96,22 @@ Public Class FormAddPO
         txtDocNumber.Enabled = False
         txtDate.EditValue = Date.Now
         txtDate.Enabled = False
-        RbO.Checked = True
         'btnConvert.Enabled = True
+        txtStatus.SelectedIndex = 0
         loadvendor()
         If X = "2" Then
             cbVendor.SelectedIndex = Array.IndexOf(vendorcode, Kodevendor)
         End If
         formatangka()
+
+        If X = "1" Then
+            RbO.Checked = True
+        End If
+
+        RepositoryItemComboBox1.TextEditStyle = TextEditStyles.DisableTextEditor
+        RepocbDiscountType.TextEditStyle = TextEditStyles.DisableTextEditor
+        RepositoryItemSearchLookUpEdit1.TextEditStyle = TextEditStyles.DisableTextEditor
+
     End Sub
 
     Sub hitung()
@@ -111,24 +120,25 @@ Public Class FormAddPO
         Dim NetPrice As Long = 0
         Try
             For i As Integer = 0 To oDataTabelUnbound.Rows.Count - 1
-                TotalPrice = TotalPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Total")))
+                TotalPrice = TotalPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Qty") * CLng(oDataTabelUnbound.Rows(i).Item("Req. Price"))))
                 'discount = discount + oDataTabelUnbound.Rows(i).Item("Req. Discount")
                 NetPrice = NetPrice + oDataTabelUnbound.Rows(i).Item("Total")
-
+                discount = (TotalPrice - NetPrice) + (NetPrice * (CLng(txtDiscountHead.Text) / 100))
             Next
-            txtTotal.Text = NetPrice.ToString
-            txtDiscount.Text = CLng(txtTotal.Text) * (CLng(txtDiscountHead.Text) / 100)
+            txtTotal.Text = TotalPrice.ToString
+            txtDiscount.Text = discount.ToString
             If RbI.Checked = True Then
                 txtPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 11
-                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
-            ElseIf RbE.Checked = True
+                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text) - CLng(txtPPN.Text)
+
+            ElseIf RbE.Checked = True Then
                 txtPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 10
-                txtNetPrice.Text = CLng(txtTotal.Text) - (CLng(txtDiscount.Text) + CLng(txtPPN.Text))
-            ElseIf RbO.Checked = True
+                txtNetPrice.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) '+ CLng(txtPPN.Text)
+            ElseIf RbO.Checked = True Then
                 txtPPN.Text = "0"
                 txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
             Else
-                MsgBox("Error calculate data, please select PPN Status", MsgBoxStyle.Critical, "Error")
+                'MsgBox("Error calculate data, please select PPN Status", MsgBoxStyle.Critical, "Error")
             End If
         Catch ex As Exception
             txtTotal.Text = "0"
@@ -150,10 +160,10 @@ Public Class FormAddPO
             oDataTabelUnbound.Columns.Add(New DataColumn("Item Description", GetType(String))) '3
             oDataTabelUnbound.Columns.Add(New DataColumn("UOM", GetType(String))) '4
             oDataTabelUnbound.Columns.Add(New DataColumn("Qty", GetType(Integer))) '5
-            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Price", GetType(Integer))) '6
+            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Price", GetType(long))) '6
             oDataTabelUnbound.Columns.Add(New DataColumn("Discount Type", GetType(String))) '7
             oDataTabelUnbound.Columns.Add(New DataColumn("Req. Discount", GetType(Integer))) '8
-            oDataTabelUnbound.Columns.Add(New DataColumn("Total", GetType(Integer))) '9
+            oDataTabelUnbound.Columns.Add(New DataColumn("Total", GetType(long))) '9
             oDataTabelUnbound.Columns.Add(New DataColumn("EstDelvTime", GetType(Integer))) '10
             oDataTabelUnbound.Columns.Add(New DataColumn("Remarks", GetType(String))) '11
             oDataTabelUnbound.Columns.Add(New DataColumn("maxQty", GetType(String))) '12
@@ -229,6 +239,9 @@ Public Class FormAddPO
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+
+        ' hitung()
+
         Dim PPNStatus As String = ""
         If RbI.Checked = True Then PPNStatus = "I"
         If RbE.Checked = True Then PPNStatus = "E"
@@ -240,19 +253,22 @@ Public Class FormAddPO
         ElseIf txtCurrency.Text = ""
             MsgBox("Currency cannot empty", MsgBoxStyle.Information, "Please fill all field")
             txtCurrency.Focus()
-        ElseIf txtCurRate.Text = ""
+        ElseIf txtCurRate.Text = "" Or isnumeric(txtCurRate.Text) = False Then
             MsgBox("Rate cannot empty", MsgBoxStyle.Information, "Please fill all field")
             txtCurrency.Focus()
         ElseIf txtStatus.Text = ""
             MsgBox("Status cannot empty", MsgBoxStyle.Information, "Please fill all field")
             txtStatus.Focus()
+        ElseIf IsNumeric(txtDiscountHead.Text) = False Or txtDiscountHead.Text = "" Then
+            MsgBox("Discount format is false", MsgBoxStyle.Information, "Please fill all field")
+            txtDiscount.Focus()
         Else
             If X = "1" Then
                 DataPO.AddPO(Format(txtDate.EditValue, "yyyy/MM/dd"), vendorcode(cbVendor.SelectedIndex), PPNStatus, txtCurrency.Text.ToUpper, txtCurRate.Text, txtDiscountHead.Text, txtStatus.Text, txtNote.Text,
                              txtRef.Text, txtTotal.Text, txtDiscount.Text, txtPPN.Text, txtNetPrice.Text, oDataTabelUnbound, PRNumber)
                 clean()
-            ElseIf X = "2"
-                DataPO.EditPO(DocumentNumber, Format(CDate(txtDate.EditValue), "yyyy/MM/dd"), vendorcode(cbVendor.SelectedIndex), PPNStatus, txtCurrency.Text.ToUpper, txtCurRate.Text, txtDiscountHead.Text, txtStatus.Text, txtNote.Text,
+            ElseIf X = "2" Then
+                DataPO.EditPO(DocumentNumber, Format(CDate(txtDate.Text), "yyyy/MM/dd"), vendorcode(cbVendor.SelectedIndex), PPNStatus, txtCurrency.Text.ToUpper, txtCurRate.Text, txtDiscountHead.Text, txtStatus.Text, txtNote.Text,
                               txtRef.Text, txtTotal.Text, txtDiscount.Text, txtPPN.Text, txtNetPrice.Text, oDataTabelUnbound, PRNumber)
                 clean()
                 Close()
@@ -278,6 +294,23 @@ Public Class FormAddPO
             FormListPR.ShowDialog()
         End Try
         hitung()
+    End Sub
+
+    Sub hitungDiscountItem()
+        Dim price As Long
+        Dim qty As Integer
+        Dim disc As Long
+        For i = 0 To oDataTabelUnbound.Rows.Count - 1
+            price = oDataTabelUnbound.Rows(i).Item("Req. Price")
+            qty = oDataTabelUnbound.Rows(i).Item("Qty")
+            disc = oDataTabelUnbound.Rows(i).Item("Req. Discount")
+            oDataTabelUnbound.Rows(i).Item("Total") = 0
+            If oDataTabelUnbound.Rows(i).Item("Discount Type") = "Percent" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (price * qty) - (CDbl(disc / 100) * (price * qty))
+            ElseIf oDataTabelUnbound.Rows(i).Item("Discount Type") = "Value" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (qty * (price - disc))
+            End If
+        Next
     End Sub
 
     Dim description As String = ""
@@ -379,6 +412,7 @@ Public Class FormAddPO
     End Sub
 
     Private Sub GridView1_RowUpdated(sender As Object, e As RowObjectEventArgs) Handles GridView1.RowUpdated
+        hitungDiscountItem()
         hitung()
     End Sub
 
@@ -424,13 +458,13 @@ Public Class FormAddPO
         laporan.lbCurrency.Text = txtCurrency.Text
         laporan.lbKurs.Text = txtCurRate.Text
 
-        Dim dpp As Long = CLng(txtTotal.Text) - CLng(txtDiscount.Text) - CLng(txtPPN.Text)
+        'Dim dpp As Long = CLng(txtNetPrice.Text) - CLng(txtDiscount.Text)
         laporan.txtSubTotalF.Text = Format(CLng(txtTotal.Text), "###,###,##0.00")
         laporan.txtDiscountF.Text = Format(CLng(txtDiscount.Text), "###,###,##0.00")
         laporan.txtVATIncF.Text = Format(CLng(txtPPN.Text), "###,###,##0.00")
-        laporan.txtDPPF.Text = Format(CLng(dpp), "###,###,##0.00")
+        laporan.txtDPPF.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
         laporan.txtVAT10F.Text = Format(CLng(txtPPN.Text), "###,###,##0.00")
-        laporan.txtGrandTotalF.Text = Format(CLng(dpp + CLng(txtPPN.Text)), "###,###,##0.00")
+        laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text + CLng(txtPPN.Text)), "###,###,##0.00")
 
         If X = "1" Then
             laporan.lbPODate.Text = txtDate.Text
@@ -442,7 +476,7 @@ Public Class FormAddPO
         If RbI.Checked = True Then
             laporan.lbVATStatus.Text = "Include"
         ElseIf RbE.Checked = True
-            laporan.lbVATStatus.Text = "EXclude"
+            laporan.lbVATStatus.Text = "Exclude"
         Else
             laporan.lbVATStatus.Text = "N/A"
         End If
@@ -497,5 +531,17 @@ Public Class FormAddPO
         If e.KeyCode = Keys.Enter Then
             hitung()
         End If
+    End Sub
+
+    Private Sub RbI_CheckedChanged(sender As Object, e As EventArgs) Handles RbI.CheckedChanged
+        hitung()
+    End Sub
+
+    Private Sub RbO_CheckedChanged(sender As Object, e As EventArgs) Handles RbO.CheckedChanged
+        hitung()
+    End Sub
+
+    Private Sub RbE_CheckedChanged(sender As Object, e As EventArgs) Handles RbE.CheckedChanged
+        hitung()
     End Sub
 End Class

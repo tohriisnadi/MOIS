@@ -75,7 +75,8 @@ Public Class ClassDelivery
             MsgBox("Data hase been save", MsgBoxStyle.Information, "Information")
         Catch ex As Exception
             dbTrans.Rollback()
-            MsgBox("Pesan Error : " + vbCrLf + ex.Message + vbCrLf + "Data gagal disimpan ! ", MsgBoxStyle.Critical, "Error")
+            'MsgBox("Pesan Error : " + vbCrLf + ex.Message + vbCrLf + "Data gagal disimpan ! ", MsgBoxStyle.Critical, "Error")
+            MsgBox("Tidak dapat diproses" + vbCrLf + "Periksa inputan anda", vbInformation, "Information")
         End Try
         ModKoneksi.TutupKoneksi()
         Return KodeMaster
@@ -94,7 +95,8 @@ Public Class ClassDelivery
             MsgBox("Data deleted", MsgBoxStyle.Information, "Information")
         Catch ex As Exception
             dbTrans.Rollback()
-            MsgBox("Error deleting data " + vbCrLf + "Error message: " + vbCrLf + ex.Message, MsgBoxStyle.Critical, "Error")
+            '            MsgBox("Error deleting data " + vbCrLf + "Error message: " + vbCrLf + ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox("Tidak dapat diproses" + vbCrLf + "Periksa inputan anda", vbInformation, "Information")
         End Try
         ModKoneksi.TutupKoneksi()
     End Sub

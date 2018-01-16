@@ -57,8 +57,9 @@
         ElseIf X = "2" Then
             Odata.Clear()
             Odata = dataPR.selectPRDetilByDocumentNumber(GridView1.GetFocusedDataRow.Item(0))
+            FormPriceList.setColumn()
             For i = 0 To Odata.Rows.Count - 1
-                FormPriceList.addNewRow(Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), 0, Odata.Rows(i).Item(5), Odata.Rows(i).Item(6))
+                FormPriceList.addNewRow(Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), 0, Odata.Rows(i).Item(6), Odata.Rows(i).Item(8))
                 FormPriceList.txtRefrence.Text = GridView1.GetFocusedDataRow.Item(0)
             Next
             Me.Close()

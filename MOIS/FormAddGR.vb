@@ -151,7 +151,7 @@ Public Class FormAddGR
 
             End If
         Catch ex As Exception
-
+            MsgBox("Terdapat kekeliruan dalam inputan anda " + vbCrLf + "Periksa Inputan anda")
         End Try
 
     End Sub

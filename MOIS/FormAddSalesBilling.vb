@@ -161,8 +161,6 @@ Public Class FormAddSalesBilling
         setGrid()
         loadItem()
 
-
-
         GridView1.Columns(2).ColumnEdit = RepoItemCode
     End Sub
 
@@ -190,19 +188,21 @@ Public Class FormAddSalesBilling
     Sub hitung()
         Dim TotalPrice As Long = 0
         Dim NetPrice As Long = 0
+        Dim Discount As Long = 0
         Try
             For i As Integer = 0 To oDataTabelUnbound.Rows.Count - 1
                 NetPrice = NetPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Total")))
                 TotalPrice = TotalPrice + (CLng(oDataTabelUnbound.Rows(i).Item("Qty") * CLng(oDataTabelUnbound.Rows(i).Item("Unit Price"))))
+                Discount = (TotalPrice - NetPrice) + (NetPrice * (CLng(txtDiscountHeader.Text) / 100))
             Next
-            txtTotal.Text = NetPrice.ToString
-            txtDiscount.Text = CLng(txtTotal.Text) * (CLng(txtDiscountHeader.Text) / 100)
+            txtTotal.Text = TotalPrice.ToString
+            txtDiscount.Text = Discount.ToString
             If txtPPNStatus.SelectedIndex = 0 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 11
-                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
+                txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text) - CLng(txtTotalPPN.Text)
             ElseIf txtPPNStatus.SelectedIndex = 1 Then
                 txtTotalPPN.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) / 10
-                txtNetPrice.Text = CLng(txtTotal.Text) - (CLng(txtDiscount.Text) + CLng(txtTotalPPN.Text))
+                txtNetPrice.Text = (CLng(txtTotal.Text) - CLng(txtDiscount.Text)) '+ CLng(txtTotalPPN.Text)
             ElseIf txtPPNStatus.SelectedIndex = 2 Then
                 txtTotalPPN.Text = "0"
                 txtNetPrice.Text = CLng(txtTotal.Text) - CLng(txtDiscount.Text)
@@ -301,7 +301,7 @@ Public Class FormAddSalesBilling
         laporan.txtDiscountF.Text = Format(CLng(txtDiscount.Text), "###,###,##0.00")
         laporan.txtFTotal.Text = Format(CLng(txtTotal.Text) - CLng(txtDiscount.Text), "###,###,##0.00")
         laporan.txtFPPN.Text = Format(CLng(txtTotalPPN.Text), "###,###,##0.00")
-        laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
+        laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text) + CLng(txtTotalPPN.Text), "###,###,##0.00")
         laporan.txtCurF1.Text = txtCurrency.Text
 
         laporan.FlbBankName.Text = dataRekening("BankName")
@@ -330,12 +330,22 @@ Public Class FormAddSalesBilling
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If X = "1" Then
-            DataAr.AddSaleBilling(CustCode(cbCust.SelectedIndex), txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), txtTermOfPayment.Text, txtDiscountHeader.Text,
+        If txtCurrency.Text = "" Then
+            MsgBox("Currency cannot empty", MsgBoxStyle.Information, "Please fill all field")
+            txtCurrency.Focus()
+        ElseIf txtRate.Text = "" Or IsNumeric(txtRate.Text) = False
+            MsgBox("Rate Format is false", MsgBoxStyle.Information, "Please fill all field")
+            txtCurrency.Focus()
+        ElseIf txtdiscountHeader.Text = "" Or IsNumeric(txtDiscountHeader.Text) = False
+            MsgBox("Discount Format is false", MsgBoxStyle.Information, "Please fill all field")
+            txtCurrency.Focus()
+        Else
+            If X = "1" Then
+                DataAr.AddSaleBilling(CustCode(cbCust.SelectedIndex), txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), txtTermOfPayment.Text, txtDiscountHeader.Text,
                                   txtPPNStatus.Text, txtNote.Text, Format(CDate(txtBaseLineDate.Text), "yyyy/MM/dd"), txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text, txtNetPrice.Text, oDataTabelUnbound, DODate)
-            clean()
+                clean()
+            End If
         End If
-
         FormDataSalesBilling.LoadData()
     End Sub
 

@@ -14,7 +14,9 @@ Public Class ReportPR
         txtCurF1.Text = txtCur1.Text
         txtCurF2.Text = txtCur1.Text
         txtCurF3.Text = txtCur1.Text
+        txtCur4.Text = txtCur1.Text
 
+        ' txtPPN.Text = Format(CLng(txtGrandTotalF.Text) - (CLng(txtSubTotalF.Text) - CLng(txtDiscountF.Text)), "###,###,##0.00")
 
         FlbDepartemen.Text = ModKoneksi.RoleNameOperator
         FlbRequestor.Text = ModKoneksi.FullNameOperator

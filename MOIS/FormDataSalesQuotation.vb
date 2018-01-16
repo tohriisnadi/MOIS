@@ -115,6 +115,7 @@
                 FormAddSalesQuotation.cbCustomer.Enabled = False
                 FormAddSalesQuotation.txtContactPerson.Enabled = False
                 FormAddSalesQuotation.txtRef.Enabled = False
+                FormAddSalesQuotation.txtDiscount.Enabled = False
                 FormAddSalesQuotation.txtCurrency.Enabled = False
                 FormAddSalesQuotation.txtRate.Enabled = False
                 FormAddSalesQuotation.txtDate.Enabled = False

@@ -1,0 +1,27 @@
+RepositoryItemComboBox2.TextEditStyle = TextEditStyles.DisableTextEditor
+RepoCbDisType.TextEditStyle = TextEditStyles.DisableTextEditor
+RepositoryItemSearchLookUpEdit1.TextEditStyle = TextEditStyles.DisableTextEditor
+
+hitung
+                If oDataTabelUnbound.Rows(i).Item("IEO").ToString = "I" Then
+                    ppn = ppn + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * 0.1)
+                Else
+                    ppn = ppn + 0
+                End If
+
+ Sub hitungDiscountItem()
+        Dim price As Long
+        Dim qty As Integer
+        Dim disc As Long
+        For i = 0 To oDataTabelUnbound.Rows.Count - 1
+            price = oDataTabelUnbound.Rows(i).Item("Req. Price")
+            qty = oDataTabelUnbound.Rows(i).Item("Qty")
+            disc = oDataTabelUnbound.Rows(i).Item("Req. Discount")
+            oDataTabelUnbound.Rows(i).Item("Total") = 0
+            If oDataTabelUnbound.Rows(i).Item("Discount Type") = "Percent" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (price * qty) - (CDbl(disc / 100) * (price * qty))
+            ElseIf oDataTabelUnbound.Rows(i).Item("Discount Type") = "Value" Then
+                oDataTabelUnbound.Rows(i).Item("Total") = (qty * (price - disc))
+            End If
+        Next
+    End Sub

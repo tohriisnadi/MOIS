@@ -100,7 +100,7 @@ Public Class ClassPriceList
         Try
             Command.CommandText = "{ call EditMasterPricelist (?,?,?,?,?,?,?,?,?,?,?)}"
             Command.Parameters.Clear()
-            Command.Parameters.Add("@idPL", OdbcType.VarChar, 20, ParameterDirection.Input).Value = PriceListCode
+            Command.Parameters.Add("@idPL", OdbcType.VarChar, 20, ParameterDirection.Input).Value = idPL
             Command.Parameters.Add("@PLCode", OdbcType.VarChar, 20, ParameterDirection.Input).Value = PriceListCode
             Command.Parameters.Add("@Desc", OdbcType.VarChar, 250, ParameterDirection.Input).Value = Desc
             Command.Parameters.Add("@ValidFrom", OdbcType.VarChar, 50, ParameterDirection.Input).Value = ValidFrom

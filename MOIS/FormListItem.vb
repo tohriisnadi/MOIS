@@ -36,6 +36,12 @@
         If X = "1" Then
             FormKartuStock.txtItemCode.Text = GridView1.GetFocusedDataRow.Item(0)
             FormKartuStock.txtDesc.Text = GridView1.GetFocusedDataRow.Item(1)
+        ElseIf X = "2"
+            FormPriceList.GridView1.GetFocusedDataRow.Item("Item Code") = GridView1.GetFocusedDataRow.Item("ItemCode")
+            FormPriceList.GridView1.GetFocusedDataRow.Item("Item Description") = GridView1.GetFocusedDataRow.Item("Description1")
+            FormPriceList.GridView1.GetFocusedDataRow.Item("Min Qty") = 0
+            FormPriceList.GridView1.GetFocusedDataRow.Item("Price / Qty") = 0
+            FormPriceList.GridView1.GetFocusedDataRow.Item("Discount") = 0
         End If
         Close()
     End Sub

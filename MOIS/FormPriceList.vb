@@ -127,12 +127,13 @@ Public Class FormPriceList
     Sub loadItem()
         OdataItem.Clear()
         OdataItem = dataItemMD.SelectItemMDMini
-        repoCbItemCode.Items.Clear()
-        For i As Integer = 0 To OdataItem.Rows.Count - 1
-            Desc(i) = OdataItem.Rows(i).Item(1)
-            ItemCodeMD(i) = OdataItem.Rows(i).Item(0)
-            repoCbItemCode.Items.Add(OdataItem.Rows(i).Item(0))
-        Next
+
+
+        RepoSLEItemCode.DataSource = OdataItem
+        RepoSLEItemCode.ValueMember = "ItemCode"
+        RepoSLEItemCode.DisplayMember = "ItemCode"
+
+
     End Sub
 
 
@@ -176,49 +177,34 @@ Public Class FormPriceList
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim Purchase As String
         Dim Sell As String
+        Try
+            If rbPurchase.Checked = True Then Purchase = "1" Else Purchase = "0"
+            If rbSell.Checked = True Then Sell = "1" Else Sell = "0"
 
-        If rbPurchase.Checked = True Then Purchase = "1" Else Purchase = "0"
-        If rbSell.Checked = True Then Sell = "1" Else Sell = "0"
+            If X = "1" Then
+                DataPriceList.AddMasterPriceList(txtPLCode.Text, txtDesc.Text, Format(txtValidFrom.EditValue, "yyyy/MM/dd"), Format(txtValidTo.EditValue, "yyyy/MM/dd"), Purchase, Sell, SearchLookUpEdit1View.GetFocusedDataRow.Item(1), txtRefrence.Text, OdataDetil)
+                clean()
+            ElseIf X = "2"
+                DataPriceList.EditMasterPriceList(idPL, txtPLCode.Text, txtDesc.Text, Format(CDate(txtValidFrom.Text), "yyyy/MM/dd"), Format(CDate(txtValidTo.Text), "yyyy/MM/dd"), Purchase, Sell, SearchLookUpEdit1View.GetFocusedDataRow.Item(1), txtRefrence.Text, OdataDetil)
+                clean()
+                Close()
+            End If
+        Catch ex As Exception
+            MsgBox("Plese complite all data", vbInformation, "Information")
+        End Try
 
-        If X = "1" Then
-            DataPriceList.AddMasterPriceList(txtPLCode.Text, txtDesc.Text, Format(txtValidFrom.EditValue, "yyyy/MM/dd"), Format(txtValidTo.EditValue, "yyyy/MM/dd"), Purchase, Sell, SearchLookUpEdit1View.GetFocusedDataRow.Item(1), txtRefrence.Text, OdataDetil)
-            clean()
-        ElseIf X = "2"
-            DataPriceList.EditMasterPriceList(idPL, txtPLCode.Text, txtDesc.Text, Format(CDate(txtValidFrom.Text), "yyyy/MM/dd"), Format(CDate(txtValidTo.Text), "yyyy/MM/dd"), Purchase, Sell, SearchLookUpEdit1View.GetFocusedDataRow.Item(1), txtRefrence.Text, OdataDetil)
-            clean()
-            Close()
-        End If
         FormDataPriceList.LoadData()
     End Sub
 
     Private Sub GridControl1_Load(sender As Object, e As EventArgs) Handles GridControl1.Load
         setGrid()
         loadItem()
-        GridView1.Columns(1).ColumnEdit = repoCbItemCode
+        'GridView1.Columns(1).ColumnEdit = repoCbItemCode
+        ' GridView1.Columns(1).ColumnEdit = RepotxtItemCode
+        GridView1.Columns(1).ColumnEdit = RepoSLEItemCode
     End Sub
 
 
-    Private Sub GridView1_ValidatingEditor(sender As Object, e As BaseContainerValidateEditorEventArgs) Handles GridView1.ValidatingEditor
-        Dim View As GridView = sender
-        If View.FocusedColumn.FieldName = "Item Code" Then
-            ''Get the currently edited value 
-            'Dim discount As Double = Convert.ToDouble(e.Value)
-            ''Specify validation criteria 
-            'If discount < 0 Then
-            '    e.Valid = False
-            '    e.ErrorText = "Enter a positive value"
-            'End If
-            If ItemCodeMD.Contains(e.Value) Then
-                e.Value = e.Value
-                View.GetFocusedDataRow.Item("Item Description") = Desc(Array.IndexOf(ItemCodeMD, e.Value))
-                View.GetFocusedDataRow.Item("NO") = GridView1.RowCount
-            Else
-                e.Valid = False
-                e.ErrorText = "Enter a valid Item Code"
-            End If
-
-        End If
-    End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Close()
@@ -242,7 +228,48 @@ Public Class FormPriceList
         End Try
     End Sub
 
-    Private Sub SearchLookUpEdit1_EditValueChanged(sender As Object, e As EventArgs) Handles SearchLookUpEdit1.EditValueChanged
-        LabelControl7.Text = SearchLookUpEdit1View.GetFocusedDataRow.Item(2)
+    Private Sub RepotxtItemCode_KeyDown(sender As Object, e As KeyEventArgs) Handles RepotxtItemCode.KeyDown
+        If e.KeyCode = Keys.F1 Then
+            FormListItem.X = "2"
+            FormListItem.BindingSource1.DataSource = OdataItem
+            FormListItem.ShowDialog()
+
+        End If
+    End Sub
+    Dim description As String = ""
+    Dim Uom As String = ""
+    Dim genItem As String = ""
+
+    Private Sub GridView1_ValidatingEditor(sender As Object, e As BaseContainerValidateEditorEventArgs) Handles GridView1.ValidatingEditor
+        Dim View As GridView = sender
+        If View.FocusedColumn.FieldName = "Item Code" Then
+            e.Value = e.Value
+            If genItem = "1" Then
+                FormPopGenItem.X = "2"
+                FormPopGenItem.ShowDialog()
+            Else
+                View.GetFocusedDataRow.Item("Item Description") = description
+
+            End If
+
+
+            View.GetFocusedDataRow.Item("Min Qty") = 0
+            View.GetFocusedDataRow.Item("Price / Qty") = 0
+            View.GetFocusedDataRow.Item("Discount") = 0
+            View.GetFocusedDataRow.Item("NO") = GridView1.RowCount
+        End If
+    End Sub
+
+    Private Sub RepoSLEItemCode_EditValueChanged(sender As Object, e As EventArgs) Handles RepoSLEItemCode.EditValueChanged
+        Dim a As DataRowView
+        a = RepoSLEItemCode.GetRowByKeyValue(GridView1.ActiveEditor.EditValue)
+        description = a.Item(1)
+
+        Uom = a.Item(2)
+        Try
+            genItem = a.Item(3)
+        Catch ex As Exception
+            genItem = "0"
+        End Try
     End Sub
 End Class

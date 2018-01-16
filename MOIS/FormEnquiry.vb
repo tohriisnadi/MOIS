@@ -38,14 +38,21 @@ Public Class FormEnquiry
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If X = "1" Then
-            dataEnquiry.addEnquiry(cbSourceOfCall.Text, txtSourceOFCallDesc.Text, txtRef.Text, Format(txtMaxResponDate.EditValue, "yyyy/MM/dd"), txtNote.Text, oDataTabelUnbound)
-            clean()
-        ElseIf X = "2" Then
-            dataEnquiry.EditEnquiry(idEnquiry, cbSourceOfCall.Text, txtSourceOFCallDesc.Text, txtRef.Text, Format(CDate(txtMaxResponDate.EditValue), "yyyy/MM/dd"), txtNote.Text, oDataTabelUnbound)
-            clean()
-            Close()
+        If cbSourceOfCall.Text = "" Then
+            MsgBox("Data Tidak Lengkap")
+        ElseIf txtSourceOFCallDesc.Text = "" Then
+            MsgBox("Data Tidak Lengkap")
+        Else
+            If X = "1" Then
+                dataEnquiry.addEnquiry(cbSourceOfCall.Text, txtSourceOFCallDesc.Text, txtRef.Text, Format(txtMaxResponDate.EditValue, "yyyy/MM/dd"), txtNote.Text, oDataTabelUnbound)
+                clean()
+            ElseIf X = "2" Then
+                dataEnquiry.EditEnquiry(idEnquiry, cbSourceOfCall.Text, txtSourceOFCallDesc.Text, txtRef.Text, Format(CDate(txtMaxResponDate.EditValue), "yyyy/MM/dd"), txtNote.Text, oDataTabelUnbound)
+                clean()
+                Close()
+            End If
         End If
+
         FormDataEnquiry.LoadData()
     End Sub
 

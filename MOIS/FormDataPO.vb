@@ -26,7 +26,7 @@
                 GridView1.Columns(i).OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains
                 GridView1.Columns(i).BestFit()
             Next
-            GridView1.Columns(0).Visible = False
+            'GridView1.Columns(0).Visible = False
             'GridView1.Columns(10).AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
             GridView1.Columns(10).DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom
             GridView1.Columns(10).DisplayFormat.FormatString = "#,#.00"
@@ -111,9 +111,14 @@
                 FormAddPO.txtDiscount.Text = GridView1.GetFocusedDataRow.Item(11).ToString
                 FormAddPO.txtPPN.Text = GridView1.GetFocusedDataRow.Item(12).ToString
                 FormAddPO.txtNetPrice.Text = GridView1.GetFocusedDataRow.Item(13).ToString
-                If GridView1.GetFocusedDataRow.Item(3) = "I" Then FormAddPO.RbI.Checked = False Else FormAddPO.RbI.Checked = True
-                If GridView1.GetFocusedDataRow.Item(3) = "E" Then FormAddPO.RbE.Checked = False Else FormAddPO.RbE.Checked = True
-                If GridView1.GetFocusedDataRow.Item(3) = "O" Then FormAddPO.RbO.Checked = False Else FormAddPO.RbO.Checked = True
+
+                If GridView1.GetFocusedDataRow.Item(3).ToString = "I" Then
+                    FormAddPO.RbI.Checked = True
+                ElseIf GridView1.GetFocusedDataRow.Item(3).ToString = "E" Then
+                    FormAddPO.RbE.Checked = True
+                Else
+                    FormAddPO.RbO.Checked = True
+                End If
 
                 FormAddPO.cbVendor.Enabled = False
                 FormAddPO.txtCurrency.Enabled = False
@@ -133,7 +138,9 @@
                 FormAddPO.btnEdit.Enabled = True
                 FormAddPO.btnPrint.Enabled = True
                 FormAddPO.btnSave.Enabled = False
+                FormAddPO.hitung()
                 FormAddPO.ShowDialog()
+                loadData()
             Else
                 MsgBox("No Authorize", MsgBoxStyle.Critical, "Akses Failed")
             End If

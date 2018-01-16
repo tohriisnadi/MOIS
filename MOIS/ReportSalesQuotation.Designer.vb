@@ -102,11 +102,11 @@ Partial Public Class ReportSalesQuotation
         Me.FNetFrice = New DevExpress.XtraReports.UI.XRLabel()
         Me.FDiscount = New DevExpress.XtraReports.UI.XRLabel()
         Me.FlbTotal = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel28 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrTable4 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow5 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.txtTotal = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrLabel28 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -180,7 +180,9 @@ Partial Public Class ReportSalesQuotation
         Me.txtQuantity.StylePriority.UseBorders = False
         Me.txtQuantity.StylePriority.UseFont = False
         Me.txtQuantity.StylePriority.UsePadding = False
+        Me.txtQuantity.StylePriority.UseTextAlignment = False
         Me.txtQuantity.Text = " "
+        Me.txtQuantity.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.txtQuantity.Weight = 0.225357498022105R
         '
         'txtUom
@@ -192,7 +194,9 @@ Partial Public Class ReportSalesQuotation
         Me.txtUom.StylePriority.UseBorders = False
         Me.txtUom.StylePriority.UseFont = False
         Me.txtUom.StylePriority.UsePadding = False
+        Me.txtUom.StylePriority.UseTextAlignment = False
         Me.txtUom.Text = " "
+        Me.txtUom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.txtUom.Weight = 0.356102960030965R
         '
         'txtAmmount
@@ -206,7 +210,7 @@ Partial Public Class ReportSalesQuotation
         Me.txtAmmount.StylePriority.UsePadding = False
         Me.txtAmmount.StylePriority.UseTextAlignment = False
         Me.txtAmmount.Text = " "
-        Me.txtAmmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        Me.txtAmmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         Me.txtAmmount.Weight = 0.716822411080577R
         '
         'TopMargin
@@ -406,9 +410,11 @@ Partial Public Class ReportSalesQuotation
         '
         'XrTableRow3
         '
+        Me.XrTableRow3.BackColor = System.Drawing.Color.White
         Me.XrTableRow3.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell9, Me.XrTableCell10, Me.XrTableCell11, Me.XrTableCell12, Me.XrTableCell13})
         Me.XrTableRow3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrTableRow3.Name = "XrTableRow3"
+        Me.XrTableRow3.StylePriority.UseBackColor = False
         Me.XrTableRow3.StylePriority.UseFont = False
         Me.XrTableRow3.Weight = 1.0R
         '
@@ -457,7 +463,7 @@ Partial Public Class ReportSalesQuotation
         '
         'XrTableRow1
         '
-        Me.XrTableRow1.BackColor = System.Drawing.Color.Gainsboro
+        Me.XrTableRow1.BackColor = System.Drawing.Color.White
         Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell5, Me.XrTableCell6, Me.XrTableCell1, Me.XrTableCell7})
         Me.XrTableRow1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrTableRow1.Name = "XrTableRow1"
@@ -891,7 +897,7 @@ Partial Public Class ReportSalesQuotation
         Me.FlbFat.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
         Me.FlbFat.CanGrow = False
         Me.FlbFat.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlbFat.LocationFloat = New DevExpress.Utils.PointFloat(588.0222!, 38.97414!)
+        Me.FlbFat.LocationFloat = New DevExpress.Utils.PointFloat(588.0228!, 59.84923!)
         Me.FlbFat.Name = "FlbFat"
         Me.FlbFat.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.FlbFat.SizeF = New System.Drawing.SizeF(189.9775!, 19.87502!)
@@ -905,7 +911,7 @@ Partial Public Class ReportSalesQuotation
         Me.FGrandTotal.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
         Me.FGrandTotal.CanGrow = False
         Me.FGrandTotal.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FGrandTotal.LocationFloat = New DevExpress.Utils.PointFloat(588.0228!, 59.8492!)
+        Me.FGrandTotal.LocationFloat = New DevExpress.Utils.PointFloat(588.0228!, 38.97412!)
         Me.FGrandTotal.Name = "FGrandTotal"
         Me.FGrandTotal.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.FGrandTotal.SizeF = New System.Drawing.SizeF(189.9775!, 19.87502!)
@@ -989,7 +995,7 @@ Partial Public Class ReportSalesQuotation
         Me.FNetFrice.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
         Me.FNetFrice.CanGrow = False
         Me.FNetFrice.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FNetFrice.LocationFloat = New DevExpress.Utils.PointFloat(588.0222!, 80.72417!)
+        Me.FNetFrice.LocationFloat = New DevExpress.Utils.PointFloat(587.7101!, 124.7658!)
         Me.FNetFrice.Name = "FNetFrice"
         Me.FNetFrice.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.FNetFrice.SizeF = New System.Drawing.SizeF(189.9775!, 19.87502!)
@@ -1017,7 +1023,7 @@ Partial Public Class ReportSalesQuotation
         Me.FlbTotal.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
         Me.FlbTotal.CanGrow = False
         Me.FlbTotal.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlbTotal.LocationFloat = New DevExpress.Utils.PointFloat(588.0223!, 124.7658!)
+        Me.FlbTotal.LocationFloat = New DevExpress.Utils.PointFloat(588.0228!, 81.72417!)
         Me.FlbTotal.Name = "FlbTotal"
         Me.FlbTotal.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.FlbTotal.SizeF = New System.Drawing.SizeF(189.9775!, 19.87502!)
@@ -1025,39 +1031,6 @@ Partial Public Class ReportSalesQuotation
         Me.FlbTotal.StylePriority.UseTextAlignment = False
         Me.FlbTotal.Text = " "
         Me.FlbTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        '
-        'XrTable4
-        '
-        Me.XrTable4.BackColor = System.Drawing.Color.Transparent
-        Me.XrTable4.Borders = DevExpress.XtraPrinting.BorderSide.Top
-        Me.XrTable4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrTable4.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
-        Me.XrTable4.Name = "XrTable4"
-        Me.XrTable4.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow5})
-        Me.XrTable4.SizeF = New System.Drawing.SizeF(777.6876!, 8.741193!)
-        Me.XrTable4.StylePriority.UseBackColor = False
-        Me.XrTable4.StylePriority.UseBorders = False
-        Me.XrTable4.StylePriority.UseFont = False
-        Me.XrTable4.StylePriority.UseTextAlignment = False
-        Me.XrTable4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrTableRow5
-        '
-        Me.XrTableRow5.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.txtTotal})
-        Me.XrTableRow5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrTableRow5.Name = "XrTableRow5"
-        Me.XrTableRow5.StylePriority.UseFont = False
-        Me.XrTableRow5.Weight = 1.0R
-        '
-        'txtTotal
-        '
-        Me.txtTotal.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.StylePriority.UseFont = False
-        Me.txtTotal.StylePriority.UseTextAlignment = False
-        Me.txtTotal.Text = " "
-        Me.txtTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.txtTotal.Weight = 0.716822411080577R
         '
         'XrLabel28
         '
@@ -1091,6 +1064,39 @@ Partial Public Class ReportSalesQuotation
         Me.XrLabel12.Text = "* In any case don't hesitate to contact us, we are ready to discuss and fine toge" &
     "ther with you the best solusition to solve your problems"
         Me.XrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrTable4
+        '
+        Me.XrTable4.BackColor = System.Drawing.Color.Transparent
+        Me.XrTable4.Borders = DevExpress.XtraPrinting.BorderSide.Top
+        Me.XrTable4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrTable4.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
+        Me.XrTable4.Name = "XrTable4"
+        Me.XrTable4.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow5})
+        Me.XrTable4.SizeF = New System.Drawing.SizeF(777.6876!, 8.741193!)
+        Me.XrTable4.StylePriority.UseBackColor = False
+        Me.XrTable4.StylePriority.UseBorders = False
+        Me.XrTable4.StylePriority.UseFont = False
+        Me.XrTable4.StylePriority.UseTextAlignment = False
+        Me.XrTable4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrTableRow5
+        '
+        Me.XrTableRow5.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.txtTotal})
+        Me.XrTableRow5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrTableRow5.Name = "XrTableRow5"
+        Me.XrTableRow5.StylePriority.UseFont = False
+        Me.XrTableRow5.Weight = 1.0R
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.StylePriority.UseFont = False
+        Me.txtTotal.StylePriority.UseTextAlignment = False
+        Me.txtTotal.Text = " "
+        Me.txtTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.txtTotal.Weight = 0.716822411080577R
         '
         'GroupFooter1
         '

@@ -43,7 +43,7 @@
 
             For i = 0 To Odata.Rows.Count - 1
                 If Odata.Rows(i).Item(7).ToString = "" Then
-                    FormAddPR.addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5), 1, "", 0, 0, "", Odata.Rows(i).Item(6), Odata.Rows(i).Item(5))
+                    FormAddPR.addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5), 1, "Value", 0, 0, "", Odata.Rows(i).Item(6), Odata.Rows(i).Item(5))
                 ElseIf Odata.Rows(i).Item(5) - Odata.Rows(i).Item(7) > 0
                     FormAddPR.addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5) - Odata.Rows(i).Item(7), 1, "", 0, 0, "", Odata.Rows(i).Item(6), Odata.Rows(i).Item(5) - Odata.Rows(i).Item(7))
                 Else
@@ -59,7 +59,7 @@
                     OdataSQ.Clear()
                     OdataSQ = dataenquiry.SElectSQDetilByItemandEnq(Odata.Rows(i).Item(2), GridView1.GetFocusedDataRow.Item(0))
                     If OdataSQ.Rows.Count - 1 Then
-                        FormAddSalesQuotation.addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5), 0, "", 0, 0, Odata.Rows(i).Item(6), Odata.Rows(i).Item(0), Odata.Rows(i).Item(5))
+                        FormAddSalesQuotation.addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5), 0, "Value", 0, 0, Odata.Rows(i).Item(6), Odata.Rows(i).Item(0), Odata.Rows(i).Item(5))
                     ElseIf CInt(OdataSQ.Rows(0).Item(0).ToString) < CInt(Odata.Rows(i).Item(5)) Then
                         FormAddSalesQuotation.addNewRow(Odata.Rows(i).Item(1), Odata.Rows(i).Item(2), Odata.Rows(i).Item(3), Odata.Rows(i).Item(4), Odata.Rows(i).Item(5) - CInt(OdataSQ.Rows(0).Item(0).ToString), 0, "", 0, 0, Odata.Rows(i).Item(6), Odata.Rows(i).Item(0), Odata.Rows(i).Item(5) - CInt(OdataSQ.Rows(0).Item(0).ToString))
                     End If
