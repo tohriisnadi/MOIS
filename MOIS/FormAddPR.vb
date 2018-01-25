@@ -163,6 +163,7 @@ Public Class FormAddPR
     End Sub
     Dim TotalPPN As Long = 0
     Dim PPNEx As Long = 0
+    Dim DPP As Long = 0
     Sub hitung()
         Dim TotalPrice As Long = 0
         Dim discount As Long = 0
@@ -170,6 +171,9 @@ Public Class FormAddPR
         Dim ppn As Long = 0
         Dim dis As Double
         Dim price, qty As Long
+        TotalPPN = 0
+        PPNEx = 0
+        DPP = 0
         Try
             For i As Integer = 0 To oDataTabelUnbound.Rows.Count - 1
                 'dis = oDataTabelUnbound.Rows(i).Item("Req. Discount")
@@ -179,12 +183,15 @@ Public Class FormAddPR
                 discount = discount + (((dis / 100) * price) * qty)
                 'NetPrice = TotalPrice - discount
                 If oDataTabelUnbound.Rows(i).Item("IEO").ToString = "I" Then
-                    ppn = ppn + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * 0.11)
+                    ppn = ppn + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) / 11)
+                    DPP = DPP + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * (100 / 110))
                 ElseIf oDataTabelUnbound.Rows(i).Item("IEO").ToString = "E" Then
                     ppn = ppn + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * 0.1)
+                    DPP = DPP + CLng(oDataTabelUnbound.Rows(i).Item("Total"))
                     PPNEx = PPNEx + (CLng(oDataTabelUnbound.Rows(i).Item("Total")) * 0.1)
                 Else
                     ppn = ppn + 0
+                    DPP = DPP + CLng(oDataTabelUnbound.Rows(i).Item("Total"))
                 End If
 
                 NetPrice = NetPrice + CLng(oDataTabelUnbound.Rows(i).Item("Total"))
@@ -420,6 +427,7 @@ Public Class FormAddPR
         laporan.txtDiscountF.Text = txtDiscount.Text
         laporan.txtPPN.Text = Format(CLng(TotalPPN), "###,###,##0.00")
         laporan.txtNetPrice.Text = Format(CLng(txtNetPrice.Text), "###,###,##0.00")
+        laporan.txtDPP.Text = Format(CLng(DPP), "###,###,##0.00")
         laporan.txtGrandTotalF.Text = Format(CLng(txtNetPrice.Text) + CLng(PPNEx), "###,###,##0.00")
 
         laporan.txtNoteF.Text = txtNote.Text

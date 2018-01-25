@@ -25,3 +25,16 @@ hitung
             End If
         Next
     End Sub
+
+
+DPP = (100/110)*N atau N/1.1
+
+PPN = N-DPP  (atau bisa juga 10% * DPP)
+
+Pretty simple kan ?? . Contoh untuk perhitungan diawal :
+
+N : 1.100.000,-
+
+DPP = 1.100.000,- / 1.1 = 1.000.000,-
+
+PPN = 1.100.000,- dikurangi 1.000.000,= = 100.000,-
