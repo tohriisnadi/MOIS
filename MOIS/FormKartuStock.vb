@@ -102,10 +102,8 @@
 
         If OdataQty.Rows.Count > 0 Then
             For i = 0 To OdataQty.Rows.Count - 1
-                addNewRow(OdataQty.Rows(i).Item(0), OdataQty.Rows(i).Item(1), OdataQty.Rows(i).Item(6), 0)
-                If OdataQty.Rows(i).Item(2).ToString <> "" Then
-                    addNewRow(OdataQty.Rows(i).Item(2), OdataQty.Rows(i).Item(3), 0, OdataQty.Rows(i).Item(7))
-                End If
+                addNewRow(OdataQty.Rows(i).Item(0), OdataQty.Rows(i).Item(1), OdataQty.Rows(i).Item(4), OdataQty.Rows(i).Item(5))
+
             Next
         End If
 
