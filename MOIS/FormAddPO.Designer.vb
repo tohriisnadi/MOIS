@@ -68,6 +68,7 @@ Partial Class FormAddPO
         Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.btnEdit = New DevExpress.XtraEditors.SimpleButton()
         Me.cbVendor = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.txtNetPrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDiscount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -530,11 +531,25 @@ Partial Class FormAddPO
         Me.cbVendor.Size = New System.Drawing.Size(247, 26)
         Me.cbVendor.TabIndex = 122
         '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton1.Appearance.Options.UseFont = True
+        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(389, 37)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(26, 22)
+        Me.SimpleButton1.TabIndex = 144
+        Me.SimpleButton1.Visible = False
+        '
         'FormAddPO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1099, 508)
+        Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.cbVendor)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.LabelControl14)
@@ -646,4 +661,5 @@ Partial Class FormAddPO
     Friend WithEvents btnEdit As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cbVendor As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents RepocbDiscountType As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
 End Class

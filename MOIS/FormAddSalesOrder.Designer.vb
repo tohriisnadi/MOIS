@@ -49,6 +49,7 @@ Partial Class FormAddSalesOrder
         Me.RepoItemCode = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.RepositoryItemSearchLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit()
         Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.RepocbDiscountType = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.txtNote = New DevExpress.XtraEditors.MemoEdit()
         Me.txtRate = New DevExpress.XtraEditors.TextEdit()
         Me.txtRef = New DevExpress.XtraEditors.TextEdit()
@@ -70,7 +71,7 @@ Partial Class FormAddSalesOrder
         Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
         Me.txtCurrency = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.btnEdit = New DevExpress.XtraEditors.SimpleButton()
-        Me.RepocbDiscountType = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNetPrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalPPN.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +84,7 @@ Partial Class FormAddSalesOrder
         CType(Me.RepoItemCode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSearchLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNote.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRef.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +99,6 @@ Partial Class FormAddSalesOrder
         CType(Me.txtPPNStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTermOfPayment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RepositoryItemComboBox1
@@ -336,6 +337,11 @@ Partial Class FormAddSalesOrder
         Me.RepositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.RepositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
         '
+        'RepocbDiscountType
+        '
+        Me.RepocbDiscountType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepocbDiscountType.Name = "RepocbDiscountType"
+        '
         'txtNote
         '
         Me.txtNote.EditValue = ""
@@ -493,7 +499,7 @@ Partial Class FormAddSalesOrder
         Me.cbCust.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.cbCust.Properties.EditFormat.FormatString = "d"
         Me.cbCust.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.cbCust.Size = New System.Drawing.Size(134, 26)
+        Me.cbCust.Size = New System.Drawing.Size(207, 26)
         Me.cbCust.TabIndex = 114
         '
         'txtSalesPerson
@@ -564,16 +570,25 @@ Partial Class FormAddSalesOrder
         Me.btnEdit.TabIndex = 142
         Me.btnEdit.Text = "Edit"
         '
-        'RepocbDiscountType
+        'SimpleButton1
         '
-        Me.RepocbDiscountType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RepocbDiscountType.Name = "RepocbDiscountType"
+        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton1.Appearance.Options.UseFont = True
+        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(341, 39)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(26, 22)
+        Me.SimpleButton1.TabIndex = 143
+        Me.SimpleButton1.Visible = False
         '
         'FormAddSalesOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1016, 512)
+        Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.txtTermOfPayment)
         Me.Controls.Add(Me.LabelControl10)
@@ -629,6 +644,7 @@ Partial Class FormAddSalesOrder
         CType(Me.RepoItemCode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSearchLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNote.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRef.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -643,7 +659,6 @@ Partial Class FormAddSalesOrder
         CType(Me.txtPPNStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTermOfPayment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RepocbDiscountType, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -696,4 +711,5 @@ Partial Class FormAddSalesOrder
     Friend WithEvents RepositoryItemSearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents btnEdit As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents RepocbDiscountType As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
 End Class

@@ -276,7 +276,7 @@ Partial Class FormAddMasterVendor
         Me.XtraTabPage2.Controls.Add(Me.LabelControl19)
         Me.XtraTabPage2.Controls.Add(Me.txtRemarks)
         Me.XtraTabPage2.Name = "XtraTabPage2"
-        Me.XtraTabPage2.Size = New System.Drawing.Size(789, 135)
+        Me.XtraTabPage2.Size = New System.Drawing.Size(789, 134)
         Me.XtraTabPage2.Text = "Generate Data"
         '
         'LabelControl14
@@ -433,7 +433,7 @@ Partial Class FormAddMasterVendor
         Me.tx.Controls.Add(Me.txtPaymentTerm)
         Me.tx.Controls.Add(Me.LabelControl27)
         Me.tx.Name = "tx"
-        Me.tx.Size = New System.Drawing.Size(789, 135)
+        Me.tx.Size = New System.Drawing.Size(789, 134)
         Me.tx.Text = "Payment"
         '
         'ckPricelist
@@ -675,6 +675,7 @@ Partial Class FormAddMasterVendor
         Me.Controls.Add(Me.LabelControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormAddMasterVendor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Master Vendor"
         CType(Me.txtVendorGroup.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()

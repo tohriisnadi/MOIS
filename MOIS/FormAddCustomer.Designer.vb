@@ -223,7 +223,7 @@ Partial Class FormAddCustomer
         Me.XtraTabPage2.Controls.Add(Me.LabelControl19)
         Me.XtraTabPage2.Controls.Add(Me.txtRemarks)
         Me.XtraTabPage2.Name = "XtraTabPage2"
-        Me.XtraTabPage2.Size = New System.Drawing.Size(789, 114)
+        Me.XtraTabPage2.Size = New System.Drawing.Size(789, 113)
         Me.XtraTabPage2.Text = "Generate Data"
         '
         'LabelControl14
@@ -372,7 +372,7 @@ Partial Class FormAddCustomer
         Me.tx.Controls.Add(Me.txtPaymentTerm)
         Me.tx.Controls.Add(Me.LabelControl27)
         Me.tx.Name = "tx"
-        Me.tx.Size = New System.Drawing.Size(789, 114)
+        Me.tx.Size = New System.Drawing.Size(789, 113)
         Me.tx.Text = "Payment"
         '
         'ckPriceList

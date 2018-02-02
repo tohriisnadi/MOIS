@@ -22,6 +22,7 @@ Public Class FormAddPR
         txtCurrency.SelectedIndex = 0
         RepositoryItemSearchLookUpEdit1.NullText = "[Item Code]"
         txtRate.Text = "1"
+        txtReqDept.Text = ""
         txtEnqRef.Text = ""
         txtNote.Text = ""
         txtStatus.SelectedIndex = -1

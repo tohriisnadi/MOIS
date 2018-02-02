@@ -28,6 +28,7 @@ Public Class FormAddPO
         txtCurrency.Text = ""
         txtNote.Text = ""
         txtRef.Text = ""
+        txtDocNumber.Text = "Otomatis"
         txtStatus.SelectedIndex = -1
         cbVendor.SelectedIndex = -1
         txtTotal.Text = "0"
@@ -543,5 +544,10 @@ Public Class FormAddPO
 
     Private Sub RbE_CheckedChanged(sender As Object, e As EventArgs) Handles RbE.CheckedChanged
         hitung()
+    End Sub
+
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        FormAddMasterVendor.ShowDialog()
+        loadvendor()
     End Sub
 End Class

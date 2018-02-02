@@ -442,4 +442,9 @@ Public Class FormAddSalesOrder
     Private Sub txtPPNStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtPPNStatus.SelectedIndexChanged
         hitung()
     End Sub
+
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        FormAddCustomer.Show()
+        LoadCustomer()
+    End Sub
 End Class

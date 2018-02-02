@@ -73,6 +73,7 @@ Partial Class FormAddSalesQuotation
         Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
         Me.txtProject = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl17 = New DevExpress.XtraEditors.LabelControl()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.txtRef.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtValidUntil.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtValidUntil.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -583,11 +584,25 @@ Partial Class FormAddSalesQuotation
         Me.LabelControl17.TabIndex = 105
         Me.LabelControl17.Text = "%"
         '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton2.Appearance.Options.UseFont = True
+        Me.SimpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton2.Image = CType(resources.GetObject("SimpleButton2.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(387, 37)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(26, 22)
+        Me.SimpleButton2.TabIndex = 144
+        Me.SimpleButton2.Visible = False
+        '
         'FormAddSalesQuotation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1016, 512)
+        Me.Controls.Add(Me.SimpleButton2)
         Me.Controls.Add(Me.LabelControl17)
         Me.Controls.Add(Me.LabelControl10)
         Me.Controls.Add(Me.txtProject)
@@ -714,4 +729,5 @@ Partial Class FormAddSalesQuotation
     Friend WithEvents LabelControl10 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtProject As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl17 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
 End Class
