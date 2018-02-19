@@ -19,8 +19,8 @@
         txtContactPerson.Text = ""
         txtWebsite.Text = ""
         txtRemarks.Text = ""
-        txtPaymentTerm.Text = ""
-        txtCreditLimit.Text = ""
+        txtPaymentTerm.Text = 0
+        txtCreditLimit.Text = 0
         txtDiscount.Text = ""
         ckPricelist.Text = ""
         txtBank.Text = ""
@@ -44,6 +44,18 @@
             ElseIf txtName.Text = ""
                 MsgBox("Vendor Name cannot empty", MsgBoxStyle.Information, "Please fill all field")
                 txtName.Focus()
+            ElseIf IsNumeric(txtAVLNumber.Text) = False Then
+                MsgBox("AVL Number must be Integer", MsgBoxStyle.Information, "Please fill all field")
+                txtAVLNumber.Focus()
+            ElseIf IsNumeric(txtPaymentTerm.Text) = False Then
+                MsgBox("Payment Term must be Integer", MsgBoxStyle.Information, "Please fill all field")
+                txtPaymentTerm.Focus()
+            ElseIf IsNumeric(txtDiscount.Text) = False Then
+                MsgBox("Discount must be Integer", MsgBoxStyle.Information, "Please fill all field")
+                txtDiscount.Focus()
+            ElseIf IsNumeric(txtCreditLimit.Text) = False Then
+                MsgBox("Credit Limit must be Integer", MsgBoxStyle.Information, "Please fill all field")
+                txtCreditLimit.Focus()
             Else
                 If X = "1" Then
                     dataMasterVendor.AddMasterVendor(txtVendorCode.Text, txtName.Text, txtOtherName.Text, txtVendorGroup.Text, txtAVLNumber.Text, txtAVLSegment.Text, txtTaxID.Text, txtTelp.Text,

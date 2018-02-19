@@ -337,6 +337,12 @@
     <Compile Include="FormDataPriceList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormDataPricelistDetil.Designer.vb">
+      <DependentUpon>FormDataPricelistDetil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataPricelistDetil.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormDataSalesBilling.Designer.vb">
       <DependentUpon>FormDataSalesBilling.vb</DependentUpon>
     </Compile>
@@ -673,6 +679,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDataPriceList.resx">
       <DependentUpon>FormDataPriceList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataPricelistDetil.resx">
+      <DependentUpon>FormDataPricelistDetil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDataSalesBilling.resx">
       <DependentUpon>FormDataSalesBilling.vb</DependentUpon>

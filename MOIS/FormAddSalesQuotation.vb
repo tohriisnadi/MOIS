@@ -147,7 +147,6 @@ Public Class FormAddSalesQuotation
     End Sub
 
     Private Sub GridControl1_Load(sender As Object, e As EventArgs) Handles GridControl1.Load
-        setGrid()
         LoadItemtoSLU()
         GridView1.Columns(2).ColumnEdit = RepositoryItemSearchLookUpEdit1
         GridView1.Columns("Discount Type").ColumnEdit = RepocbPaymentType

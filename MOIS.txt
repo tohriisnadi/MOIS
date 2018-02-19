@@ -1,0 +1,7 @@
+Tambhkan form Live Stok
+
+Item, Desc, uom, WHS, Qty Per hari ini, vendor (price list), valid from (price list), valid to(price list), price, discount,
+
+
+where valid to >= today()
+

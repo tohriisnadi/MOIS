@@ -44,14 +44,14 @@ Partial Class FormPriceList
         Me.PersistentRepository1 = New DevExpress.XtraEditors.Repository.PersistentRepository(Me.components)
         Me.repoCbItemCode = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.RepotxtItemCode = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
+        Me.RepoSLEItemCode = New DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit()
+        Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.txtRefrence = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
         Me.SearchLookUpEdit1 = New DevExpress.XtraEditors.SearchLookUpEdit()
         Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.Refrence = New DevExpress.XtraEditors.LabelControl()
-        Me.RepoSLEItemCode = New DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit()
-        Me.RepositoryItemSearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,11 +65,11 @@ Partial Class FormPriceList
         CType(Me.txtValidTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.repoCbItemCode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepotxtItemCode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepoSLEItemCode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRefrence.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RepoSLEItemCode, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupControl1
@@ -253,6 +253,19 @@ Partial Class FormPriceList
         '
         Me.RepotxtItemCode.Name = "RepotxtItemCode"
         '
+        'RepoSLEItemCode
+        '
+        Me.RepoSLEItemCode.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepoSLEItemCode.Name = "RepoSLEItemCode"
+        Me.RepoSLEItemCode.View = Me.RepositoryItemSearchLookUpEdit1View
+        '
+        'RepositoryItemSearchLookUpEdit1View
+        '
+        Me.RepositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.RepositoryItemSearchLookUpEdit1View.Name = "RepositoryItemSearchLookUpEdit1View"
+        Me.RepositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.RepositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        '
         'SimpleButton1
         '
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -310,19 +323,6 @@ Partial Class FormPriceList
         Me.Refrence.TabIndex = 62
         Me.Refrence.Text = "Refrence"
         '
-        'RepoSLEItemCode
-        '
-        Me.RepoSLEItemCode.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RepoSLEItemCode.Name = "RepoSLEItemCode"
-        Me.RepoSLEItemCode.View = Me.RepositoryItemSearchLookUpEdit1View
-        '
-        'RepositoryItemSearchLookUpEdit1View
-        '
-        Me.RepositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
-        Me.RepositoryItemSearchLookUpEdit1View.Name = "RepositoryItemSearchLookUpEdit1View"
-        Me.RepositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
-        Me.RepositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
-        '
         'FormPriceList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -364,11 +364,11 @@ Partial Class FormPriceList
         CType(Me.txtValidTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.repoCbItemCode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepotxtItemCode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepoSLEItemCode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRefrence.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RepoSLEItemCode, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RepositoryItemSearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

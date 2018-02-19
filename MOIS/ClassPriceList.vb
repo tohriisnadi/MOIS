@@ -40,6 +40,19 @@ Public Class ClassPriceList
         Return oDataTabel
     End Function
 
+    Function selectPricelistdetilAll()
+        Dim oDataTabel As New DataTable
+        ModKoneksi.BukaKoneksi()
+        Command.Connection = ModKoneksi.Koneksi
+        Command.CommandType = CommandType.Text
+        Command.CommandText = "exec selectpricelistdetilAll"
+        oDataAdapter.SelectCommand = Command
+        oDataAdapter.Fill(oDataTabel)
+        ModKoneksi.TutupKoneksi()
+        Return oDataTabel
+    End Function
+
+
     Function SelectPriceListDetilByIdPL(idPL As String)
         Dim oDataTabel As New DataTable
         ModKoneksi.BukaKoneksi()
