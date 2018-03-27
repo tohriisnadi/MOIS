@@ -56,7 +56,7 @@ Public Class FormAddDelivery
             oDataTabelUnbound.Columns.Add(New DataColumn("Qty", GetType(Integer))) '5
             oDataTabelUnbound.Columns.Add(New DataColumn("Unit Price", GetType(Long))) '6
             oDataTabelUnbound.Columns.Add(New DataColumn("Discount Type", GetType(String))) '7
-            oDataTabelUnbound.Columns.Add(New DataColumn("Discount", GetType(Long))) '8
+            oDataTabelUnbound.Columns.Add(New DataColumn("Discount", GetType(String))) '8
             oDataTabelUnbound.Columns.Add(New DataColumn("Total", GetType(Long))) '9
             oDataTabelUnbound.Columns.Add(New DataColumn("WHS", GetType(String))) '10
             oDataTabelUnbound.Columns.Add(New DataColumn("Remarks", GetType(String))) '11
@@ -298,7 +298,6 @@ Public Class FormAddDelivery
         Dim Tool As ReportPrintTool = New ReportPrintTool(laporan)
         Dim oDataSet As New DataSet
         Dim oDataAdapter As New OdbcDataAdapter
-        Dim i As Integer
 
         If oDataSet.Tables.Count <> 0 Then
             oDataSet.Tables.Remove("Table1")
@@ -306,6 +305,20 @@ Public Class FormAddDelivery
 
         laporan.lbDate.Text = txtDate.Text
         laporan.lbDONumber.Text = DOid
+
+        'Dim Discount As String
+        'Dim odata2 As New DataTable
+        'odata2 = odata.Copy()
+
+        'For i As Integer = 0 To odata2.Rows.Count - 1
+        '    Discount = odata2.Rows(i).Item("Req. Discount")
+        '    If odata2.Rows(i).Item("Discount Type") = "Percent" Then
+        '        odata2.Rows(i).Item("Req. Discount") = Discount.ToString + " %"
+        '    Else
+        '        odata2.Rows(i).Item("Req. Discount") = "IDR. " + Format(CLng(Discount), "###,###,##0.00")
+        '        'odata.Rows(i).Item("Req. Discount") = String.Format("{0:C}", Discount.ToString)
+        '    End If
+        'Next
 
         Dim oDataVendor As New DataTable
         oDataVendor.Clear()

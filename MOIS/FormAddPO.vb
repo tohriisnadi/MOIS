@@ -163,7 +163,7 @@ Public Class FormAddPO
             oDataTabelUnbound.Columns.Add(New DataColumn("Qty", GetType(Integer))) '5
             oDataTabelUnbound.Columns.Add(New DataColumn("Req. Price", GetType(long))) '6
             oDataTabelUnbound.Columns.Add(New DataColumn("Discount Type", GetType(String))) '7
-            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Discount", GetType(Integer))) '8
+            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Discount", GetType(String))) '8
             oDataTabelUnbound.Columns.Add(New DataColumn("Total", GetType(long))) '9
             oDataTabelUnbound.Columns.Add(New DataColumn("EstDelvTime", GetType(Integer))) '10
             oDataTabelUnbound.Columns.Add(New DataColumn("Remarks", GetType(String))) '11
@@ -358,24 +358,7 @@ Public Class FormAddPO
             Else
                 e.Value = e.Value
             End If
-            'Try
-            '    Dim price As Long = Convert.ToInt64(View.GetFocusedDataRow.Item("Req. Price"))
-            '    Dim qty As Long = Convert.ToInt64(View.GetFocusedDataRow.Item("Qty"))
-            '    If price > 0 And qty > 0 Then
-            '        'e.Value = e.Value
-            '        If View.GetFocusedDataRow.Item("Discount Type") = "Percent" Then
-            '            View.GetFocusedDataRow.Item("Total") = (price * qty) - (CDbl(e.Value / 100) * (price * qty))
-            '        Else
-            '            View.GetFocusedDataRow.Item("Total") = (qty * (price - e.Value))
-            '        End If
-            '    Else
-            '        e.Valid = False
-            '        e.ErrorText = "invalid Value"
-            '    End If
-            'Catch ex As Exception
-
-            'End Try
-            'hitung()
+            hitung()
         ElseIf View.FocusedColumn.FieldName = "Req. Price" Then
             'Try
             '    Dim price As Long = Convert.ToInt64(View.GetFocusedDataRow.Item("Req. Price"))
@@ -422,13 +405,26 @@ Public Class FormAddPO
         Dim Tool As ReportPrintTool = New ReportPrintTool(laporan)
         Dim oDataSet As New DataSet
         Dim oDataAdapter As New OdbcDataAdapter
-        Dim i As Integer
 
         If oDataSet.Tables.Count <> 0 Then
             oDataSet.Tables.Remove("Table1")
         End If
 
-        oDataSet.Tables.Add(odata.Copy)
+        Dim Discount As String
+        Dim odata2 As New DataTable
+        odata2 = odata.Copy()
+
+        For i As Integer = 0 To odata2.Rows.Count - 1
+            Discount = odata2.Rows(i).Item("Req. Discount")
+            If odata2.Rows(i).Item("Discount Type") = "Percent" Then
+                odata2.Rows(i).Item("Req. Discount") = Discount.ToString + " %"
+            Else
+                odata2.Rows(i).Item("Req. Discount") = "IDR. " + Format(CLng(Discount), "###,###,##0.00")
+                'odata.Rows(i).Item("Req. Discount") = String.Format("{0:C}", Discount.ToString)
+            End If
+        Next
+
+        oDataSet.Tables.Add(odata2.Copy)
 
         laporan.DataSource = oDataSet
         laporan.DataAdapter = oDataAdapter

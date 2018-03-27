@@ -9,7 +9,7 @@ Public Class ClassSalesBilling
         ModKoneksi.BukaKoneksi()
         Command.Connection = ModKoneksi.Koneksi
         Command.CommandType = CommandType.Text
-        Command.CommandText = "select DocumentNumber,Customer,Reference,Currency,Rate,DateInput,TermOfPayment,Discount,PPNStatus,Note,BaseLineDate,TotalPrice,TotalDiscount,TotalPPN,NetPrice,DoDate,IsAktif from tbSalesBilling" ' where isAktif='1'"
+        Command.CommandText = "select DocumentNumber,Customer,Reference,Currency,Rate,DateInput,TermOfPayment,Discount,PPNStatus,Note,BaseLineDate,TotalPrice,TotalDiscount,TotalPPN,NetPrice,DoDate,CustPONo,CustPODate,IsAktif from tbSalesBilling" ' where isAktif='1'"
         oDataAdapter.SelectCommand = Command
         oDataAdapter.Fill(oDataTabel)
         ModKoneksi.TutupKoneksi()
@@ -29,7 +29,8 @@ Public Class ClassSalesBilling
     End Function
 
     Function AddSaleBilling(customer As String, Ref As String, Currency As String, rate As String, dateinput As String, TermOfPayment As String,
-                       Discount As Integer, ppnStatus As String, note As String, BaseLineDate As String, TotalPrice As Long, TotalDiscount As Long, TotalPPN As Long, NetPrice As Long, data As DataTable, dodate As String)
+                       Discount As Integer, ppnStatus As String, note As String, BaseLineDate As String, TotalPrice As Long, TotalDiscount As Long, TotalPPN As Long, NetPrice As Long, data As DataTable,
+                            dodate As String, CustPONo As String, CustPODate As String)
 
         Dim KodeMaster As String = ""
         ModKoneksi.BukaKoneksi()
@@ -54,6 +55,9 @@ Public Class ClassSalesBilling
             Command.Parameters.Add("@TotalPPN", OdbcType.BigInt, ParameterDirection.Input).Value = TotalPPN
             Command.Parameters.Add("@NetPrice", OdbcType.BigInt, ParameterDirection.Input).Value = NetPrice
             Command.Parameters.Add("@DoDate", OdbcType.VarChar, 50, ParameterDirection.Input).Value = dodate
+            Command.Parameters.Add("@CustPONO", OdbcType.VarChar, 50, ParameterDirection.Input).Value = CustPONo
+            Command.Parameters.Add("@CustPODate", OdbcType.VarChar, 50, ParameterDirection.Input).Value = CustPODate
+
             Command.Parameters.Add("@KodeOperator", OdbcType.VarChar, 50, ParameterDirection.Input).Value = kodeOperator
             Command.Parameters.Add("@namaOperator", OdbcType.VarChar, 50, ParameterDirection.Input).Value = namaOperator
             Command.Parameters.Add("@DocNumber", OdbcType.VarChar, 50)

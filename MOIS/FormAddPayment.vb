@@ -6,14 +6,22 @@ Imports DevExpress.XtraReports.UI
 
 Public Class FormAddPayment
     Dim DataPayment As New ClassPayment
-
-    Public X As String = ""
-
-    Public Docnumber As String = ""
+    Dim DataRekening As New ClassRekening
     Dim dataSQ As New ClassSalesQuotation
+    Dim dataVendor As New ClassMasterVendor
 
     Dim oDataTabelUnbound As New DataTable
     Dim Orow As DataRow
+
+    Public X As String = ""
+
+    Public KodeCust As String
+    Dim custCode(5000) As String
+
+    Public Docnumber As String = ""
+
+    Public KodeVendor As String
+    Dim vendorCode(5000) As String
 
     Sub clean()
         txtDate.EditValue = Date.Now
@@ -94,9 +102,6 @@ Public Class FormAddPayment
         End Try
     End Sub
 
-    Public KodeCust As String
-    Dim custCode(5000) As String
-
     Sub LoadCustomer()
         Dim odata As New DataTable
         odata.Clear()
@@ -114,10 +119,6 @@ Public Class FormAddPayment
         End Try
     End Sub
 
-    Dim dataVendor As New ClassMasterVendor
-    Public KodeVendor As String
-    Dim vendorCode(5000) As String
-
     Sub loadVendor()
         Dim odata As New DataTable
         odata.Clear()
@@ -134,6 +135,28 @@ Public Class FormAddPayment
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Dim Koderekening(5000) As String
+    Public kodeRek As String
+
+    Sub loadRekening()
+        Dim odata As New DataTable
+        odata.Clear()
+        odata = DataRekening.SelectRekeningMini
+        txtCashBank.Properties.Items.Clear()
+        For i = 0 To odata.Rows.Count - 1
+            Koderekening(i) = odata.Rows(i).Item(0)
+            txtCashBank.Properties.Items.Add(odata.Rows(i).Item(1))
+        Next
+        txtCashBank.SelectedIndex = 0
+
+        Try
+            txtCashBank.SelectedIndex = Array.IndexOf(Koderekening, KodeRek)
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub txtPartnertType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtPartnertType.SelectedIndexChanged
@@ -276,7 +299,7 @@ Public Class FormAddPayment
 
         If RbIncoming.Checked = True Then typePayment = "Incoming" Else typePayment = "Outgoing"
         Try
-            DataPayment.AddPayment(typePayment, txtCashBank.Text, txtCurrency.Text, txtRate.Text, Format(txtDate.EditValue, "yyyy/MM/dd"), txtPartnertType.Text, partnername, txtTotalPayment.Text,
+            DataPayment.AddPayment(typePayment, Koderekening(txtCashBank.SelectedIndex), txtCurrency.Text, txtRate.Text, Format(txtDate.EditValue, "yyyy/MM/dd"), txtPartnertType.Text, partnername, txtTotalPayment.Text,
                                    txtTotalPaymentIDR.Text, txtNote.Text, txtTotalRefInvAmount.Text, txtTotalPaymentAmount.Text, oDataTabelUnbound)
         Catch ex As Exception
 
@@ -335,5 +358,9 @@ Public Class FormAddPayment
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clean()
         Close()
+    End Sub
+
+    Private Sub FormAddPayment_Load(sender As Object, e As EventArgs) Handles Me.Load
+        loadRekening()
     End Sub
 End Class

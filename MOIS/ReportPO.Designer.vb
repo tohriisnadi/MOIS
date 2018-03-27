@@ -200,7 +200,7 @@ Partial Public Class ReportPO
         Me.txtUraian.StylePriority.UseTextAlignment = False
         Me.txtUraian.Text = "Uraian"
         Me.txtUraian.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.txtUraian.Weight = 0.975736292415554R
+        Me.txtUraian.Weight = 0.86005415840648036R
         '
         'txtCur1
         '
@@ -212,7 +212,7 @@ Partial Public Class ReportPO
         Me.txtCur1.StylePriority.UseTextAlignment = False
         Me.txtCur1.Text = "Rp."
         Me.txtCur1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.txtCur1.Weight = 0.138619177954528R
+        Me.txtCur1.Weight = 0.15782441754237095R
         '
         'txtUnitPrice
         '
@@ -224,13 +224,13 @@ Partial Public Class ReportPO
         Me.txtUnitPrice.StylePriority.UseTextAlignment = False
         Me.txtUnitPrice.Text = "Unit Price"
         Me.txtUnitPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.txtUnitPrice.Weight = 0.437487835008314R
+        Me.txtUnitPrice.Weight = 0.43756318644420944R
         '
         'txtDisc
         '
         Me.txtDisc.Name = "txtDisc"
         Me.txtDisc.Text = "Disc"
-        Me.txtDisc.Weight = 0.240333591381094R
+        Me.txtDisc.Weight = 0.38300794843032482R
         '
         'txtCur2
         '
@@ -242,7 +242,7 @@ Partial Public Class ReportPO
         Me.txtCur2.StylePriority.UseTextAlignment = False
         Me.txtCur2.Text = "Rp."
         Me.txtCur2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.txtCur2.Weight = 0.152792857311902R
+        Me.txtCur2.Weight = 0.13736871775638343R
         '
         'txtJumlah
         '
@@ -254,7 +254,7 @@ Partial Public Class ReportPO
         Me.txtJumlah.StylePriority.UseTextAlignment = False
         Me.txtJumlah.Text = "Jumlah"
         Me.txtJumlah.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.txtJumlah.Weight = 0.43517998885007R
+        Me.txtJumlah.Weight = 0.40433131434169306R
         '
         'TopMargin
         '
@@ -459,25 +459,25 @@ Partial Public Class ReportPO
         '
         Me.XrTableCell5.Name = "XrTableCell5"
         Me.XrTableCell5.Text = "Uraian"
-        Me.XrTableCell5.Weight = 0.975736292415554R
+        Me.XrTableCell5.Weight = 0.8600543892250303R
         '
         'XrTableCell6
         '
         Me.XrTableCell6.Name = "XrTableCell6"
         Me.XrTableCell6.Text = "Unit Price"
-        Me.XrTableCell6.Weight = 0.576107255181051R
+        Me.XrTableCell6.Weight = 0.59538750647991778R
         '
         'XrTableCell7
         '
         Me.XrTableCell7.Name = "XrTableCell7"
         Me.XrTableCell7.Text = "Disc"
-        Me.XrTableCell7.Weight = 0.240333365439751R
+        Me.XrTableCell7.Weight = 0.38300825308440523R
         '
         'XrTableCell8
         '
         Me.XrTableCell8.Name = "XrTableCell8"
         Me.XrTableCell8.Text = "Jumlah"
-        Me.XrTableCell8.Weight = 0.587972706120871R
+        Me.XrTableCell8.Weight = 0.5416994703678738R
         '
         'lbVendor
         '

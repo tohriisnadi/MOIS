@@ -117,6 +117,8 @@
                 FormAddSalesBilling.txtTotalPPN.Text = GridView1.GetFocusedDataRow.Item(13).ToString
                 FormAddSalesBilling.txtNetPrice.Text = GridView1.GetFocusedDataRow.Item(14).ToString
                 FormAddSalesBilling.DODate = GridView1.GetFocusedDataRow.Item(15).ToString
+                FormAddSalesBilling.txtPONo.Text = GridView1.GetFocusedDataRow.Item(16).ToString
+                FormAddSalesBilling.txtPODate.Text = GridView1.GetFocusedDataRow.Item(17).ToString
                 FormAddSalesBilling.loaddetilbyidmaster()
 
                 FormAddSalesBilling.cbCust.Enabled = False
@@ -131,6 +133,9 @@
                 FormAddSalesBilling.txtBaseLineDate.Enabled = False
                 FormAddSalesBilling.btnConvert.Enabled = False
                 FormAddSalesBilling.GridControl1.Enabled = False
+                FormAddSalesBilling.txtPONo.Enabled = False
+                FormAddSalesBilling.txtPODate.Enabled = False
+
 
                 FormAddSalesBilling.btnPrint.Enabled = True
                 FormAddSalesBilling.btnSave.Enabled = False

@@ -17,6 +17,18 @@ Public Class ClassRekening
         Return oDataTabel
     End Function
 
+    Function SelectRekeningMini()
+        Dim oDataTabel As New DataTable
+        ModKoneksi.BukaKoneksi()
+        Command.Connection = ModKoneksi.Koneksi
+        Command.CommandType = CommandType.Text
+        Command.CommandText = "select AccountNumber,BankName +' '+ AccountName from tbrekeningbank"
+        oDataAdapter.SelectCommand = Command
+        oDataAdapter.Fill(oDataTabel)
+        ModKoneksi.TutupKoneksi()
+        Return oDataTabel
+    End Function
+
     Sub AddRekening(bankName As String, BankAddres As String, Account As String, accountName As String, currency As String)
         ModKoneksi.BukaKoneksi()
         dbTrans = ModKoneksi.Koneksi.BeginTransaction

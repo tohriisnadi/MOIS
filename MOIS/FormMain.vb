@@ -292,7 +292,9 @@ Public Class FormMain
 
     Private Sub BarButtonItem27_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem27.ItemClick
         If FormLogin.CekAkses(FormAdjustmentStock.menuid) > 0 Then
-            FormAdjustmentStock.Show()
+            FormDataAdjusment.MdiParent = Me
+            FormDataAdjusment.Show()
+            XtraTabbedMdiManager1.SelectedPage = XtraTabbedMdiManager1.Pages(FormDataAdjusment)
         Else
             MsgBox("NO AUTHORIZE", MsgBoxStyle.Critical, "Acces Failed")
         End If

@@ -79,6 +79,7 @@ Public Class FormAdjustmentStock
             DataAdjustment.AddAdjustmentOut(Format(CDate(txtDate.EditValue), "yyyy/MM/dd"), "Adjusment Out", txtCountBy.Text, txtApproveBy.Text, txtReference.Text, txtNote.Text, oDataTabelUnbound)
         End If
         clean()
+        FormDataAdjusment.loaddata()
     End Sub
 
     Private Sub GridControl1_Load(sender As Object, e As EventArgs) Handles GridControl1.Load

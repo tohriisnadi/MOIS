@@ -79,6 +79,7 @@
                 FormAddPayment.txtPartnertType.Enabled = True
                 FormAddPayment.txtPartnerName.Enabled = True
                 FormAddPayment.txtNote.Enabled = True
+                FormAddPayment.txtTotalPayment.Enabled = True
                 FormAddPayment.btnPrint.Enabled = False
                 FormAddPayment.ShowDialog()
             Else
@@ -88,7 +89,7 @@
             If FormLogin.CekAkses(MenuId) > 2 Then
                 FormAddPayment.clean()
                 FormAddPayment.Docnumber = GridView1.GetFocusedDataRow.Item(0).ToString
-                FormAddPayment.txtCashBank.Text = GridView1.GetFocusedDataRow.Item(2).ToString
+                FormAddPayment.kodeRek = GridView1.GetFocusedDataRow.Item(2).ToString
                 FormAddPayment.txtCurrency.Text = GridView1.GetFocusedDataRow.Item(3).ToString
                 FormAddPayment.txtRate.Text = GridView1.GetFocusedDataRow.Item(4).ToString
                 FormAddPayment.txtDate.Text = GridView1.GetFocusedDataRow.Item(5).ToString

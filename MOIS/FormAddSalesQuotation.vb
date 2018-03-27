@@ -34,6 +34,13 @@ Public Class FormAddSalesQuotation
         txtDiscount.Text = "0"
         txtTotalPPN.Text = "0"
         txtNetPrice.Text = "0"
+        txtProject.Text = ""
+
+        txtDellTime.Text = ""
+        txtShipVia.Text = ""
+        txtFOBPoint.Text = ""
+        txtTOPayment.Text = ""
+
         cbCustomer.SelectedIndex = 0
         RepositoryItemSearchLookUpEdit1.NullText = "<select Item code>"
         txtContactPerson.Focus()
@@ -53,6 +60,12 @@ Public Class FormAddSalesQuotation
         txtPPNStatus.Enabled = True
         txtNote.Enabled = True
         SimpleButton1.Enabled = True
+
+        txtDellTime.Enabled = True
+        txtShipVia.Enabled = True
+        txtFOBPoint.Enabled = True
+        txtTOPayment.Enabled = True
+
         txtProject.Enabled = True
         btnConvert.Enabled = True
         GridControl1.Enabled = True
@@ -227,12 +240,14 @@ Public Class FormAddSalesQuotation
                 If X = "1" Then
                     dataSQ.AddSalesQuotation(CustomerCode(cbCustomer.SelectedIndex), txtContactPerson.Text, txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), Format(CDate(txtValidUntil.Text), "yyyy/MM/dd"),
                                              txtSalesPerson.Text, txtDiscountHeader.Text, txtPPNStatus.Text, txtNote.Text, txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text,
-                                             txtNetPrice.Text, txtProject.Text, oDataTabelUnbound)
+                                             txtNetPrice.Text, txtProject.Text, oDataTabelUnbound,
+                                             txtDellTime.Text, txtShipVia.Text, txtFOBPoint.Text, txtTOPayment.Text)
                     clean()
                 ElseIf X = "2" Then
                     dataSQ.EditSalesQuotation(SQid, CustomerCode(cbCustomer.SelectedIndex), txtContactPerson.Text, txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), Format(CDate(txtValidUntil.Text), "yyyy/MM/dd"),
                                              txtSalesPerson.Text, txtDiscountHeader.Text, txtPPNStatus.Text, txtNote.Text, txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text,
-                                             txtNetPrice.Text, txtProject.Text, oDataTabelUnbound)
+                                             txtNetPrice.Text, txtProject.Text, oDataTabelUnbound,
+                                             txtDellTime.Text, txtShipVia.Text, txtFOBPoint.Text, txtTOPayment.Text)
                     clean()
                     Close()
                 End If
@@ -416,9 +431,15 @@ Public Class FormAddSalesQuotation
         laporan.txtMaterial.DataBindings.Add("Text", Nothing, "Item Description")
         laporan.txtQuantity.DataBindings.Add("Text", Nothing, "Qty")
         laporan.txtUom.DataBindings.Add("Text", Nothing, "UOM")
+        laporan.txtUnitPrice.DataBindings.Add("Text", Nothing, "Unit Price", "{0:#,#.00}")
         laporan.txtAmmount.DataBindings.Add("Text", Nothing, "Total", "{0:#,#.00}")
         'laporan.txtCur1.Text = txtCurrency.Text
         'laporan.txtCur2.Text = txtCurrency.Text
+
+        laporan.txtDellTime.Text = txtDellTime.Text
+        laporan.txtShipVia.Text = txtShipVia.Text
+        laporan.txtFOBPoint.Text = txtFOBPoint.Text
+        laporan.txtTermOfPayment.Text = txtTOPayment.Text
 
         laporan.FlbTotal.Text = Format(CLng(txtTotal.Text), "###,###,##0.00")
         laporan.FDiscount.Text = txtDiscount.Text

@@ -130,13 +130,30 @@
                 FormAddSalesQuotation.GridControl1.Enabled = False
                 FormAddSalesQuotation.txtDiscountHeader.Enabled = False
 
+                FormAddSalesQuotation.txtDellTime.Enabled = False
+                FormAddSalesQuotation.txtShipVia.Enabled = False
+                FormAddSalesQuotation.txtFOBPoint.Enabled = False
+                FormAddSalesQuotation.txtTOPayment.Enabled = False
+
                 FormAddSalesQuotation.btnPrint.Enabled = True
                 FormAddSalesQuotation.btnEdit.Visible = True
                 FormAddSalesQuotation.btnEdit.Enabled = True
                 FormAddSalesQuotation.btnSave.Enabled = False
 
-                FormAddSalesQuotation.btnSave.Text = "Update"
+                '--- Sales Quotation Info
+                Dim odataSQInfo As New DataTable
+                odataSQInfo.Clear()
+                odataSQInfo = dataSQ.SelectSQInfobyId(GridView1.GetFocusedDataRow.Item(0).ToString)
+                Try
+                    FormAddSalesQuotation.txtDellTime.Text = odataSQInfo.Rows(0).Item(2).ToString
+                    FormAddSalesQuotation.txtShipVia.Text = odataSQInfo.Rows(0).Item(3).ToString
+                    FormAddSalesQuotation.txtFOBPoint.Text = odataSQInfo.Rows(0).Item(4).ToString
+                    FormAddSalesQuotation.txtTOPayment.Text = odataSQInfo.Rows(0).Item(5).ToString
+                Catch ex As Exception
 
+                End Try
+
+                FormAddSalesQuotation.btnSave.Text = "Update"
                 FormAddSalesQuotation.ShowDialog()
             Else
                 MsgBox("No Authorize", MsgBoxStyle.Critical, "Akses Failed")

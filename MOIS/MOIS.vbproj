@@ -265,6 +265,12 @@
     <Compile Include="FormDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormDataAdjusment.Designer.vb">
+      <DependentUpon>FormDataAdjusment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataAdjusment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormDataCompanySetup.Designer.vb">
       <DependentUpon>FormDataCompanySetup.vb</DependentUpon>
     </Compile>
@@ -643,6 +649,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataAdjusment.resx">
+      <DependentUpon>FormDataAdjusment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDataCompanySetup.resx">
       <DependentUpon>FormDataCompanySetup.vb</DependentUpon>

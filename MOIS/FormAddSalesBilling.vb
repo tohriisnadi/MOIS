@@ -35,6 +35,8 @@ Public Class FormAddSalesBilling
         txtDiscount.Text = "0"
         txtTotalPPN.Text = "0"
         txtNetPrice.Text = "0"
+        txtPONo.Text = ""
+        txtPODate.EditValue = Date.Now
         btnConvert.Enabled = True
         setTabelUnbound()
     End Sub
@@ -289,7 +291,8 @@ Public Class FormAddSalesBilling
         laporan.lbInvoice.Text = SalesBillingId
         laporan.lbDONo.Text = txtRef.Text
         laporan.lbDODate.Text = DODate
-
+        laporan.lbPONo.Text = txtPONo.Text
+        laporan.lbPODate.Text = txtPODate.Text
 
         laporan.txtNo.DataBindings.Add("Text", Nothing, "NO")
         laporan.txtProductDesc.DataBindings.Add("Text", Nothing, "Item Description")
@@ -342,7 +345,8 @@ Public Class FormAddSalesBilling
         Else
             If X = "1" Then
                 DataAr.AddSaleBilling(CustCode(cbCust.SelectedIndex), txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), txtTermOfPayment.Text, txtDiscountHeader.Text,
-                                  txtPPNStatus.Text, txtNote.Text, Format(CDate(txtBaseLineDate.Text), "yyyy/MM/dd"), txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text, txtNetPrice.Text, oDataTabelUnbound, DODate)
+                                  txtPPNStatus.Text, txtNote.Text, Format(CDate(txtBaseLineDate.Text), "yyyy/MM/dd"), txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text, txtNetPrice.Text, oDataTabelUnbound, DODate,
+                                  txtPONo.Text, txtPODate.Text)
                 clean()
             End If
         End If

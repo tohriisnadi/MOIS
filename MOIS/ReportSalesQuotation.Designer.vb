@@ -27,6 +27,7 @@ Partial Public Class ReportSalesQuotation
         Me.txtMaterial = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtQuantity = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtUom = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.txtUnitPrice = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtAmmount = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
@@ -50,6 +51,7 @@ Partial Public Class ReportSalesQuotation
         Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell2 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell13 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -131,7 +133,7 @@ Partial Public Class ReportSalesQuotation
         Me.XrTable3.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
         Me.XrTable3.Name = "XrTable3"
         Me.XrTable3.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow4})
-        Me.XrTable3.SizeF = New System.Drawing.SizeF(777.9999!, 21.11743!)
+        Me.XrTable3.SizeF = New System.Drawing.SizeF(777.6875!, 21.11743!)
         Me.XrTable3.SnapLineMargin = New DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100.0!)
         Me.XrTable3.StylePriority.UseBackColor = False
         Me.XrTable3.StylePriority.UseBorders = False
@@ -141,7 +143,7 @@ Partial Public Class ReportSalesQuotation
         '
         'XrTableRow4
         '
-        Me.XrTableRow4.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.txtNo, Me.txtMaterial, Me.txtQuantity, Me.txtUom, Me.txtAmmount})
+        Me.XrTableRow4.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.txtNo, Me.txtMaterial, Me.txtQuantity, Me.txtUom, Me.txtUnitPrice, Me.txtAmmount})
         Me.XrTableRow4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrTableRow4.Name = "XrTableRow4"
         Me.XrTableRow4.StylePriority.UseFont = False
@@ -169,7 +171,7 @@ Partial Public Class ReportSalesQuotation
         Me.txtMaterial.StylePriority.UseFont = False
         Me.txtMaterial.StylePriority.UsePadding = False
         Me.txtMaterial.Text = " "
-        Me.txtMaterial.Weight = 1.45348091748211R
+        Me.txtMaterial.Weight = 1.40913346774387R
         '
         'txtQuantity
         '
@@ -183,7 +185,7 @@ Partial Public Class ReportSalesQuotation
         Me.txtQuantity.StylePriority.UseTextAlignment = False
         Me.txtQuantity.Text = " "
         Me.txtQuantity.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
-        Me.txtQuantity.Weight = 0.225357498022105R
+        Me.txtQuantity.Weight = 0.29104186195095R
         '
         'txtUom
         '
@@ -197,7 +199,20 @@ Partial Public Class ReportSalesQuotation
         Me.txtUom.StylePriority.UseTextAlignment = False
         Me.txtUom.Text = " "
         Me.txtUom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
-        Me.txtUom.Weight = 0.356102960030965R
+        Me.txtUom.Weight = 0.332137620527453R
+        '
+        'txtUnitPrice
+        '
+        Me.txtUnitPrice.Borders = DevExpress.XtraPrinting.BorderSide.Top
+        Me.txtUnitPrice.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUnitPrice.Name = "txtUnitPrice"
+        Me.txtUnitPrice.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100.0!)
+        Me.txtUnitPrice.StylePriority.UseBorders = False
+        Me.txtUnitPrice.StylePriority.UseFont = False
+        Me.txtUnitPrice.StylePriority.UsePadding = False
+        Me.txtUnitPrice.StylePriority.UseTextAlignment = False
+        Me.txtUnitPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.txtUnitPrice.Weight = 0.332137620527453R
         '
         'txtAmmount
         '
@@ -211,7 +226,7 @@ Partial Public Class ReportSalesQuotation
         Me.txtAmmount.StylePriority.UseTextAlignment = False
         Me.txtAmmount.Text = " "
         Me.txtAmmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.txtAmmount.Weight = 0.716822411080577R
+        Me.txtAmmount.Weight = 0.65282108636150427R
         '
         'TopMargin
         '
@@ -401,7 +416,7 @@ Partial Public Class ReportSalesQuotation
         Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(0!, 396.3284!)
         Me.XrTable2.Name = "XrTable2"
         Me.XrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow3})
-        Me.XrTable2.SizeF = New System.Drawing.SizeF(777.9999!, 21.11743!)
+        Me.XrTable2.SizeF = New System.Drawing.SizeF(778.0002!, 21.11743!)
         Me.XrTable2.StylePriority.UseBackColor = False
         Me.XrTable2.StylePriority.UseBorders = False
         Me.XrTable2.StylePriority.UseFont = False
@@ -411,7 +426,7 @@ Partial Public Class ReportSalesQuotation
         'XrTableRow3
         '
         Me.XrTableRow3.BackColor = System.Drawing.Color.White
-        Me.XrTableRow3.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell9, Me.XrTableCell10, Me.XrTableCell11, Me.XrTableCell12, Me.XrTableCell13})
+        Me.XrTableRow3.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell9, Me.XrTableCell10, Me.XrTableCell11, Me.XrTableCell12, Me.XrTableCell2, Me.XrTableCell13})
         Me.XrTableRow3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrTableRow3.Name = "XrTableRow3"
         Me.XrTableRow3.StylePriority.UseBackColor = False
@@ -428,25 +443,31 @@ Partial Public Class ReportSalesQuotation
         '
         Me.XrTableCell10.Name = "XrTableCell10"
         Me.XrTableCell10.Text = "Material Description"
-        Me.XrTableCell10.Weight = 1.45348091748211R
+        Me.XrTableCell10.Weight = 1.3621254338237012R
         '
         'XrTableCell11
         '
         Me.XrTableCell11.Name = "XrTableCell11"
         Me.XrTableCell11.Text = "Quantity"
-        Me.XrTableCell11.Weight = 0.225357498022105R
+        Me.XrTableCell11.Weight = 0.28245316682703603R
         '
         'XrTableCell12
         '
         Me.XrTableCell12.Name = "XrTableCell12"
         Me.XrTableCell12.Text = "UOM"
-        Me.XrTableCell12.Weight = 0.356102960030965R
+        Me.XrTableCell12.Weight = 0.32233579169045873R
+        '
+        'XrTableCell2
+        '
+        Me.XrTableCell2.Name = "XrTableCell2"
+        Me.XrTableCell2.Text = "Unit Price"
+        Me.XrTableCell2.Weight = 0.3223360355044812R
         '
         'XrTableCell13
         '
         Me.XrTableCell13.Name = "XrTableCell13"
-        Me.XrTableCell13.Text = "Ammount"
-        Me.XrTableCell13.Weight = 0.716822411080577R
+        Me.XrTableCell13.Text = "Amount"
+        Me.XrTableCell13.Weight = 0.63480540502806893R
         '
         'XrTable1
         '
@@ -1209,4 +1230,6 @@ Partial Public Class ReportSalesQuotation
     Friend WithEvents XrLabel28 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel12 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents GroupFooter1 As DevExpress.XtraReports.UI.GroupFooterBand
+    Friend WithEvents txtUnitPrice As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell2 As DevExpress.XtraReports.UI.XRTableCell
 End Class

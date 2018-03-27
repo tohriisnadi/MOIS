@@ -577,7 +577,7 @@ Partial Class FormAddSalesOrder
         Me.SimpleButton1.Appearance.Options.UseFont = True
         Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(341, 39)
+        Me.SimpleButton1.Location = New System.Drawing.Point(341, 34)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(26, 22)
         Me.SimpleButton1.TabIndex = 143

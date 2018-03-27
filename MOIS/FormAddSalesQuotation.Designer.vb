@@ -74,6 +74,15 @@ Partial Class FormAddSalesQuotation
         Me.txtProject = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl17 = New DevExpress.XtraEditors.LabelControl()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.txtTOPayment = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl21 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtFOBPoint = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl20 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtShipVia = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl19 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtDellTime = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl18 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.txtRef.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtValidUntil.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtValidUntil.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +110,12 @@ Partial Class FormAddSalesQuotation
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cbCustomer.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProject.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl1.SuspendLayout()
+        CType(Me.txtTOPayment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtFOBPoint.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtShipVia.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDellTime.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtRef
@@ -309,11 +324,11 @@ Partial Class FormAddSalesQuotation
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridControl1.DataSource = Me.BindingSource1
-        Me.GridControl1.Location = New System.Drawing.Point(2, 151)
+        Me.GridControl1.Location = New System.Drawing.Point(2, 211)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemComboBox1})
-        Me.GridControl1.Size = New System.Drawing.Size(1006, 251)
+        Me.GridControl1.Size = New System.Drawing.Size(1025, 292)
         Me.GridControl1.TabIndex = 91
         Me.GridControl1.UseEmbeddedNavigator = True
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -339,7 +354,7 @@ Partial Class FormAddSalesQuotation
         Me.btnPrint.Appearance.Options.UseFont = True
         Me.btnPrint.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.btnPrint.Image = CType(resources.GetObject("btnPrint.Image"), System.Drawing.Image)
-        Me.btnPrint.Location = New System.Drawing.Point(112, 422)
+        Me.btnPrint.Location = New System.Drawing.Point(112, 523)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(42, 34)
         Me.btnPrint.TabIndex = 15
@@ -351,7 +366,7 @@ Partial Class FormAddSalesQuotation
         Me.btnClear.Appearance.Options.UseFont = True
         Me.btnClear.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.btnClear.Image = CType(resources.GetObject("btnClear.Image"), System.Drawing.Image)
-        Me.btnClear.Location = New System.Drawing.Point(160, 422)
+        Me.btnClear.Location = New System.Drawing.Point(160, 523)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(42, 34)
         Me.btnClear.TabIndex = 16
@@ -363,7 +378,7 @@ Partial Class FormAddSalesQuotation
         Me.btnSave.Appearance.Options.UseFont = True
         Me.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
-        Me.btnSave.Location = New System.Drawing.Point(2, 422)
+        Me.btnSave.Location = New System.Drawing.Point(2, 523)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(104, 34)
         Me.btnSave.TabIndex = 14
@@ -373,7 +388,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.txtTotalPPN.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtTotalPPN.EditValue = ""
-        Me.txtTotalPPN.Location = New System.Drawing.Point(827, 454)
+        Me.txtTotalPPN.Location = New System.Drawing.Point(846, 555)
         Me.txtTotalPPN.Name = "txtTotalPPN"
         Me.txtTotalPPN.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotalPPN.Properties.Appearance.Options.UseFont = True
@@ -386,7 +401,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.LabelControl13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelControl13.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelControl13.Location = New System.Drawing.Point(760, 457)
+        Me.LabelControl13.Location = New System.Drawing.Point(779, 558)
         Me.LabelControl13.Name = "LabelControl13"
         Me.LabelControl13.Size = New System.Drawing.Size(57, 17)
         Me.LabelControl13.TabIndex = 96
@@ -396,7 +411,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.txtDiscount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDiscount.EditValue = ""
-        Me.txtDiscount.Location = New System.Drawing.Point(827, 429)
+        Me.txtDiscount.Location = New System.Drawing.Point(846, 530)
         Me.txtDiscount.Name = "txtDiscount"
         Me.txtDiscount.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDiscount.Properties.Appearance.Options.UseFont = True
@@ -409,7 +424,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.LabelControl14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelControl14.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelControl14.Location = New System.Drawing.Point(734, 432)
+        Me.LabelControl14.Location = New System.Drawing.Point(753, 533)
         Me.LabelControl14.Name = "LabelControl14"
         Me.LabelControl14.Size = New System.Drawing.Size(83, 17)
         Me.LabelControl14.TabIndex = 94
@@ -419,7 +434,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.txtTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtTotal.EditValue = ""
-        Me.txtTotal.Location = New System.Drawing.Point(827, 404)
+        Me.txtTotal.Location = New System.Drawing.Point(846, 505)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotal.Properties.Appearance.Options.UseFont = True
@@ -432,7 +447,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.LabelControl15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelControl15.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelControl15.Location = New System.Drawing.Point(756, 407)
+        Me.LabelControl15.Location = New System.Drawing.Point(775, 508)
         Me.LabelControl15.Name = "LabelControl15"
         Me.LabelControl15.Size = New System.Drawing.Size(61, 17)
         Me.LabelControl15.TabIndex = 92
@@ -442,7 +457,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.txtNetPrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtNetPrice.EditValue = ""
-        Me.txtNetPrice.Location = New System.Drawing.Point(827, 480)
+        Me.txtNetPrice.Location = New System.Drawing.Point(846, 581)
         Me.txtNetPrice.Name = "txtNetPrice"
         Me.txtNetPrice.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNetPrice.Properties.Appearance.Options.UseFont = True
@@ -455,7 +470,7 @@ Partial Class FormAddSalesQuotation
         '
         Me.LabelControl16.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelControl16.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelControl16.Location = New System.Drawing.Point(764, 483)
+        Me.LabelControl16.Location = New System.Drawing.Point(783, 584)
         Me.LabelControl16.Name = "LabelControl16"
         Me.LabelControl16.Size = New System.Drawing.Size(53, 17)
         Me.LabelControl16.TabIndex = 101
@@ -513,7 +528,8 @@ Partial Class FormAddSalesQuotation
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(546, 405)
+        Me.SimpleButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.SimpleButton1.Location = New System.Drawing.Point(546, 505)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(75, 23)
         Me.SimpleButton1.TabIndex = 18
@@ -534,11 +550,12 @@ Partial Class FormAddSalesQuotation
         '
         'btnEdit
         '
+        Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnEdit.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.Appearance.Options.UseFont = True
         Me.btnEdit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.btnEdit.Image = CType(resources.GetObject("btnEdit.Image"), System.Drawing.Image)
-        Me.btnEdit.Location = New System.Drawing.Point(208, 422)
+        Me.btnEdit.Location = New System.Drawing.Point(208, 522)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(104, 34)
         Me.btnEdit.TabIndex = 17
@@ -591,17 +608,117 @@ Partial Class FormAddSalesQuotation
         Me.SimpleButton2.Appearance.Options.UseFont = True
         Me.SimpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.SimpleButton2.Image = CType(resources.GetObject("SimpleButton2.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(387, 37)
+        Me.SimpleButton2.Location = New System.Drawing.Point(325, 9)
         Me.SimpleButton2.Name = "SimpleButton2"
         Me.SimpleButton2.Size = New System.Drawing.Size(26, 22)
         Me.SimpleButton2.TabIndex = 144
         Me.SimpleButton2.Visible = False
         '
+        'PanelControl1
+        '
+        Me.PanelControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelControl1.Appearance.BackColor = System.Drawing.Color.Gainsboro
+        Me.PanelControl1.Appearance.Options.UseBackColor = True
+        Me.PanelControl1.Controls.Add(Me.txtTOPayment)
+        Me.PanelControl1.Controls.Add(Me.LabelControl21)
+        Me.PanelControl1.Controls.Add(Me.txtFOBPoint)
+        Me.PanelControl1.Controls.Add(Me.LabelControl20)
+        Me.PanelControl1.Controls.Add(Me.txtShipVia)
+        Me.PanelControl1.Controls.Add(Me.LabelControl19)
+        Me.PanelControl1.Controls.Add(Me.txtDellTime)
+        Me.PanelControl1.Controls.Add(Me.LabelControl18)
+        Me.PanelControl1.Location = New System.Drawing.Point(2, 151)
+        Me.PanelControl1.Name = "PanelControl1"
+        Me.PanelControl1.Size = New System.Drawing.Size(1025, 54)
+        Me.PanelControl1.TabIndex = 145
+        '
+        'txtTOPayment
+        '
+        Me.txtTOPayment.EditValue = ""
+        Me.txtTOPayment.Location = New System.Drawing.Point(644, 23)
+        Me.txtTOPayment.Name = "txtTOPayment"
+        Me.txtTOPayment.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTOPayment.Properties.Appearance.Options.UseFont = True
+        Me.txtTOPayment.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.txtTOPayment.Size = New System.Drawing.Size(190, 26)
+        Me.txtTOPayment.TabIndex = 76
+        '
+        'LabelControl21
+        '
+        Me.LabelControl21.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl21.Location = New System.Drawing.Point(644, 5)
+        Me.LabelControl21.Name = "LabelControl21"
+        Me.LabelControl21.Size = New System.Drawing.Size(101, 17)
+        Me.LabelControl21.TabIndex = 77
+        Me.LabelControl21.Text = "Term Of Payment"
+        '
+        'txtFOBPoint
+        '
+        Me.txtFOBPoint.EditValue = ""
+        Me.txtFOBPoint.Location = New System.Drawing.Point(437, 23)
+        Me.txtFOBPoint.Name = "txtFOBPoint"
+        Me.txtFOBPoint.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFOBPoint.Properties.Appearance.Options.UseFont = True
+        Me.txtFOBPoint.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.txtFOBPoint.Size = New System.Drawing.Size(190, 26)
+        Me.txtFOBPoint.TabIndex = 74
+        '
+        'LabelControl20
+        '
+        Me.LabelControl20.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl20.Location = New System.Drawing.Point(437, 5)
+        Me.LabelControl20.Name = "LabelControl20"
+        Me.LabelControl20.Size = New System.Drawing.Size(62, 17)
+        Me.LabelControl20.TabIndex = 75
+        Me.LabelControl20.Text = "F.O.B Point"
+        '
+        'txtShipVia
+        '
+        Me.txtShipVia.EditValue = ""
+        Me.txtShipVia.Location = New System.Drawing.Point(226, 23)
+        Me.txtShipVia.Name = "txtShipVia"
+        Me.txtShipVia.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtShipVia.Properties.Appearance.Options.UseFont = True
+        Me.txtShipVia.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.txtShipVia.Size = New System.Drawing.Size(190, 26)
+        Me.txtShipVia.TabIndex = 72
+        '
+        'LabelControl19
+        '
+        Me.LabelControl19.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl19.Location = New System.Drawing.Point(226, 5)
+        Me.LabelControl19.Name = "LabelControl19"
+        Me.LabelControl19.Size = New System.Drawing.Size(47, 17)
+        Me.LabelControl19.TabIndex = 73
+        Me.LabelControl19.Text = "Ship Via"
+        '
+        'txtDellTime
+        '
+        Me.txtDellTime.EditValue = ""
+        Me.txtDellTime.Location = New System.Drawing.Point(10, 23)
+        Me.txtDellTime.Name = "txtDellTime"
+        Me.txtDellTime.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDellTime.Properties.Appearance.Options.UseFont = True
+        Me.txtDellTime.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.txtDellTime.Size = New System.Drawing.Size(190, 26)
+        Me.txtDellTime.TabIndex = 70
+        '
+        'LabelControl18
+        '
+        Me.LabelControl18.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl18.Location = New System.Drawing.Point(10, 5)
+        Me.LabelControl18.Name = "LabelControl18"
+        Me.LabelControl18.Size = New System.Drawing.Size(54, 17)
+        Me.LabelControl18.TabIndex = 71
+        Me.LabelControl18.Text = "Dell Time"
+        '
         'FormAddSalesQuotation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1016, 512)
+        Me.ClientSize = New System.Drawing.Size(1035, 613)
+        Me.Controls.Add(Me.PanelControl1)
         Me.Controls.Add(Me.SimpleButton2)
         Me.Controls.Add(Me.LabelControl17)
         Me.Controls.Add(Me.LabelControl10)
@@ -676,6 +793,13 @@ Partial Class FormAddSalesQuotation
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cbCustomer.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtProject.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl1.ResumeLayout(False)
+        Me.PanelControl1.PerformLayout()
+        CType(Me.txtTOPayment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtFOBPoint.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtShipVia.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDellTime.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -730,4 +854,13 @@ Partial Class FormAddSalesQuotation
     Friend WithEvents txtProject As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl17 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents txtDellTime As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl18 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtTOPayment As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl21 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtFOBPoint As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl20 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtShipVia As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl19 As DevExpress.XtraEditors.LabelControl
 End Class

@@ -33,7 +33,19 @@ Public Class ClassSalesQuotation
         ModKoneksi.BukaKoneksi()
         Command.Connection = ModKoneksi.Koneksi
         Command.CommandType = CommandType.Text
-        Command.CommandText = "Exec SelectDetilSalesQuotaionByid'" & SqId & "'"
+        Command.CommandText = "Exec SelectDetilSalesQuotaionByid '" & SqId & "'"
+        oDataAdapter.SelectCommand = Command
+        oDataAdapter.Fill(oDataTabel)
+        ModKoneksi.TutupKoneksi()
+        Return oDataTabel
+    End Function
+
+    Function SelectSQInfobyId(SqId As String)
+        Dim oDataTabel As New DataTable
+        ModKoneksi.BukaKoneksi()
+        Command.Connection = ModKoneksi.Koneksi
+        Command.CommandType = CommandType.Text
+        Command.CommandText = "select * from tbSalesQuotationInfo where DocNumber='" & SqId & "'"
         oDataAdapter.SelectCommand = Command
         oDataAdapter.Fill(oDataTabel)
         ModKoneksi.TutupKoneksi()
@@ -41,7 +53,8 @@ Public Class ClassSalesQuotation
     End Function
 
     Function AddSalesQuotation(customer As String, ContactPerson As String, Ref As String, Currency As String, rate As String, dateinput As String, validuntil As String, salesPerson As String,
-                               Discount As Integer, ppnStatus As String, note As String, TotalPrice As Long, TotalDiscount As Long, TotalPPN As Long, NetPrice As Long, project As String, data As DataTable)
+                               Discount As Integer, ppnStatus As String, note As String, TotalPrice As Long, TotalDiscount As Long, TotalPPN As Long, NetPrice As Long, project As String, data As DataTable,
+                               Delltime As String, ShipVia As String, FOBPoint As String, TermofPayment As String)
 
         Dim KodeMaster As String = ""
         ModKoneksi.BukaKoneksi()
@@ -80,6 +93,9 @@ Public Class ClassSalesQuotation
                 Command.ExecuteNonQuery()
             Next
 
+            Command.CommandText = "exec addSalesQuotationInfo '" & KodeMaster & "','" & Delltime & "','" & ShipVia & "','" & FOBPoint & "','" & TermofPayment & "'"
+            Command.ExecuteNonQuery()
+
             Command.Parameters.Clear()
             dbTrans.Commit()
             MsgBox("Data hase been save", MsgBoxStyle.Information, "Information")
@@ -93,7 +109,8 @@ Public Class ClassSalesQuotation
     End Function
 
     Sub EditSalesQuotation(salesQuotationid As String, customer As String, ContactPerson As String, Ref As String, Currency As String, rate As String, dateinput As String, validuntil As String, salesPerson As String,
-                              Discount As Integer, ppnStatus As String, note As String, TotalPrice As Long, TotalDiscount As Long, TotalPPN As Long, NetPrice As Long, project As String, data As DataTable)
+                           Discount As Integer, ppnStatus As String, note As String, TotalPrice As Long, TotalDiscount As Long, TotalPPN As Long, NetPrice As Long, project As String, data As DataTable,
+                           Delltime As String, ShipVia As String, FOBPoint As String, TermofPayment As String)
         ModKoneksi.BukaKoneksi()
         dbTrans = ModKoneksi.Koneksi.BeginTransaction
         Command.Connection = ModKoneksi.Koneksi
@@ -127,6 +144,9 @@ Public Class ClassSalesQuotation
                                        & "'" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "'"
                 Command.ExecuteNonQuery()
             Next
+
+            Command.CommandText = "exec EditSalesQuotationInfo '" & salesQuotationid & "','" & Delltime & "','" & ShipVia & "','" & FOBPoint & "','" & TermofPayment & "'"
+            Command.ExecuteNonQuery()
 
             Command.Parameters.Clear()
             dbTrans.Commit()

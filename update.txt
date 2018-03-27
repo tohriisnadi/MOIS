@@ -1,0 +1,13 @@
+21-02-2018
+Database
+- Add Tabel tbSalesQuotationInfo
+- Add Store Procesure
+
+Program
+- Modif Form Sales Quotation
+- Add Unit Price colom on print out quotations
+
+23-02-2018
+- Add Tax di detail SO, dan detil Invoice dan billing, isinya Check Box defaultnya true
+	jika true, kehitung ppn global, jika false, tidak terhitung ppn global
+	

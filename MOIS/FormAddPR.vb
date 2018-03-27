@@ -89,7 +89,7 @@ Public Class FormAddPR
             oDataTabelUnbound.Columns.Add(New DataColumn("Qty", GetType(Integer))) '5
             oDataTabelUnbound.Columns.Add(New DataColumn("Req. Price", GetType(Long))) '6
             oDataTabelUnbound.Columns.Add(New DataColumn("Discount Type", GetType(String))) '7
-            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Discount", GetType(Integer))) '8
+            oDataTabelUnbound.Columns.Add(New DataColumn("Req. Discount", GetType(String))) '8
             oDataTabelUnbound.Columns.Add(New DataColumn("Total", GetType(Long))) '9
             oDataTabelUnbound.Columns.Add(New DataColumn("IEO", GetType(String))) '10
             oDataTabelUnbound.Columns.Add(New DataColumn("Remarks", GetType(String))) '11
@@ -341,25 +341,6 @@ Public Class FormAddPR
             Else
                 e.Value = e.Value
             End If
-
-            '------------hitung
-            'Try
-            '    Dim price As Long = Convert.ToInt64(View.GetFocusedDataRow.Item("Req. Price"))
-            '    Dim qty As Long = Convert.ToInt64(View.GetFocusedDataRow.Item("Qty"))
-            '    If price > 0 And qty > 0 Then
-            '        'e.Value = e.Value
-            '        If View.GetFocusedDataRow.Item("Discount Type") = "Percent" Then
-            '            View.GetFocusedDataRow.Item("Total") = (price * qty) - (CDbl(e.Value / 100) * (price * qty))
-            '        Else
-            '            View.GetFocusedDataRow.Item("Total") = (qty * (price - e.Value))
-            '        End If
-            '    Else
-            '        e.Valid = False
-            '        e.ErrorText = "invalid Value"
-            '    End If
-            'Catch ex As Exception
-
-            'End Try
             hitung()
         ElseIf View.FocusedColumn.FieldName = "Req. Discount" Then
             Dim price As Long = Convert.ToInt64(View.GetFocusedDataRow.Item("Req. Price"))
@@ -368,6 +349,7 @@ Public Class FormAddPR
                 'e.Value = e.Value
                 If View.GetFocusedDataRow.Item("Discount Type") = "Percent" Then
                     View.GetFocusedDataRow.Item("Total") = (price * qty) - (CDbl(e.Value / 100) * (price * qty))
+                    'View.GetFocusedDataRow.Item("Discount Type") = e.Valid + " %"
                 Else
                     View.GetFocusedDataRow.Item("Total") = (qty * (price - e.Value))
                 End If
@@ -391,7 +373,8 @@ Public Class FormAddPR
         Dim Tool As ReportPrintTool = New ReportPrintTool(laporan)
         Dim oDataSet As New DataSet
         Dim oDataAdapter As New OdbcDataAdapter
-        Dim i As Integer
+
+
 
         If oDataSet.Tables.Count <> 0 Then
             oDataSet.Tables.Remove("Table1")
@@ -399,7 +382,21 @@ Public Class FormAddPR
 
         hitung()
 
-        oDataSet.Tables.Add(odata.Copy)
+        Dim Discount As String
+        Dim odata2 As New DataTable
+        odata2 = odata.Copy()
+
+        For i As Integer = 0 To odata2.Rows.Count - 1
+            Discount = odata2.Rows(i).Item("Req. Discount")
+            If odata2.Rows(i).Item("Discount Type") = "Percent" Then
+                odata2.Rows(i).Item("Req. Discount") = Discount.ToString + " %"
+            Else
+                odata2.Rows(i).Item("Req. Discount") = "IDR. " + Format(CLng(Discount), "###,###,##0.00")
+                'odata.Rows(i).Item("Req. Discount") = String.Format("{0:C}", Discount.ToString)
+            End If
+        Next
+
+        oDataSet.Tables.Add(odata2.Copy)
 
         laporan.DataSource = oDataSet
         laporan.DataAdapter = oDataAdapter
@@ -417,7 +414,7 @@ Public Class FormAddPR
         laporan.txtUnit.DataBindings.Add("Text", Nothing, "UOM")
         laporan.txtUraian.DataBindings.Add("Text", Nothing, "Item Description")
         laporan.txtUnitPrice.DataBindings.Add("Text", Nothing, "Req. Price", "{0: #,#.00}")
-        laporan.txtDisc.DataBindings.Add("Text", Nothing, "Req. Discount", "{0:#,#}")
+        laporan.txtDisc.DataBindings.Add("Text", Nothing, "Req. Discount") ', "{0:#,#}")
         laporan.txtJumlah.DataBindings.Add("Text", Nothing, "Total", "{0:#,#.00}")
         laporan.txtCur1.Text = txtCurrency.Text
         laporan.txtCur2.Text = txtCurrency.Text

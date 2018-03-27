@@ -94,4 +94,16 @@ Public Class ClassAdjustmentStock
         ModKoneksi.TutupKoneksi()
         Return KodeMaster
     End Function
+
+    Function SelectDataAdj()
+        Dim oDataTabel As New DataTable
+        ModKoneksi.BukaKoneksi()
+        Command.Connection = ModKoneksi.Koneksi
+        Command.CommandType = CommandType.Text
+        Command.CommandText = "Select DocumentNumber,Date,Type,CountBy,ApproveBy,Reference,Notes from tbAdjustmentStock"
+        oDataAdapter.SelectCommand = Command
+        oDataAdapter.Fill(oDataTabel)
+        ModKoneksi.TutupKoneksi()
+        Return oDataTabel
+    End Function
 End Class

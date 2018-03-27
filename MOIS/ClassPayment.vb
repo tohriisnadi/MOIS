@@ -45,7 +45,7 @@ Public Class ClassPayment
         ModKoneksi.BukaKoneksi()
         Command.Connection = ModKoneksi.Koneksi
         Command.CommandType = CommandType.Text
-        Command.CommandText = "Select Reference,ReferenceInformation,RefInvoiceAmount,PaymentAmount,PaymentAmountinIDR,Remarks from tbPaymentDetils"
+        Command.CommandText = "Select Reference,ReferenceInformation,RefInvoiceAmount,PaymentAmount,PaymentAmountinIDR,Remarks from tbPaymentDetils where tbPaymentId= '" & id & "'"
         oDataAdapter.SelectCommand = Command
         oDataAdapter.Fill(oDataTabel)
         ModKoneksi.TutupKoneksi()

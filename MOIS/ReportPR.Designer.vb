@@ -98,6 +98,10 @@ Partial Public Class ReportPR
         Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtCur5 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtNetPrice = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableRow9 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.txtCur6 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.txtDPP = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableRow6 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.txtCur4 = New DevExpress.XtraReports.UI.XRTableCell()
@@ -110,10 +114,6 @@ Partial Public Class ReportPR
         Me.XrTable4 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow5 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.txtTotal = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableRow9 = New DevExpress.XtraReports.UI.XRTableRow()
-        Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.txtCur6 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.txtDPP = New DevExpress.XtraReports.UI.XRTableCell()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -186,7 +186,7 @@ Partial Public Class ReportPR
         Me.txtUraian.StylePriority.UseTextAlignment = False
         Me.txtUraian.Text = "Uraian"
         Me.txtUraian.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.txtUraian.Weight = 0.975736292415554R
+        Me.txtUraian.Weight = 0.92464208791837033R
         '
         'txtCur1
         '
@@ -198,7 +198,7 @@ Partial Public Class ReportPR
         Me.txtCur1.StylePriority.UseTextAlignment = False
         Me.txtCur1.Text = "Rp."
         Me.txtCur1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.txtCur1.Weight = 0.138619177954528R
+        Me.txtCur1.Weight = 0.14729646912402697R
         '
         'txtUnitPrice
         '
@@ -210,13 +210,13 @@ Partial Public Class ReportPR
         Me.txtUnitPrice.StylePriority.UseTextAlignment = False
         Me.txtUnitPrice.Text = "Unit Price"
         Me.txtUnitPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.txtUnitPrice.Weight = 0.437487835008314R
+        Me.txtUnitPrice.Weight = 0.40681586074681853R
         '
         'txtDisc
         '
         Me.txtDisc.Name = "txtDisc"
         Me.txtDisc.Text = "Disc"
-        Me.txtDisc.Weight = 0.240333591381094R
+        Me.txtDisc.Weight = 0.36740712274925841R
         '
         'txtCur2
         '
@@ -230,7 +230,7 @@ Partial Public Class ReportPR
         Me.txtCur2.StylePriority.UseTextAlignment = False
         Me.txtCur2.Text = "Rp."
         Me.txtCur2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.txtCur2.Weight = 0.152792857311902R
+        Me.txtCur2.Weight = 0.15664942175079027R
         '
         'txtJumlah
         '
@@ -244,7 +244,7 @@ Partial Public Class ReportPR
         Me.txtJumlah.StylePriority.UseTextAlignment = False
         Me.txtJumlah.Text = "Jumlah"
         Me.txtJumlah.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.txtJumlah.Weight = 0.43517998885007R
+        Me.txtJumlah.Weight = 0.3773387806321975R
         '
         'TopMargin
         '
@@ -401,25 +401,25 @@ Partial Public Class ReportPR
         '
         Me.XrTableCell5.Name = "XrTableCell5"
         Me.XrTableCell5.Text = "Uraian"
-        Me.XrTableCell5.Weight = 0.975736292415554R
+        Me.XrTableCell5.Weight = 0.9246423160138576R
         '
         'XrTableCell6
         '
         Me.XrTableCell6.Name = "XrTableCell6"
         Me.XrTableCell6.Text = "Unit Price"
-        Me.XrTableCell6.Weight = 0.576107255181051R
+        Me.XrTableCell6.Weight = 0.55411209289104146R
         '
         'XrTableCell7
         '
         Me.XrTableCell7.Name = "XrTableCell7"
         Me.XrTableCell7.Text = "Disc"
-        Me.XrTableCell7.Weight = 0.240333365439751R
+        Me.XrTableCell7.Weight = 0.36740725860508255R
         '
         'XrTableCell8
         '
         Me.XrTableCell8.Name = "XrTableCell8"
         Me.XrTableCell8.Text = "Jumlah"
-        Me.XrTableCell8.Weight = 0.587972706120871R
+        Me.XrTableCell8.Weight = 0.53398795164724544R
         '
         'lbRequestor
         '
@@ -907,6 +907,34 @@ Partial Public Class ReportPR
         Me.txtNetPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         Me.txtNetPrice.Weight = 1.25669526865272R
         '
+        'XrTableRow9
+        '
+        Me.XrTableRow9.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell12, Me.txtCur6, Me.txtDPP})
+        Me.XrTableRow9.Name = "XrTableRow9"
+        Me.XrTableRow9.Weight = 1.0R
+        '
+        'XrTableCell12
+        '
+        Me.XrTableCell12.Name = "XrTableCell12"
+        Me.XrTableCell12.Text = "DPP"
+        Me.XrTableCell12.Weight = 0.978219618238072R
+        '
+        'txtCur6
+        '
+        Me.txtCur6.Name = "txtCur6"
+        Me.txtCur6.Text = "Rp."
+        Me.txtCur6.Weight = 0.281020139203395R
+        '
+        'txtDPP
+        '
+        Me.txtDPP.Name = "txtDPP"
+        Me.txtDPP.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100.0!)
+        Me.txtDPP.StylePriority.UsePadding = False
+        Me.txtDPP.StylePriority.UseTextAlignment = False
+        Me.txtDPP.Text = "txtDPP"
+        Me.txtDPP.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        Me.txtDPP.Weight = 1.25669526865272R
+        '
         'XrTableRow6
         '
         Me.XrTableRow6.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell10, Me.txtCur4, Me.txtPPN})
@@ -1002,34 +1030,6 @@ Partial Public Class ReportPR
         Me.txtTotal.Text = " "
         Me.txtTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         Me.txtTotal.Weight = 0.716822411080577R
-        '
-        'XrTableRow9
-        '
-        Me.XrTableRow9.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell12, Me.txtCur6, Me.txtDPP})
-        Me.XrTableRow9.Name = "XrTableRow9"
-        Me.XrTableRow9.Weight = 1.0R
-        '
-        'XrTableCell12
-        '
-        Me.XrTableCell12.Name = "XrTableCell12"
-        Me.XrTableCell12.Text = "DPP"
-        Me.XrTableCell12.Weight = 0.978219618238072R
-        '
-        'txtCur6
-        '
-        Me.txtCur6.Name = "txtCur6"
-        Me.txtCur6.Text = "Rp."
-        Me.txtCur6.Weight = 0.281020139203395R
-        '
-        'txtDPP
-        '
-        Me.txtDPP.Name = "txtDPP"
-        Me.txtDPP.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100.0!)
-        Me.txtDPP.StylePriority.UsePadding = False
-        Me.txtDPP.StylePriority.UseTextAlignment = False
-        Me.txtDPP.Text = "txtDPP"
-        Me.txtDPP.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.txtDPP.Weight = 1.25669526865272R
         '
         'ReportPR
         '

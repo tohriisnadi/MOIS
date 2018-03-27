@@ -21,7 +21,7 @@ Public Class ClassVendorInvoice
         ModKoneksi.BukaKoneksi()
         Command.Connection = ModKoneksi.Koneksi
         Command.CommandType = CommandType.Text
-        Command.CommandText = "select a.CL,a.ItemCode,b.Description1,b.UOM,a.Qty,a.UnitPrice,a.DiscountType,a.Discount,a.Total,a.Remarks,a.GRNumber from tbVendorInvoiceDetils a inner join tbMasterItemMD b on a.ItemCode = b.ItemCode where a.VendorInvoiceId='" & SalesBillingId & "'"
+        Command.CommandText = "select a.CL,a.ItemCode,a.Description,a.uom,a.Qty,a.UnitPrice,a.DiscountType,a.Discount,a.Total,a.Remarks,a.GRNumber from tbVendorInvoiceDetils a inner join tbMasterItemMD b on a.ItemCode = b.ItemCode where a.VendorInvoiceId='" & SalesBillingId & "'"
         oDataAdapter.SelectCommand = Command
         oDataAdapter.Fill(oDataTabel)
         ModKoneksi.TutupKoneksi()
@@ -74,7 +74,7 @@ Public Class ClassVendorInvoice
             KodeMaster = Command.Parameters("@DocNumber").Value
             ' id = '" & Guid.NewGuid.ToString & "'
             For i As Integer = 0 To data.Rows.Count - 1
-                Command.CommandText = "exec AddDetilsVendorInvoice '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
+                Command.CommandText = "exec AddDetilsVendorInvoice '" & Guid.NewGuid.ToString & "','" & KodeMaster & "','" & data.Rows(i).Item(1) & "','" & data.Rows(i).Item(2) & "','" & data.Rows(i).Item(3) & "','" & data.Rows(i).Item(4) & "','" & data.Rows(i).Item(5) & "','" & data.Rows(i).Item(6) & "'," _
                                        & "'" & data.Rows(i).Item(7) & "','" & data.Rows(i).Item(8) & "','" & data.Rows(i).Item(9) & "','" & data.Rows(i).Item(10) & "','" & data.Rows(i).Item(11) & "'"
                 Command.ExecuteNonQuery()
             Next

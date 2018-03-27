@@ -43,7 +43,6 @@ Partial Class FormAddPayment
         Me.LabelControl8 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
-        Me.txtCashBank = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.txtDocNumber = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
@@ -61,6 +60,7 @@ Partial Class FormAddPayment
         Me.txtTotalPaymentIDR = New DevExpress.XtraEditors.TextEdit()
         Me.txtCurrency = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
+        Me.txtCashBank = New DevExpress.XtraEditors.ComboBoxEdit()
         CType(Me.txtTotalPaymentAmount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalRefInvAmount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,7 +72,6 @@ Partial Class FormAddPayment
         CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCashBank.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDocNumber.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPartnertType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSearchLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +80,7 @@ Partial Class FormAddPayment
         CType(Me.txtTotalPaymentIDR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCashBank.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelControl18
@@ -267,17 +267,6 @@ Partial Class FormAddPayment
         Me.LabelControl3.TabIndex = 269
         Me.LabelControl3.Text = "Cash / Bank Account"
         '
-        'txtCashBank
-        '
-        Me.txtCashBank.EditValue = ""
-        Me.txtCashBank.Location = New System.Drawing.Point(139, 60)
-        Me.txtCashBank.Name = "txtCashBank"
-        Me.txtCashBank.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCashBank.Properties.Appearance.Options.UseFont = True
-        Me.txtCashBank.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
-        Me.txtCashBank.Size = New System.Drawing.Size(239, 26)
-        Me.txtCashBank.TabIndex = 5
-        '
         'LabelControl2
         '
         Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -444,6 +433,18 @@ Partial Class FormAddPayment
         '
         Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
         '
+        'txtCashBank
+        '
+        Me.txtCashBank.EditValue = ""
+        Me.txtCashBank.Location = New System.Drawing.Point(139, 60)
+        Me.txtCashBank.Name = "txtCashBank"
+        Me.txtCashBank.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCashBank.Properties.Appearance.Options.UseFont = True
+        Me.txtCashBank.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.txtCashBank.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtCashBank.Size = New System.Drawing.Size(239, 26)
+        Me.txtCashBank.TabIndex = 5
+        '
         'FormAddPayment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -473,12 +474,12 @@ Partial Class FormAddPayment
         Me.Controls.Add(Me.LabelControl8)
         Me.Controls.Add(Me.LabelControl5)
         Me.Controls.Add(Me.LabelControl3)
-        Me.Controls.Add(Me.txtCashBank)
         Me.Controls.Add(Me.LabelControl2)
         Me.Controls.Add(Me.txtDocNumber)
         Me.Controls.Add(Me.LabelControl1)
         Me.Controls.Add(Me.txtPartnertType)
         Me.Controls.Add(Me.txtCurrency)
+        Me.Controls.Add(Me.txtCashBank)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormAddPayment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -494,7 +495,6 @@ Partial Class FormAddPayment
         CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCashBank.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDocNumber.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPartnertType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSearchLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -503,6 +503,7 @@ Partial Class FormAddPayment
         CType(Me.txtTotalPaymentIDR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCashBank.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -529,7 +530,6 @@ Partial Class FormAddPayment
     Friend WithEvents LabelControl8 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtCashBank As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtDocNumber As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
@@ -544,4 +544,5 @@ Partial Class FormAddPayment
     Friend WithEvents RepositoryItemSearchLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit
     Friend WithEvents RepositoryItemSearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+    Friend WithEvents txtCashBank As DevExpress.XtraEditors.ComboBoxEdit
 End Class

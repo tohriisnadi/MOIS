@@ -20,7 +20,7 @@
         If txtUsername.Text <> "" And e.KeyCode = Keys.Enter Then
             txtPassword.Focus()
         ElseIf e.KeyCode = Keys.F1 Then
-            MsgBox("Aplication Version 0.1.1.3" + vbCrLf + "update 06-02-2018", MsgBoxStyle.Information, "Version Info")
+            MsgBox("Aplication Version 0.1.3.5" + vbCrLf + "update 05-03-2018", MsgBoxStyle.Information, "Version Info")
         End If
     End Sub
 
