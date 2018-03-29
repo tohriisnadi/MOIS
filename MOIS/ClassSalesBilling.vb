@@ -38,7 +38,7 @@ Public Class ClassSalesBilling
         Command.Connection = ModKoneksi.Koneksi
         Command.Transaction = dbTrans
         Command.CommandType = CommandType.StoredProcedure
-        Command.CommandText = "{call AddSalesBilling (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}"
+        Command.CommandText = "{call AddSalesBilling (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}"
         Try
             Command.Parameters.Add("@Customer", OdbcType.VarChar, 50, ParameterDirection.Input).Value = customer
             Command.Parameters.Add("@Reference", OdbcType.VarChar, 50, ParameterDirection.Input).Value = Ref
@@ -59,7 +59,7 @@ Public Class ClassSalesBilling
             Command.Parameters.Add("@CustPODate", OdbcType.VarChar, 50, ParameterDirection.Input).Value = CustPODate
 
             Command.Parameters.Add("@KodeOperator", OdbcType.VarChar, 50, ParameterDirection.Input).Value = kodeOperator
-            Command.Parameters.Add("@namaOperator", OdbcType.VarChar, 50, ParameterDirection.Input).Value = namaOperator
+            Command.Parameters.Add("@NamaOperator", OdbcType.VarChar, 50, ParameterDirection.Input).Value = namaOperator
             Command.Parameters.Add("@DocNumber", OdbcType.VarChar, 50)
             Command.Parameters("@DocNumber").Direction = ParameterDirection.Output
             Command.ExecuteNonQuery()

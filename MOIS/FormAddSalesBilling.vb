@@ -345,8 +345,8 @@ Public Class FormAddSalesBilling
         Else
             If X = "1" Then
                 DataAr.AddSaleBilling(CustCode(cbCust.SelectedIndex), txtRef.Text, txtCurrency.Text, txtRate.Text, Format(CDate(txtDate.Text), "yyyy/MM/dd"), txtTermOfPayment.Text, txtDiscountHeader.Text,
-                                  txtPPNStatus.Text, txtNote.Text, Format(CDate(txtBaseLineDate.Text), "yyyy/MM/dd"), txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text, txtNetPrice.Text, oDataTabelUnbound, DODate,
-                                  txtPONo.Text, txtPODate.Text)
+                                  txtPPNStatus.Text, txtNote.Text, Format(CDate(txtBaseLineDate.Text), "yyyy/MM/dd"), txtTotal.Text, txtDiscount.Text, txtTotalPPN.Text, txtNetPrice.Text, oDataTabelUnbound, Format(CDate(DODate), "yyyy/MM/dd"),
+                                  txtPONo.Text, Format(CDate(txtPODate.Text), "yyyy/MM/dd"))
                 clean()
             End If
         End If

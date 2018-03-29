@@ -581,3 +581,4 @@ D:\Tohri\MOIS\MOIS\bin\Debug\MOIS.pdb
 D:\Tohri\MOIS\MOIS\bin\Debug\MOIS.xml
 D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.vbprojResolveAssemblyReference.cache
 D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataPricelistDetil.resources
+D:\Tohri\MOIS\MOIS\obj\Debug\MOIS.FormDataAdjusment.resources

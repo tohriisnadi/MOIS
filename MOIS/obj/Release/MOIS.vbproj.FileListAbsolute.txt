@@ -466,4 +466,3 @@ D:\Tohri\MOIS\MOIS\obj\Release\MOIS.ReportVendorInvoice.resources
 D:\Tohri\MOIS\MOIS\obj\Release\MOIS.WaitForm1.resources
 D:\Tohri\MOIS\MOIS\obj\Release\MOIS.FormDataPricelistDetil.resources
 D:\Tohri\MOIS\MOIS\obj\Release\MOIS.FormDataAdjusment.resources
-D:\Tohri\MOIS\MOIS\obj\Release\MOIS.vbprojResolveAssemblyReference.cache
