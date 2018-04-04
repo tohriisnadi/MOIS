@@ -97,6 +97,7 @@
                 FormAddVendorInvoice.X = "2"
                 FormAddVendorInvoice.clean()
                 FormAddVendorInvoice.VendorInvoiceId = GridView1.GetFocusedDataRow.Item(0).ToString
+                FormAddVendorInvoice.Kodevendor = GridView1.GetFocusedDataRow.Item(1).ToString
                 FormAddVendorInvoice.txtDocNumber.Text = GridView1.GetFocusedDataRow.Item(0).ToString
                 FormAddVendorInvoice.txtDate.EditValue = GridView1.GetFocusedDataRow.Item(6).ToString
                 FormAddVendorInvoice.txtRef.Text = GridView1.GetFocusedDataRow.Item(3).ToString
