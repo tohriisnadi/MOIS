@@ -1,3 +1,8 @@
+11-04-2018
+Program
+Update Print logic if rekening not chosed
+
+
 21-02-2018
 Database
 - Add Tabel tbSalesQuotationInfo

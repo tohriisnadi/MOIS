@@ -430,7 +430,11 @@ Public Class FormAddSalesOrder
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         FormChoseRekening.X = "1"
         FormChoseRekening.ShowDialog()
-        cetakLaporan(oDataTabelUnbound, OdataRek)
+        Try
+            cetakLaporan(oDataTabelUnbound, OdataRek)
+        Catch ex As Exception
+            MsgBox("Tidak ada Rekening terpilih. ", vbInformation, "Information")
+        End Try
     End Sub
 
     Private Sub txtDiscountHeader_KeyDown(sender As Object, e As KeyEventArgs) Handles txtDiscountHeader.KeyDown

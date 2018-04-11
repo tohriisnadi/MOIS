@@ -30,6 +30,7 @@ Module ModKoneksi
     Sub BukaKoneksi()
         Koneksi.Close()
         KonString = "DSN=MOIS;UID=sa;PWD=fid123!!;"
+        'KonString = "DSN=MOIS;UID=;PWD=;"
         Koneksi.ConnectionString = KonString
         Try
             If Koneksi.State = ConnectionState.Open Then
