@@ -21,7 +21,7 @@ Public Class ClassPR
         ModKoneksi.BukaKoneksi()
         Command.Connection = ModKoneksi.Koneksi
         Command.CommandType = CommandType.Text
-        Command.CommandText = "select DocumentNumber,DateInput,RequestedName,ReqDepartemen,ReqDate,ValidUntil,Currency,Status,Note,EnqRefrence,TotalPrice,Discount,NetPrice from tbPR where isAktif='1'"
+        Command.CommandText = "exec selectDataPRForList"
         oDataAdapter.SelectCommand = Command
         oDataAdapter.Fill(oDataTabel)
         ModKoneksi.TutupKoneksi()

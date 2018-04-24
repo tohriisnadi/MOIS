@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MOIS
+</name>
+</assembly>
+<members>
+<member name="T:MOIS.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:MOIS.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:MOIS.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:MOIS.My.Resources.Resources.building1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MOIS.My.Resources.Resources.entrepreneur_working_on_his_macbook_min">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MOIS.My.Resources.Resources.Header">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>

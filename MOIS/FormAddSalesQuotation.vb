@@ -390,7 +390,6 @@ Public Class FormAddSalesQuotation
     End Sub
 
 
-
     Sub cetakLaporan(ByVal odata As DataTable)
         Dim laporan As New ReportSalesQuotation
         Dim Tool As ReportPrintTool = New ReportPrintTool(laporan)

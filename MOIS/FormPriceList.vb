@@ -46,10 +46,15 @@ Public Class FormPriceList
         SearchLookUpEdit1View.Columns(16).Visible = False
         SearchLookUpEdit1View.Columns(17).Visible = False
         SearchLookUpEdit1View.Columns(18).Visible = False
-        SearchLookUpEdit1View.Columns(19).Visible = False
-        SearchLookUpEdit1View.Columns(20).Visible = False
-        SearchLookUpEdit1View.Columns(21).Visible = False
-        SearchLookUpEdit1View.Columns(22).Visible = False
+        Try
+            SearchLookUpEdit1View.Columns(19).Visible = False
+            SearchLookUpEdit1View.Columns(20).Visible = False
+            SearchLookUpEdit1View.Columns(21).Visible = False
+            SearchLookUpEdit1View.Columns(22).Visible = False
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Sub LoadCustomer()
@@ -84,7 +89,7 @@ Public Class FormPriceList
     Private Sub SearchLookUpEdit1_QueryPopUp(sender As Object, e As CancelEventArgs) Handles SearchLookUpEdit1.QueryPopUp
         If rbPurchase.Checked = True Then
             setcolumnVendor()
-        Else
+        ElseIf rbSell.Checked = True Then
             setColumnCustomer()
         End If
     End Sub

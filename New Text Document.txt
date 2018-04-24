@@ -1,0 +1,12 @@
+Inquiry,,
+	requister... simpan di tabel master.. secara otomatis dengan nilai user yang logi
+
+login..
+ buat batasan user yang login hanya ada 1 user.
+
+form sales quotation
+ buat semua inputan jadi hurup kapital.
+
+form out..
+print out note tidak membaca enter..
+

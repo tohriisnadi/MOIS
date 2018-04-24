@@ -2573,7 +2573,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MOIS"
         "ProductCode" = "8:{C29EC2B0-75EA-416C-88F1-6780CDEB5BA6}"
-        "PackageCode" = "8:{49FD9D96-DA52-4E7E-97CE-D6BCD615C0AB}"
+        "PackageCode" = "8:{F09BFB38-8680-4E4C-9105-E60E9CCD0DA2}"
         "UpgradeCode" = "8:{B8FD2AB5-BAC4-4240-862F-C6AE5E5C46C5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -3122,7 +3122,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7421599A32964AE78BA2F4D02A722ECB"
             {
-            "SourcePath" = "8:..\\MOIS\\obj\\Release\\MOIS.exe"
+            "SourcePath" = "8:..\\MOIS\\obj\\x86\\Release\\MOIS.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6B14BE4371D64565B6F5F85540F42F48"
@@ -3150,7 +3150,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F8A4C679AF5E4944926430820FEC5EEA"
             {
-            "SourcePath" = "8:..\\MOIS\\obj\\Release\\MOIS.exe"
+            "SourcePath" = "8:..\\MOIS\\obj\\x86\\Release\\MOIS.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E21787251BEE473B9A72480323ABBFD7"
